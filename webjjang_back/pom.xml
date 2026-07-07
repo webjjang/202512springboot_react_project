@@ -74,7 +74,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- swagger UI -->
+        <!-- swagger UI : localhost/swagger-ui/index.html 로 열기 -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
