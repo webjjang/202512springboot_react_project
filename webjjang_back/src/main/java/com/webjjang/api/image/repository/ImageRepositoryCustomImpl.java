@@ -14,10 +14,10 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor // private 이면서 final 붙인 변수를 자동 DI 해준다. 생성자를 이용한다.
-public class ImageRepositoryCustomImpl implements BoardRepositoryCustom{
+public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
 
     private final JPAQueryFactory queryFactory;
-    private final QBoardRepository qBoardRepository;
+    private final QImageRepository qImageRepository;
 
     // dsl 작성을 위해 사용한다.
     QBoard board = QBoard.board;
@@ -104,7 +104,7 @@ public class ImageRepositoryCustomImpl implements BoardRepositoryCustom{
 
     @Override
     public Board writeBoard(Board boardData) {
-        return qBoardRepository.save(boardData);
+        return qImageRepository.save(boardData);
     }
 
     @Override
@@ -112,11 +112,11 @@ public class ImageRepositoryCustomImpl implements BoardRepositoryCustom{
     // -> 수정된 내용을 DB에 저장(save()) : @LastModifedDate 수정날짜 자동 변경 됨
     // 2. QueryFactory 사용 : 수정 쿼리 실행 - @LastModifedDate 수정날짜 자동 변경 안됨
     public Board updateBoard(Board boardData) {
-        return qBoardRepository.save(boardData);
+        return qImageRepository.save(boardData);
       }
 
     @Override
     public void deleteBoard(Long no) {
-        qBoardRepository.deleteById(no);
+        qImageRepository.deleteById(no);
     }
 }

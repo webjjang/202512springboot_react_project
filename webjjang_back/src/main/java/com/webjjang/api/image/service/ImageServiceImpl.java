@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @Service
 @Log4j2
-public class ImageServiceImpl implements BoardService {
+public class ImageServiceImpl implements ImageService {
 
     @Autowired
     private  BoardRepositoryCustom boardRepositoryCustom;
