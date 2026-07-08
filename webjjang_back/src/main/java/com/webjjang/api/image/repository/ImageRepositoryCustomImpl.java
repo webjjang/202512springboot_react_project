@@ -4,7 +4,8 @@ import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.webjjang.api.board.entity.Board;
-import com.webjjang.api.board.entity.QBoard;
+import com.webjjang.api.image.entity.Image;
+import com.webjjang.api.image.entity.QImage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,22 +21,23 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
     private final QImageRepository qImageRepository;
 
     // dsl 작성을 위해 사용한다.
-    QBoard board = QBoard.board;
+    QImage image = QImage.image;
 
     @Override
     // Tuple = [data1, data2, ... ]
     public List<Tuple> getList(Long page, Long perPageNum, String key, String word) {
         return queryFactory
                 .select(
-                        board.no,
-                        board.title,
-                        board.writer,
-                        board.hit,
-                        board.writedDate
+                        image.no,
+                        image.title,
+                        image.member().id,
+                        image.member().name,
+                        image.hit,
+                        image.writedDate
                 )
-                .from(board)
+                .from(image)
                 .where(search(key, word)) // BooleanBuilder - true || false
-                .orderBy(board.no.desc())
+                .orderBy(image.no.desc())
                 .limit(perPageNum)// 보여질 데이터의 개수
                 .offset((page-1)*perPageNum) // 이전페이지까지 데이터 개수
                 .fetch();
@@ -51,15 +53,15 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
 
         // key에 t가 포함이 되어있으면 제목에서 검색
         if(key.contains("t"))
-            builder.or(board.title.contains(word));
+            builder.or(image.title.contains(word));
 
         // key에 c가 포함이 되어있으면 내용에서 검색
         if(key.contains("c"))
-            builder.or(board.content.contains(word));
+            builder.or(image.content.contains(word));
 
         // key에 w가 포함이 되어있으면 작성자에서 검색
-        if(key.contains("w"))
-            builder.or(board.writer.contains(word));
+        if(key.contains("i"))
+            builder.or(image.member().id.contains(word));
 
         return builder;
     }
@@ -67,26 +69,27 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
     @Override
     public Long getCount(String key, String word) {
         return queryFactory
-                .select(board.count())
-                .from(board)
+                .select(image.count())
+                .from(image)
                 .where(search(key, word))
                 .fetchOne();
     }
 
     @Override
     // 기본 쿼리 가능 - findById(Long no) -> Factory 보안 때문에
-    public Tuple getBoard(Long no) {
+    public Tuple getImage(Long no) {
         return queryFactory
                 .select(
-                        board.no,
-                        board.title,
-                        board.content,
-                        board.writer,
-                        board.writedDate,
-                        board.hit
+                        image.no,
+                        image.title,
+                        image.content,
+                        image.member().id,
+                        image.member().name,
+                        image.writedDate,
+                        image.hit
                 )
-                .from(board)
-                .where(board.no.eq(no))
+                .from(image)
+                .where(image.no.eq(no))
                 .fetchOne();
     }
 
@@ -96,27 +99,27 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
     // 2. QueryFactory 사용 : 수정 쿼리 실행 - @LastModifedDate 수정날짜 자동 변경 안됨
     public Long increaseHit(Long no) {
         return queryFactory
-                .update(board)
-                .set(board.hit, board.hit.add(1))
-                .where(board.no.eq(no))
+                .update(image)
+                .set(image.hit, image.hit.add(1))
+                .where(image.no.eq(no))
                 .execute();
     }
 
     @Override
-    public Board writeBoard(Board boardData) {
-        return qImageRepository.save(boardData);
+    public Image writeImage(Image imageData) {
+        return qImageRepository.save(imageData);
     }
 
     @Override
     // 1 방법. : 기본 CRUD의 수정은 먼저 데이터를 꺼내온다(findById()) -> 꺼내온 데이터 변경(JAVA에서)
     // -> 수정된 내용을 DB에 저장(save()) : @LastModifedDate 수정날짜 자동 변경 됨
     // 2. QueryFactory 사용 : 수정 쿼리 실행 - @LastModifedDate 수정날짜 자동 변경 안됨
-    public Board updateBoard(Board boardData) {
-        return qImageRepository.save(boardData);
+    public Image updateImage(Image imageData) {
+        return qImageRepository.save(imageData);
       }
 
     @Override
-    public void deleteBoard(Long no) {
+    public void deleteImage(Long no) {
         qImageRepository.deleteById(no);
     }
 }

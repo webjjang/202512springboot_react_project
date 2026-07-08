@@ -1,7 +1,7 @@
 package com.webjjang.api.image.repository;
 
 import com.querydsl.core.Tuple;
-import com.webjjang.api.board.entity.Board;
+import com.webjjang.api.image.entity.Image;
 
 import java.util.List;
 
@@ -14,18 +14,18 @@ public interface ImageRepositoryCustom {
     Long getCount(String key, String word);
 
     // view
-    Tuple getBoard(Long no);
+    Tuple getImage(Long no);
 
     // hit + 1
     Long increaseHit(Long no);
 
     // write
-    Board writeBoard(Board boardData);
+    Image writeImage(Image imageData);
 
     // update
-    Board updateBoard(Board boardData);
+    Image updateImage(Image imageData);
 
     // delete
-    void deleteBoard(Long no);
+    void deleteImage(Long no);
 
 }
