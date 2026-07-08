@@ -26,6 +26,6 @@ public interface BoardRepositoryCustom {
     Board updateBoard(Board boardData);
 
     // delete
-    Long deleteBoard(Board boardData);
+    void deleteBoard(Long no);
 
 }

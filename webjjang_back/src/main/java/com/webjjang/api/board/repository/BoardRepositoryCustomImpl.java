@@ -116,14 +116,7 @@ public class BoardRepositoryCustomImpl implements BoardRepositoryCustom{
       }
 
     @Override
-    public Long deleteBoard(Board boardData) {
-//        return queryFactory
-//                .delete(board)
-//                .where(
-//                        board.no.eq(boardData.getNo()),
-//                        board.pw.eq(boardData.getPw())
-//                )
-//                .execute();
-        return qBoardRepository.deleteByNoAndPw(boardData.getNo(),boardData.getPw());
+    public void deleteBoard(Long no) {
+        qBoardRepository.deleteById(no);
     }
 }
