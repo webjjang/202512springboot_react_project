@@ -8,10 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +18,7 @@ import java.util.Objects;
 @RequestMapping("/board")
 @Log4j2
 @RequiredArgsConstructor // private final 변수 자동 DI 어노테이션
+@CrossOrigin(origins = "http://localhost:5173") // react 서버로 데이터 공유 허용해준다.
 public class BoardRestController {
 
     private final BoardService service;
@@ -49,7 +47,8 @@ public class BoardRestController {
 
     // 3. write
     @PostMapping("/write.do")
-    public ResponseEntity<String> write(BoardVO vo){
+    public ResponseEntity<String> write(@RequestBody BoardVO vo){
+        log.info("[write] vo = {}",vo);
         service.write(vo);
         return ResponseEntity.status(HttpStatus.OK)
                 .body("일반 게시판 글등록이 성공적으로 되었습니다.");
@@ -57,7 +56,7 @@ public class BoardRestController {
 
     // 4. update
     @PostMapping("/update.do")
-    public ResponseEntity<String> update(BoardVO vo){
+    public ResponseEntity<String> update(@RequestBody BoardVO vo){
         service.update(vo);
         return ResponseEntity.status(HttpStatus.OK)
                 .body("일반 게시판 글수정이 성공적으로 되었습니다.");
@@ -65,7 +64,7 @@ public class BoardRestController {
 
     // 5. delete
     @PostMapping("/delete.do")
-    public ResponseEntity<String> delete(BoardVO vo){
+    public ResponseEntity<String> delete(@RequestBody BoardVO vo){
         service.delete(vo);
         return ResponseEntity.status(HttpStatus.OK)
                 .body("일반 게시판 글삭제가 성공적으로 되었습니다.");
