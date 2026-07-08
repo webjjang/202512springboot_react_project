@@ -23,7 +23,7 @@ public interface BoardRepositoryCustom {
     Board writeBoard(Board boardData);
 
     // update
-    Long updateBoard(Board boardData);
+    Board updateBoard(Board boardData);
 
     // delete
     Long deleteBoard(Board boardData);

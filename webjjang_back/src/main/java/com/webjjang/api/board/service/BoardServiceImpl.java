@@ -3,8 +3,10 @@ package com.webjjang.api.board.service;
 import com.querydsl.core.Tuple;
 import com.webjjang.api.board.entity.Board;
 import com.webjjang.api.board.repository.BoardRepositoryCustom;
+import com.webjjang.api.board.repository.QBoardRepository;
 import com.webjjang.api.board.vo.BoardVO;
 import com.webjjang.api.util.page.PageObject;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,14 +15,18 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Log4j2
 public class BoardServiceImpl implements BoardService {
 
     @Autowired
     private  BoardRepositoryCustom boardRepositoryCustom;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private QBoardRepository qBoardRepository;
 
     @Override
     public List<BoardVO> list(PageObject pageObject) {
@@ -105,12 +111,33 @@ public class BoardServiceImpl implements BoardService {
     @Override
     @Transactional
     public Long update(BoardVO vo) {
-        return boardRepositoryCustom.updateBoard(boardVOToBoard(vo));
+        log.info("[update] boardVOToBoard(vo) = {}", boardVOToBoard(vo));
+        // pw를 포함 데이터를 먼저 가져온다.
+        Optional<Board> optional = qBoardRepository.findById(vo.getNo());
+        if(optional.isEmpty())
+            throw new RuntimeException("일반 게시판 수정 오류 - 글번호 확인");
+        Board board = optional.get();
+        if(!passwordEncoder.matches(vo.getPw(), board.getPw()))
+            throw new RuntimeException("일반 게시판 수정 오류 - 비밀번호 확인");
+        // 수정할 데이터로 변경 : board
+        board.setTitle(vo.getTitle());
+        board.setContent(vo.getContent());
+        board.setWriter(vo.getWriter());
+
+        // save(board) : 데이터가 있으면 수정(update)을 없으면 등록(insert)을 시킨다.
+        Board updatedBoard = boardRepositoryCustom.updateBoard(board);
+
+        return 1L;
     }
 
     @Override
     @Transactional
     public Long delete(BoardVO vo) {
-        return boardRepositoryCustom.deleteBoard(boardVOToBoard(vo));
+
+        Long result = boardRepositoryCustom.deleteBoard(boardVOToBoard(vo));
+        log.info("[delete] 실행 결과 : result = {}", result);
+
+        if(result == 0) throw new RuntimeException("일반 게시판 삭제 오류 - 글번호나 비밀번호 확인");
+        return result;
     }
 }
