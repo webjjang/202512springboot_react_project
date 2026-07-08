@@ -6,6 +6,7 @@ import com.webjjang.api.board.repository.BoardRepositoryCustom;
 import com.webjjang.api.board.vo.BoardVO;
 import com.webjjang.api.util.page.PageObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,8 @@ public class BoardServiceImpl implements BoardService {
 
     @Autowired
     private  BoardRepositoryCustom boardRepositoryCustom;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public List<BoardVO> list(PageObject pageObject) {
@@ -85,7 +88,7 @@ public class BoardServiceImpl implements BoardService {
         board.setWriter(vo.getWriter());
         board.setWritedDate(vo.getWriteDate());
         board.setUpdatedDate(vo.getUpdateDate());
-        board.setPw(vo.getPw());
+        board.setPw(passwordEncoder.encode(vo.getPw()));
         return board;
     }
 
