@@ -30,6 +30,9 @@ public class Image {
     @Column(nullable = false, columnDefinition = "text")
     private String content;
 
+    @Column(nullable = false)
+    private String fileName;
+
     @ManyToOne
     @JoinColumn(name = "member_id")
 //    @ToString.Exclude
