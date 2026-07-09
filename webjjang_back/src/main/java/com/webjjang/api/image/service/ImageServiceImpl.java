@@ -9,6 +9,7 @@ import com.webjjang.api.image.entity.Image;
 import com.webjjang.api.image.repository.ImageRepositoryCustom;
 import com.webjjang.api.image.repository.QImageRepository;
 import com.webjjang.api.image.vo.ImageVO;
+import com.webjjang.api.member.entity.Member;
 import com.webjjang.api.util.page.PageObject;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,10 +104,13 @@ public class ImageServiceImpl implements ImageService {
         image.setTitle(vo.getTitle());
         image.setContent(vo.getContent());
         image.setFileName(vo.getFileName());
-        image.getMember().setId(vo.getId());
+        // image id 세팅하기 : member 생성 -> member에 id 세팅 -> image에 member 세팅
+        Member member = new Member();
+        member.setId(vo.getId());
+        image.setMember(member);
         image.setWritedDate(vo.getWritedDate());
         image.setUpdatedDate(vo.getUpdatedDate());
-        image.setHit(vo.getHit());
+        image.setHit(vo.getHit()==null?0:vo.getHit());
         return image;
     }
 

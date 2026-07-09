@@ -110,7 +110,8 @@ public class ImageRestController {
         log.info("[write] 데이터 세팅 완료 vo = {}", vo);
 
         //DB에 저장 처리
-        
+        ImageVO savedImageVO = service.write(vo);
+        log.info("[write] DB에 저장된 데이터 확인. savedImageVO = {}", savedImageVO);
 
         return ResponseEntity.status(HttpStatus.OK)
                 .body("이미지 게시판 등록이 성공적으로 되었습니다.");
