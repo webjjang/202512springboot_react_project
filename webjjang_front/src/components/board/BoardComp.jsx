@@ -8,7 +8,7 @@ import BoardUpdate from "./BoardUpdate";
 
 function BoardComp(){
   return (
-    <div class="mt-5">
+    <div className="mt-5">
       <h2>일반 게시판</h2>
       <Routes>
         <Route path="list" element={<BoardList /> } />

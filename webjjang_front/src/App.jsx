@@ -12,7 +12,7 @@ function App() {
       {/* 맨 위에 메뉴 컴포넌트 : /src/components/common/TopNavi.jsx */}
       <TopNavi />
 
-      <div className="container">
+      <div className="container pt-5">
       {/* 라이팅 - 메뉴별 */}
         <Routes>
           <Route path="/" element={<Home />} />

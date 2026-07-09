@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function BoardWrite(){
   // 데이터 처리 - 데이터 표시 전에 처리, 후에 처리 가능--------
@@ -9,6 +10,8 @@ function BoardWrite(){
   const [writer, setWriter] = useState('');
   const [pw, setPw] = useState('');
   const [pw2, setPw2] = useState('');
+
+  const navigate = useNavigate();
 
   // 맨 처음에 커서의 위치를 title로 만들어 보자.
   useEffect(()=>{
@@ -46,7 +49,7 @@ function BoardWrite(){
       const response = await axios.post("http://localhost/board/write.do",data);
       // alert("일반 게시판에 게시글이 등록되었습니다.");
       alert(response.data); // 서버에서 보낸 데이터를 출력하자.
-      location.href = "/board/list"; // react 서버
+      navigate("/board/list"); // react 서버
     } catch (error) { // 서버에서 오류가 난 경우 : 500번 오류
       console.log(error);
     }

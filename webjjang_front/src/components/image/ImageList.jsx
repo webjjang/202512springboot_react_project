@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Image.css"
 import PageNation from "../common/PageNation";
 import { Link, useSearchParams } from "react-router-dom";
+import { format } from "date-fns";
 
 function ImageList(){
   // -- 데이터 처리 부분 ------------------
@@ -51,8 +52,8 @@ function ImageList(){
           <td>{vo.title}</td>
           <td>{vo.id}</td>
           <td>{vo.name}</td>
-          <td>{vo.fileName}</td>
-          <td>{vo.writedDate}</td>
+          <td><img src={`http://localhost/upload/image/${vo.fileName}`} alt={vo.title} style={{ maxWidth: '50px', maxHeight: '50px' }} /></td>
+          <td>{format(vo.writedDate, "yyyy-MM-dd")}</td>
           <td>{vo.hit}</td>
         </tr>
       )

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Board.css"
 import PageNation from "../common/PageNation";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { format } from "date-fns";
 
 function BoardList(){
   // -- 데이터 처리 부분 ------------------
@@ -14,6 +15,8 @@ function BoardList(){
   const perPageNum = searchParams.get('perPageNum');
   const key = searchParams.get('key');
   const word = searchParams.get('word');
+
+  const navigate = useNavigate();
 
   console.log("page=",page, ",perPageNum=", perPageNum, ", key=",key,", word=",word);
 
@@ -46,11 +49,12 @@ function BoardList(){
     (vo) => {
       return (
         <tr className="dataRow" key={vo.no}
-         onClick={() => location.href=`./view?no=${vo.no}&inc=1`}>
+         onClick={() => navigate(`/board/view?no=${vo.no}&inc=1`)}>
           <td className="no" >{vo.no}</td>
           <td>{vo.title}</td>
           <td>{vo.writer}</td>
-          <td>{vo.writeDate}</td>
+          <td>{format(vo.writeDate, "yyyy-MM-dd")}</td>
+
           <td>{vo.hit}</td>
         </tr>
       )

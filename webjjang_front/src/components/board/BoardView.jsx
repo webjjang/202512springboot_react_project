@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import BoardDelete from "./BoardDelete";
+import { format } from "date-fns";
 
 function BoardView(){
   // 데이터 처리 ---------------------------------------------
@@ -80,7 +81,7 @@ function BoardView(){
               </tr>
               <tr>
                 <th>작성일</th>
-                <td>{vo.writeDate}</td>
+                <td>{format(vo.writeDate, "yyyy-MM-dd")}</td>
               </tr>
               <tr>
                 <th>조회수</th>

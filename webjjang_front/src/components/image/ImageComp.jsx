@@ -8,7 +8,7 @@ import ImageUpdate from "./ImageUpdate";
 
 function ImageComp(){
   return (
-    <div class="mt-5">
+    <div className="mt-5">
       <h2>이미지 게시판</h2>
       <Routes>
         <Route path="list" element={<ImageList /> } />

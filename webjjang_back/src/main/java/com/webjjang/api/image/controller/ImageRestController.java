@@ -12,6 +12,8 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -37,7 +40,7 @@ public class ImageRestController {
 
     private final ImageService service;
 
-    private final String savePath = "c:/upload/image"; // realPath
+    private final String savePath = "c:/upload/image/"; // realPath
 
     // 1. list
     @GetMapping("/list.do")
@@ -60,6 +63,33 @@ public class ImageRestController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(service.view(no, inc));
     }
+
+//    @GetMapping("/{fileName}") - config.WebConfig에서 설정 처리
+    public ResponseEntity<Resource> viewImage(
+            @PathVariable String fileName) throws MalformedURLException {
+
+        log.info("[viewImage] 이미지 보기 처리되고 있음.");
+        Path path = Paths.get(savePath).resolve(fileName);
+
+        Resource resource = new UrlResource(path.toUri());
+
+        if (!resource.exists()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        String contentType;
+
+        try {
+            contentType = Files.probeContentType(path);
+        } catch (IOException e) {
+            contentType = "application/octet-stream";
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .body(resource);
+    }
+
 
     // 3. write
     @PostMapping(value = "/write.do",
