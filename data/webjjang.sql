@@ -1,9 +1,9 @@
 -- 1. 객체 제거 (FK -> PK)
 
-    drop table if exists board
-    drop table if exists image
-    drop table if exists member_roles
-    drop table if exists member
+    drop table if exists board;
+    drop table if exists image;
+    drop table if exists member_roles;
+    drop table if exists member;
     
 -- 2. 객체 생성
     create table board (
@@ -16,7 +16,7 @@
         content text not null,
         pw varchar(255) not null,
         primary key (no)
-    ) engine=InnoDB
+    ) engine=INNODB;
     
     create table member (
         birth datetime(6) not null,
@@ -32,7 +32,7 @@
         tel varchar(255),
         primary key (id),
         check (gender in ('남자','여자'))
-    ) engine=InnoDB
+    ) engine=INNODB;
 
     create table image (
         hit bigint,
@@ -43,7 +43,7 @@
         content text not null,
         member_id varchar(255),
         primary key (no)
-    ) engine=InnoDB
+    ) engine=INNODB;
 
     create table member_roles (
         member_id varchar(255) not null,
@@ -54,9 +54,9 @@
     alter table if exists image 
        add constraint FKnnvd0itj2hhoyuua7g3ive7vo 
        foreign key (member_id) 
-       references member (id)
+       references member (id);
 
     alter table if exists member_roles 
        add constraint FKet63dfllh4o5qa9qwm7f5kx9x 
        foreign key (member_id) 
-       references member (id)
+       references member (id);
