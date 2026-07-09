@@ -5,6 +5,10 @@ import com.webjjang.api.board.entity.Board;
 import com.webjjang.api.board.repository.BoardRepositoryCustom;
 import com.webjjang.api.board.repository.QBoardRepository;
 import com.webjjang.api.board.vo.BoardVO;
+import com.webjjang.api.image.entity.Image;
+import com.webjjang.api.image.repository.ImageRepositoryCustom;
+import com.webjjang.api.image.repository.QImageRepository;
+import com.webjjang.api.image.vo.ImageVO;
 import com.webjjang.api.util.page.PageObject;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,19 +26,20 @@ import java.util.Optional;
 public class ImageServiceImpl implements ImageService {
 
     @Autowired
-    private  BoardRepositoryCustom boardRepositoryCustom;
+    private ImageRepositoryCustom imageRepositoryCustom;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
-    private QBoardRepository qBoardRepository;
+    private QImageRepository qImageRepository;
 
     @Override
-    public List<BoardVO> list(PageObject pageObject) {
+    public List<ImageVO> list(PageObject pageObject) {
 
         // 화면에 페이지 내이션을 표시하기 위한 페이지
-        pageObject.setTotalRow(boardRepositoryCustom.getCount(pageObject.getKey(), pageObject.getWord()));
+        pageObject.setTotalRow(imageRepositoryCustom.getCount(pageObject.getKey(), pageObject.getWord()));
 
-        List<Tuple> tupleList = boardRepositoryCustom.getList(
+        // Tuple-> [no, title, fileName, id, name, writedDate, hit] :: index 번호를 이용해서 데이터를 가져온다.
+        List<Tuple> tupleList = imageRepositoryCustom.getList(
                 pageObject.getPage(),
                 pageObject.getPerPageNum(),
                 pageObject.getKey(),
@@ -42,14 +47,16 @@ public class ImageServiceImpl implements ImageService {
         );
 
         // List<Tuple> to List<BoardVO>
-        List<BoardVO> list = new ArrayList<>();
+        List<ImageVO> list = new ArrayList<>();
         for(Tuple tuple : tupleList){
-            BoardVO vo = new BoardVO();
+            ImageVO vo = new ImageVO();
             vo.setNo(tuple.get(0, Long.class));
             vo.setTitle(tuple.get(1, String.class));
-            vo.setWriter(tuple.get(2, String.class));
-            vo.setHit(tuple.get(3, Long.class));
-            vo.setWriteDate(tuple.get(4, LocalDateTime.class));
+            vo.setFileName(tuple.get(2, String.class));
+            vo.setId(tuple.get(3, String.class));
+            vo.setName(tuple.get(4, String.class));
+            vo.setWritedDate(tuple.get(5, LocalDateTime.class));
+            vo.setHit(tuple.get(6, Long.class));
             list.add(vo);
         }
 
@@ -58,91 +65,91 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     @Transactional
-    public BoardVO view(Long no, Integer inc) {
-        if(inc == 1) boardRepositoryCustom.increaseHit(no);
-        Tuple tuple = boardRepositoryCustom.getBoard(no);
-        BoardVO vo = new BoardVO();
+    public ImageVO view(Long no, Integer inc) {
+        if(inc == 1) imageRepositoryCustom.increaseHit(no);
+        // Tuple -> [no, title, content, id, name, writedDate, hit]
+        Tuple tuple = imageRepositoryCustom.getImage(no);
+        ImageVO vo = new ImageVO();
         vo.setNo(tuple.get(0, Long.class));
         vo.setTitle(tuple.get(1, String.class));
         vo.setContent(tuple.get(2, String.class));
-        vo.setWriter(tuple.get(3, String.class));
-        vo.setWriteDate(tuple.get(4, LocalDateTime.class));
-        vo.setHit(tuple.get(5, Long.class));
+        vo.setFileName(tuple.get(3, String.class));
+        vo.setId(tuple.get(4, String.class));
+        vo.setName(tuple.get(5, String.class));
+        vo.setWritedDate(tuple.get(6, LocalDateTime.class));
+        vo.setHit(tuple.get(7, Long.class));
         return vo;
     }
 
-    // Board -> BoardVO
-    BoardVO boardToBoardVO(Board board){
-        BoardVO vo = new BoardVO();
-        vo.setNo(board.getNo());
-        vo.setTitle(board.getTitle());
-        vo.setContent(board.getContent());
-        vo.setWriter(board.getWriter());
-        vo.setHit(board.getHit());
-        vo.setWriteDate(board.getWritedDate());
-        vo.setUpdateDate(board.getUpdatedDate());
-        vo.setPw(board.getPw());
+    // Image Entity -> ImageVO
+    ImageVO imageToImageVO(Image image){
+        ImageVO vo = new ImageVO();
+        vo.setNo(image.getNo());
+        vo.setTitle(image.getTitle());
+        vo.setContent(image.getContent());
+        vo.setFileName(image.getFileName());
+        vo.setId(image.getMember().getId());
+        vo.setName(image.getMember().getName());
+        vo.setWritedDate(image.getWritedDate());
+        vo.setUpdatedDate(image.getUpdatedDate());
+        vo.setHit(image.getHit());
         return vo;
     }
 
-    // BoardVO -> Board
-    Board boardVOToBoard(BoardVO vo){
-        Board board = new Board();
-        board.setNo(vo.getNo());
-        board.setTitle(vo.getTitle());
-        board.setContent(vo.getContent());
-        board.setWriter(vo.getWriter());
-        board.setWritedDate(vo.getWriteDate());
-        board.setUpdatedDate(vo.getUpdateDate());
-        board.setPw(passwordEncoder.encode(vo.getPw()));
-        return board;
+    // ImageVO -> Image Entity
+    Image imageVOToImage(ImageVO vo){
+        Image image = new Image();
+        image.setNo(vo.getNo());
+        image.setTitle(vo.getTitle());
+        image.setContent(vo.getContent());
+        image.setFileName(vo.getFileName());
+        image.getMember().setId(vo.getId());
+        image.setWritedDate(vo.getWritedDate());
+        image.setUpdatedDate(vo.getUpdatedDate());
+        image.setHit(vo.getHit());
+        return image;
     }
 
     @Override
     @Transactional
-    public BoardVO write(BoardVO vo) {
-        Board board = boardRepositoryCustom.writeBoard(
-                boardVOToBoard(vo) // BoardVO -> Board
+    public ImageVO write(ImageVO vo) {
+        Image image = imageRepositoryCustom.writeImage(
+                imageVOToImage(vo) // BoardVO -> Board
         );
 
-        return boardToBoardVO(board); // Board -> BoardVO
+        return imageToImageVO(image); // Board -> BoardVO
     }
 
     @Override
     @Transactional
-    public Long update(BoardVO vo) {
-        log.info("[update] boardVOToBoard(vo) = {}", boardVOToBoard(vo));
-        // pw를 포함 데이터를 먼저 가져온다.
-        Optional<Board> optional = qBoardRepository.findById(vo.getNo());
-        if(optional.isEmpty())
-            throw new RuntimeException("일반 게시판 수정 오류 - 글번호 확인");
-        Board board = optional.get();
-        if(!passwordEncoder.matches(vo.getPw(), board.getPw()))
-            throw new RuntimeException("일반 게시판 수정 오류 - 비밀번호 확인");
-        // 수정할 데이터로 변경 : board
-        board.setTitle(vo.getTitle());
-        board.setContent(vo.getContent());
-        board.setWriter(vo.getWriter());
+    public Long update(ImageVO vo) {
+       log.info("[update] imageVOToImage(vo) = {}", imageVOToImage(vo));
 
-        // save(board) : 데이터가 있으면 수정(update)을 없으면 등록(insert)을 시킨다.
-        Board updatedBoard = boardRepositoryCustom.updateBoard(board);
+       Long result = imageRepositoryCustom.updateImage(vo.getTitle(), vo.getContent(), vo.getNo(), vo.getId());
 
-        return 1L;
+       if(result == 0)
+           throw new RuntimeException("이미지 게시판 수정 안됨 - 없는 이미지 게시글이거나 본인이 작성한 게시물이 아님.");
+
+       return result;
     }
 
     @Override
     @Transactional
-    public Long delete(BoardVO vo) {
+    // 삭제 하면 뒤에 삭제한 데이터의 파일명을 리턴해주면 파일시스템에서 파일을 삭제하셔야 합니다.
+    public String delete(ImageVO vo) {
 
         // pw를 포함 데이터를 먼저 가져온다.
-        Optional<Board> optional = qBoardRepository.findById(vo.getNo());
-        if(optional.isEmpty())
-            throw new RuntimeException("일반 게시판 삭제 오류 - 글번호 확인");
-        Board board = optional.get();
-        if(!passwordEncoder.matches(vo.getPw(), board.getPw()))
-            throw new RuntimeException("일반 게시판 삭제 오류 - 비밀번호 확인");
-       boardRepositoryCustom.deleteBoard(vo.getNo());
+       Optional<Image> optional = qImageRepository.findById(vo.getNo());
+       if(optional.isEmpty())
+           throw new RuntimeException("이미지 게시판 삭제 오류 - 글번호 확인");
+       Image image = optional.get();
+       imageRepositoryCustom.deleteImage(vo.getNo());
 
-        return 1L;
+        return image.getFileName();
+    }
+
+    @Override
+    public Long changeImage(ImageVO vo) {
+        return imageRepositoryCustom.changeImage(vo.getNo(), vo.getId(), vo.getFileName());
     }
 }

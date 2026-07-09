@@ -23,7 +23,10 @@ public interface ImageRepositoryCustom {
     Image writeImage(Image imageData);
 
     // update
-    Image updateImage(Image imageData);
+    Long updateImage(String title, String content, Long no, String id);
+
+    // changeImage
+    Long changeImage(Long no, String id, String fileName);
 
     // delete
     void deleteImage(Long no);

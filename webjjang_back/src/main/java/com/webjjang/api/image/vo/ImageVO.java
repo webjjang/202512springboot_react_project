@@ -11,10 +11,11 @@ public class ImageVO {
     private Long no;
     private String title;
     private String content;
-    private String writer;
+    private String fileName;
+    private String id;
+    private String name;
+    private LocalDateTime writedDate;
+    private LocalDateTime updatedDate;
     private Long hit;
-    private LocalDateTime writeDate;
-    private LocalDateTime updateDate;
-    private String pw;
 
 }

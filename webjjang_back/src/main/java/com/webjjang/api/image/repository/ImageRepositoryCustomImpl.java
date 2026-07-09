@@ -30,10 +30,11 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
                 .select(
                         image.no,
                         image.title,
+                        image.fileName,
                         image.member().id,
                         image.member().name,
-                        image.hit,
-                        image.writedDate
+                        image.writedDate,
+                        image.hit
                 )
                 .from(image)
                 .where(search(key, word)) // BooleanBuilder - true || false
@@ -83,6 +84,7 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
                         image.no,
                         image.title,
                         image.content,
+                        image.fileName,
                         image.member().id,
                         image.member().name,
                         image.writedDate,
@@ -114,9 +116,23 @@ public class ImageRepositoryCustomImpl implements ImageRepositoryCustom{
     // 1 방법. : 기본 CRUD의 수정은 먼저 데이터를 꺼내온다(findById()) -> 꺼내온 데이터 변경(JAVA에서)
     // -> 수정된 내용을 DB에 저장(save()) : @LastModifedDate 수정날짜 자동 변경 됨
     // 2. QueryFactory 사용 : 수정 쿼리 실행 - @LastModifedDate 수정날짜 자동 변경 안됨
-    public Image updateImage(Image imageData) {
-        return qImageRepository.save(imageData);
+    public Long updateImage(String title, String content, Long no, String id) {
+        return queryFactory
+                .update(image)
+                .set(image.title, title)
+                .set(image.content, content)
+                .where(image.no.eq(no), image.member().id.eq(id))
+                .execute();
       }
+
+    @Override
+    public Long changeImage(Long no, String id, String fileName) {
+        return queryFactory
+                .update(image)
+                .set(image.fileName, fileName)
+                .where(image.no.eq(no), image.member().id.eq(id))
+                .execute();
+    }
 
     @Override
     public void deleteImage(Long no) {

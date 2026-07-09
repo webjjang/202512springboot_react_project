@@ -1,6 +1,13 @@
 -- 1. 객체 제거 (FK -> PK)
 
-    drop table if exists board;
+   alter table if exists image 
+	   DROP 
+	   foreign key if exists FKnnvd0itj2hhoyuua7g3ive7vo;
+   alter table if exists member_roles 
+      drop 
+      foreign key if exists FKet63dfllh4o5qa9qwm7f5kx9x;
+
+	 drop table if exists board;
     drop table if exists image;
     drop table if exists member_roles;
     drop table if exists member;
