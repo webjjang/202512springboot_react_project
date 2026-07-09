@@ -3,6 +3,7 @@ import TopNavi from "./components/common/TopNavi"
 import Home from "./components/common/Home"
 import NotFoundMenu from "./components/error/NotFoundMenu"
 import BoardComp from "./components/board/BoardComp"
+import ImageComp from "./components/image/ImageComp"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/board/*" element={<BoardComp />} />
+          <Route path="/image/*" element={<ImageComp />} />
           <Route path="*" element={<NotFoundMenu />} />
         </Routes>
       </div>
