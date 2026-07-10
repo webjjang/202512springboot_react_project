@@ -18,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/board/*" element={<BoardComp />} />
           <Route path="/image/*" element={<ImageComp />} />
+          <Route path="/member/*" element={<ImageComp />} />
           <Route path="*" element={<NotFoundMenu />} />
         </Routes>
       </div>
