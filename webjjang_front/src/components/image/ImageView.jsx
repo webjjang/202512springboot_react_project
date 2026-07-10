@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import ImageDelete from "./ImageDelete";
+import { format } from "date-fns";
 
 function ImageView(){
   // 데이터 처리 ---------------------------------------------
@@ -34,7 +35,7 @@ function ImageView(){
       console.log("vo : " + JSON.stringify(vo));
       alert('데이터를 불러오는 과정에서 에러가 발생했습니다.');
     })
-  }, [no]);// no가 바뀌면 실행된다. 
+  }, [no, inc]);// no가 바뀌면 실행된다. 
   // link 연결시 a 태그를 사용하시면 [] 한번만 실행하는 것 가능
   // link 연결시 <Link> <NavLink> 태그를 사용하면 현재 컴포넌트를 그대로 사용 - 그번호를 바꾸면 실행된다.
 
@@ -71,16 +72,20 @@ function ImageView(){
                 <td>{vo.title}</td>
               </tr>
               <tr>
+                <th>이미지</th>
+                <td><img src={`http://localhost/upload/image/${vo.fileName}`}  style={{ maxWidth: '500px'}} /></td>
+              </tr>
+              <tr>
                 <th>내용</th>
                 <td><pre>{vo.content}</pre></td>
               </tr>
               <tr>
                 <th>작성자</th>
-                <td>{vo.writer}</td>
+                <td>{vo.id}({vo.name})</td>
               </tr>
               <tr>
                 <th>작성일</th>
-                <td>{vo.writeDate}</td>
+                <td>{format(vo.writedDate, 'yyyy-MM-dd')}</td>
               </tr>
               <tr>
                 <th>조회수</th>

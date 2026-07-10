@@ -7,10 +7,13 @@ function ImageWrite(){
 
   const navigate = useNavigate();
 
-  // 항목 한개를 저장하는 상태 객체 작성 - 5개
+  // 항목 한개를 저장하는 상태 객체 작성 - 3개
+  // 텍스트 데이터 저장 - 2개
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  // 파일 데이터 저장 - 1개
   const [imageFile, setImageFile] = useState(null);
+  // 이미지 파일 미리보기
   const [preview, setPreview] = useState('');
 
   // 맨 처음에 커서의 위치를 title로 만들어 보자.
@@ -18,19 +21,23 @@ function ImageWrite(){
     document.getElementById('title').focus();
   },[]);
 
+  // 파일 입력란에 파일을 선택하면 파일 데이터 세팅 & 미리보기 처리
   const handleFileChange = (e) => {
 
+    // 선택된 파일 중에서 첫번째
     const file = e.target.files[0];
 
+    // 선택하지 않은 경우 처리
     if (!file) {
       setImageFile(null);
       setPreview('');
       return;
     }
 
+    // 선택한 경우 처리
     setImageFile(file);
 
-    // 미리보기 생성
+    // 미리보기 생성 & 저장
     const imageUrl = URL.createObjectURL(file);
     setPreview(imageUrl);
   }
@@ -44,6 +51,7 @@ function ImageWrite(){
       return;
     }
 
+    // 데이터 전송을 위한 form 객체
     const formData = new FormData();
 
     // 입력한 데이터를 JSON 데이터로 만든다.
@@ -86,6 +94,7 @@ function ImageWrite(){
       <div>/image/write</div>
       <hr />
       <p>이미지 게시판 등록 페이지 입니다.</p>
+      {/* method="post" encType="multipart/form-data" 생략 - axios를 이용해서 비통신으로 처리 한다. */}
       <form onSubmit={handleSubmit}>
         <div className="mb-3 mt-3">
           <label htmlFor="title" className="form-label">제목:</label>
@@ -107,14 +116,14 @@ function ImageWrite(){
            onChange={handleFileChange}/>
         </div>
 
+        <div className="mb-3 mt-3">
+          {preview && <img src={preview} alt="미리보기" style={{ maxWidth: '300px' }} />}
+        </div>
+
         <button type="submit" className="btn btn-primary mr-2">등록</button>
         <button type="reset" className="btn btn-success mr-2">새로입력</button>
         <button type="button" className="btn btn-warning"
           onClick={() => location.href = "/image/list"}>취소</button>
-
-        <div className="mb-3 mt-3">
-          {preview && <img src={preview} alt="미리보기" style={{ maxWidth: '300px' }} />}
-        </div>
 
       </form>
     </>

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Image.css"
 import PageNation from "../common/PageNation";
-import { Link, useSearchParams } from "react-router-dom";
-import { format } from "date-fns";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { format } from "date-fns"; // 날짜 형식
 
 function ImageList(){
   // -- 데이터 처리 부분 ------------------
@@ -16,6 +16,9 @@ function ImageList(){
   const key = searchParams.get('key');
   const word = searchParams.get('word');
 
+  // 자동으로 페이지 이동을 시킨다. - 컴포넌트로 컨트롤한다.
+  const navigate = useNavigate();
+
   console.log("page=",page, ",perPageNum=", perPageNum, ", key=",key,", word=",word);
 
   const notPageQuery = `perPageNum=${perPageNum==null?"":perPageNum}&key=${key==null?"":key}&word=${word==null?"":word}`;
@@ -26,13 +29,16 @@ function ImageList(){
   const [myJSON, setMyJSON] = useState({list:[], pageObject:{}});
 
   // 데이터 가져오기
+  // 페이지 정보나 검색 정보가 바뀌면(이미지 게시판 메뉴나, 페이지 네이션의 페이지 클릭하면) 데이터를 다시 불러온다.
   useEffect(
     function(){
       console.log("ImageList :: useEffect 실행해서 데이터 가져오기 시작")
+      // react(:5173) -> spring boot(:80-http인 경우 생략)로 데이터 요청
       axios.get("http://localhost/image/list.do?" + query)
       .then((response) => {
         console.log("Axios를 이용한 데이터 가져오기");
         console.log("응답 데이터 : " + response);
+        // spring boot 서버에서 가져온 데이터는 response.data 안에 JSON 전달된다.
         console.log("json 데이터 : " + JSON.stringify(response.data));
         setMyJSON(response.data);
       })
@@ -47,11 +53,12 @@ function ImageList(){
     (vo) => {
       return (
         <tr className="dataRow" key={vo.no}
-         onClick={() => location.href=`./view?no=${vo.no}&inc=1`}>
+         onClick={() => navigate(`/image/view?no=${vo.no}&inc=1`)}>
           <td className="no" >{vo.no}</td>
           <td>{vo.title}</td>
           <td>{vo.id}</td>
           <td>{vo.name}</td>
+          {/* spring boot 서버에서 이미지 데이터를 가져와서 표시해준다. img 태그 사용 */}
           <td><img src={`http://localhost/upload/image/${vo.fileName}`} alt={vo.title} style={{ maxWidth: '50px', maxHeight: '50px' }} /></td>
           <td>{format(vo.writedDate, "yyyy-MM-dd")}</td>
           <td>{vo.hit}</td>

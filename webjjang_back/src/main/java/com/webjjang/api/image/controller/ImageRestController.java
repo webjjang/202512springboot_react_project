@@ -60,11 +60,12 @@ public class ImageRestController {
     // 2. view
     @GetMapping("/view.do")
     public ResponseEntity<ImageVO> view(Long no, Integer inc){
+        log.info("[view] no = {}, inc = {}",no, inc);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(service.view(no, inc));
     }
-
-//    @GetMapping("/{fileName}") - config.WebConfig에서 설정 처리
+//   localhost/image/~~~.jpg
+//    @GetMapping("/{fileName}") - config.WebConfig에서 설정 처리하는 방법이 더 간편.
     public ResponseEntity<Resource> viewImage(
             @PathVariable String fileName) throws MalformedURLException {
 

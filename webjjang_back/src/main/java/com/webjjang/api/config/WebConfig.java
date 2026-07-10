@@ -14,6 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
 
         log.info("[addResourceHandlers] image URI 폴더 추가 ------");
 
+        // URI로 접근이 안되는 폴더를 접근이 가능한 URI와 매칭시켜서 접근시켜준다.
         registry.addResourceHandler("/upload/image/**")
                 .addResourceLocations("file:///C:/upload/image/");
     }
