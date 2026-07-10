@@ -58,10 +58,11 @@ public class JwtTokenProvider {
     }
 
     // 토큰을 만드는 메서드 - 정상적인 로그인이 처리되고 (토근이 없으면) 실행
-    public String createToken(String userUid, List<String> roles){
+    public String createToken(String id, String name, List<String> roles){
         log.info("[createToken] 토큰 생성 시작");
         log.info("[createToken] 토큰에 저장할 데이터 : id, name, roles");
-        Claims claims = Jwts.claims().setSubject(userUid);
+        Claims claims = Jwts.claims().setSubject(id);
+        claims.put("name",name);
         claims.put("roles",roles);
         Date now = new Date();
 
