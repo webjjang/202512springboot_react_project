@@ -81,7 +81,7 @@ public class SignServiceImpl implements SignService {
 
     @Override
     public SignInResultDto signIn(String id, String pw) throws RuntimeException {
-        log.info("[signIn] signDataHandler 로 회원 정보 요청 - id : {}", id);
+        log.info("[signIn] signDataHandler 로 회원 정보 요청 - id : {}, pw : {}", id, pw);
         Member member = qMemberRepository.getReferenceById(id);
         log.info("[signIn] member : {}", member);
 
