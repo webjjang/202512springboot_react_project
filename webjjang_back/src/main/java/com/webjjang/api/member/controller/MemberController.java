@@ -1,15 +1,13 @@
-package com.webjjang.api.controller;
+package com.webjjang.api.member.controller;
 
 import com.webjjang.api.data.dto.SignInResultDto;
 import com.webjjang.api.data.dto.SignUpResultDto;
+import com.webjjang.api.member.vo.MemberVO;
 import com.webjjang.api.service.SignService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -18,13 +16,13 @@ import java.util.Map;
 @RestController
 @RequestMapping("/sign-api")
 @Log4j2
-public class SignController {
+public class MemberController {
 
     // service 자동 DI
     private final SignService signService;
 
     @Autowired // 생성자를 이용한 자동 DI
-    public SignController(SignService signService){
+    public MemberController(SignService signService){
         this.signService = signService;
     }
 
@@ -53,17 +51,14 @@ public class SignController {
     @PostMapping("/sign-up") //  /sign-api/sign-up
     @Operation(summary = "(회원가입)")
     public SignUpResultDto signUp(
-            @Parameter(name = "id", description = "아이디", required = true) @RequestParam String id,
-            @Parameter(name = "password", description = "비밀번호", required = true) @RequestParam String password,
-            @Parameter(name = "name", description = "이름", required = true) @RequestParam String name,
-            @Parameter(name = "role", description = "권한", required = true) @RequestParam String role
+            MemberVO vo
     ){
 
         // 넘어온 데이터 확인
-        log.info("[signUp] 회원가입을 수행합니다. id : {}, password : {}, name : {}, role : {}",
-               id, password, name, role );
-        SignUpResultDto signUpResultDto = signService.signUp(id, password, name, role);
-        log.info("[signUp] 회원가입을 완료했습니다. id : {}", id);
+        log.info("[signUp] 회원가입을 수행합니다. vo : {}", vo);
+        // DB에 적용
+        SignUpResultDto signUpResultDto = signService.signUp(vo);
+        log.info("[signUp] 회원가입을 완료했습니다.");
         log.info("[signUp] signUpResultDto : {}", signUpResultDto);
 
         return signUpResultDto;
