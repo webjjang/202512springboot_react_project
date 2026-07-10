@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/sign-api")
+@RequestMapping("/member")
 @Log4j2
 public class MemberController {
 
@@ -27,9 +27,9 @@ public class MemberController {
     }
 
     //로그인 처리
-    @PostMapping("/sign-in") //  /sign-api/sign-in
+    @PostMapping("/login.do") //  /sign-api/sign-in
     @Operation(summary = "(로그인)")
-    public SignInResultDto signIn(
+    public SignInResultDto login(
             @Parameter(name = "id", description = "아이디", required = true) @RequestParam String id,
             @Parameter(name = "password", description = "비밀번호", required = true) @RequestParam String password
     ) throws RuntimeException {
@@ -45,6 +45,7 @@ public class MemberController {
                     id, signInResultDto.getToken());
         }
 
+        // 토큰이 포함됨. - react에서 X-AUTH-TOKEN 헤더에 추가해서 서버에 보내야한다.
         return signInResultDto;
     }
 

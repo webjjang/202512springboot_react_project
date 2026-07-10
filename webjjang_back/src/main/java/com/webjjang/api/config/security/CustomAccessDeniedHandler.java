@@ -18,8 +18,8 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
                        AccessDeniedException accessDeniedException) throws IOException {
 
         log.info("[handel] 접근이 막혔을 경우 경로 리다이렉트");
-        // SignController에 메서드를 처리함. - 정상 요청
-        response.sendRedirect("/sign-api/exception");
+        // 예외 처리
+        throw new RuntimeException("접근 권한이 없습니다.");
 
     }
 }
