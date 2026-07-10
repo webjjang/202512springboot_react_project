@@ -14,6 +14,12 @@ function TopNavi(){
           <li className="nav-item">
             <NavLink to={"/board/list"} className="nav-link">Board</NavLink>&nbsp;
           </li>
+          <li className="nav-item">
+            <NavLink to={"/member/write"} className="nav-link">회원가입</NavLink>&nbsp;
+          </li>
+          <li className="nav-item">
+            <NavLink to={"/member/login"} className="nav-link">Login</NavLink>&nbsp;
+          </li>
         </ul>
       </div>
     </nav>

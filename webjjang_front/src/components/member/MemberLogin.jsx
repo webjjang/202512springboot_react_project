@@ -1,101 +1,78 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import MemberDelete from "./MemberDelete";
 import { format } from "date-fns";
 
 function MemberLogin(){
   // 데이터 처리 ---------------------------------------------
-  // 파라메터로 넘어오는 데이터 수집 - useLocation
-  // const location = useLocation();
-  const [searchParams] = useSearchParams();
-  const no = searchParams.get('no');
-  const inc = searchParams.get('inc');
-  // 넘어온 데이터 확인하기
-  console.log("no:", no, ", inc:", inc);
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
 
-  // 서버에서 가져온 데이터를 저장하는 상태 변수
-  const [vo, setVo] = useState({}); // vo는 null이 아니다. vo로 판단이 안되서 vo.no로 판단한다.
-
-  // 삭제 div를 보이게/안보이게 하는 선택적 랜더링을 할 상태 변수
-  const [showDelete, setShowDelete] = useState(false);
+  // 데이터를 저장하는 부분
+  const [myJSON, setMyJSON] = useState(null);
 
   // 컴포넌트 이동 - routing : 페이지 이동
   const navigate = useNavigate();
 
   // 랜더링 전에 컴포넌트를 처음 실행할 때 Spring Boot Server에서 데이터 가져오기 - useEffect()
   useEffect(()=>{
-    axios.get(`http://localhost/member/view.do?no=${no}&inc=${inc}`)
-    .then((response) =>{
-      // 가져온 데이터 확인
-      console.log("json 데이터 : " + JSON.stringify(response.data));
-      setVo(response.data);
-    }).catch((error)=> {
-      console.log(`error : ${error}`);
-      console.log("vo : " + JSON.stringify(vo));
-      alert('데이터를 불러오는 과정에서 에러가 발생했습니다.');
-    })
-  }, [no]);// no가 바뀌면 실행된다. 
-  // link 연결시 a 태그를 사용하시면 [] 한번만 실행하는 것 가능
-  // link 연결시 <Link> <NavLink> 태그를 사용하면 현재 컴포넌트를 그대로 사용 - 그번호를 바꾸면 실행된다.
+    document.getElementById('id').focus();
+  },[]);
 
-  // 삭제 버튼은 누르면 showDelete를 상태 변경 시킨다.(토글)
-  const handleDeleteClick = () => {
-    setShowDelete(!showDelete);
-    if(showDelete) document.getElementById("pw").value = "";
+  // 등록 버튼의 클릭 처리 -> 실제적으로 등록 시키는 것. 폼을 화면에 표시(랜더링 후) -> 데이터 수집 -> 등록
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // 기본 동작을 무시시킨다. 페이지를 이동시키면서 데이터 넘기기
+
+    // 입력한 데이터를 JSON 데이터로 만든다.
+    const data = {
+      id : id,
+      pw : pw
+    }
+    // 수집한 데이터 출력 확인
+    console.log(data);
+
+    // Spring Boot로 백엔드 처리 APi 호출해서 데이터 전달
+    try {
+      const response = await axios.post("http://localhost/member/login.do",data);
+      console(response.data); // 서버에서 보낸 데이터를 출력하자.
+      setMyJSON(response.data);
+     navigate("/"); // react 서버
+    } catch (error) { // 서버에서 오류가 난 경우 : 500번 오류
+      console.log(error);
+    }
+
   }
 
-  // 데이터 저장하고 데이터를 이용해서 HTML tag를 만든다.
+
+  // id, pw를 입력하는 form tag 작성
   return(
     <>
-      <div>/member/view</div>
+      <div>/member/login</div>
       <hr />
-      <p>일반 게시판 글보기 페이지 입니다.</p>
-      <table className="table">
-        {/* 조건부 랜더링 : vo.no가 null 이거나 0 인 경우 (tag 하나 - tbody tag) 랜더링한다. */}
-        {!vo.no && (
-          <tbody>
-            <tr>
-              <td>데이터가 존재하지 않습니다.</td>
-            </tr>
-          </tbody>
-        )}
-        {/* 조건부 랜더링 : vo.no가 0이 아닌 다른 숫자인 경우 랜더링한다. no의 특성상 0보다 큰 숫자만 활용 */}
-        {vo.no && (
-            <tbody>
-                <tr>
-                <th>번호</th>
-                <td>{vo.no}</td>
-              </tr>
-              <tr>
-                <th>제목</th>
-                <td>{vo.title}</td>
-              </tr>
-              <tr>
-                <th>내용</th>
-                <td><pre>{vo.content}</pre></td>
-              </tr>
-              <tr>
-                <th>작성자</th>
-                <td>{vo.writer}</td>
-              </tr>
-              <tr>
-                <th>작성일</th>
-                <td>{format(vo.writeDate, "yyyy-MM-dd")}</td>
-              </tr>
-              <tr>
-                <th>조회수</th>
-                <td>{vo.hit}</td>
-              </tr>
-            </tbody>
-          )
-        }
-      </table>
-      <button className="btn btn-primary" onClick={() => navigate(`/member/image?no=${no}`)
-      }>수정</button>&nbsp;
-      <button className="btn btn-danger" onClick={handleDeleteClick}>삭제</button>&nbsp;
-      <Link to={"/member/list"} className="btn btn-success">리스트</Link>&nbsp;
-      { showDelete && <MemberDelete no = {vo.no} handleCancel={handleDeleteClick} />}
+      <p>회원 가입 페이지 입니다.</p>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3 mt-3">
+          <label htmlFor="id" className="form-label">아이디:</label>
+          <input type="text" className="form-control" id="id"
+           placeholder="아이디 입력" name="id" required maxLength={100}
+           onChange={(e) => setId(e.target.value)}/>
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="pw" className="form-label">비밀번호:</label>
+          <input type="password" className="form-control" id="pw"
+           placeholder="비밀번호를 입력하세요" name="pw" required maxLength={20}
+           value={pw}
+           onChange={(e) => setPw(e.target.value)} />
+        </div>
+
+
+       <button type="submit" className="btn btn-primary mr-2">가입</button>
+        <button type="reset" className="btn btn-success mr-2">새로입력</button>
+        <button type="button" className="btn btn-warning"
+          onClick={() => navigate("/")}>취소</button>
+
+      </form>
     </>
   );
 }
