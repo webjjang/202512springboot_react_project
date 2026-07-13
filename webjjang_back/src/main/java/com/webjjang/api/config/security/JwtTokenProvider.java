@@ -1,6 +1,8 @@
 package com.webjjang.api.config.security;
 
 import com.webjjang.api.data.entity.UserDetails;
+import com.webjjang.api.member.entity.MemberDetails;
+import com.webjjang.api.member.service.MemberDetailsService;
 import com.webjjang.api.service.UserDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -29,6 +31,7 @@ import java.util.List;
 public class JwtTokenProvider {
 
     private final UserDetailsService userDetailsService;
+    private final MemberDetailsService memberDetailsService;
 
     // application.properties에 springboot.jwt.secret 항목으로 세팅되어 있는 값을 가져다 사용한다.
     // 아래 초기값을 덮어 쓰기를 한다.
@@ -80,12 +83,9 @@ public class JwtTokenProvider {
         return token;
     }
 
-    // 토큰에서 사용자 이름을 꺼내는 메서드 - 토큰을 가지고 들어온 경우의 처리
-    public String getUsername(String token){
-        log.info("[getUsername] 토큰 기반 회원 구별 정보 추출 시작");
-
-//        String info = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token)
-//                        .getBody().getSubject();
+    // 토큰에서 사용자 아이디를 꺼내는 메서드 - 토큰을 가지고 들어온 경우의 처리
+    public String getId(String token){
+        log.info("[getId] 토큰 기반 회원 구별 정보 추출 시작");
 
         String info = Jwts.parserBuilder()
                 .setSigningKey(key)
@@ -93,7 +93,7 @@ public class JwtTokenProvider {
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
-        log.info("[getUsername] 토큰 기반 회원 구별 정보 추출 완료, info : {}", info);
+        log.info("[getId] 토큰 기반 회원 구별 정보 추출 완료, id : {}", info);
 
         return info;
     }
@@ -101,12 +101,12 @@ public class JwtTokenProvider {
     // 사용자 인증 정보를 반환하는 메서드
     public Authentication getAuthentication(String token) {
         log.info("[getAuthentication] 토큰 인증 정보 조회 시작");
-        UserDetails userDetails = userDetailsService.loadUserByUsername(this.getUsername(token));
-        log.info("[getAuthentication] 토큰 인증 정보 조회 완료. UserDetails.UserName : {}",
-                userDetails.getUsername());
+        MemberDetails memberDetails = memberDetailsService.loadMemberById(this.getId(token));
+        log.info("[getAuthentication] 토큰 인증 정보 조회 완료. MemberDetails.id : {}",
+                memberDetails.getId());
         // 두번째 파라메터의 "" 는 인증에 대한 처리 -> 로그인 처리가 되어 있고 토큰도 검증 완료가 된 상태
         return new UsernamePasswordAuthenticationToken
-                (userDetails, "", userDetails.getAuthorities());
+                (memberDetails, "", memberDetails.getAuthorities());
     }
 
     // 클라이언트 -> 서버로 정보가 전달되는데 이때 request 객체가 받는다. 헤더가 포함되어 있다.

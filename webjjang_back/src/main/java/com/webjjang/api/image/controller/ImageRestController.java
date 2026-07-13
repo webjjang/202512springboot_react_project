@@ -64,6 +64,7 @@ public class ImageRestController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(service.view(no, inc));
     }
+
 //   localhost/image/~~~.jpg
 //    @GetMapping("/{fileName}") - config.WebConfig에서 설정 처리하는 방법이 더 간편.
     public ResponseEntity<Resource> viewImage(

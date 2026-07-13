@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../common/api";
 
 function ImageWrite(){
   // 데이터 처리 - 데이터 표시 전에 처리, 후에 처리 가능--------
@@ -71,7 +72,8 @@ function ImageWrite(){
 
     // Spring Boot로 백엔드 처리 APi 호출해서 데이터 전달
     try {
-      const response = await axios.post("http://localhost/image/write.do",
+      // const response = await axios.post("http://localhost/image/write.do",
+      const response = await api.post("http://localhost/image/write.do",
         formData,
         {
           headers: {
