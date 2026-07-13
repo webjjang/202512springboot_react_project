@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 function MemberLogin(){
   // 데이터 처리 ---------------------------------------------
@@ -32,6 +33,33 @@ function MemberLogin(){
     try {
       const response = await axios.post("http://localhost/member/login.do",data);
       console.log(response.data); // 서버에서 보낸 데이터를 출력하자.
+
+      // react 어디서나 접근 가능한 곳에 저장해야한다.
+      const result = response.data;
+
+      // 로그인이 성공되면 처리
+      if(result.success){
+
+        // JWT 토큰 가져오기
+        const token = result.token;
+
+        // JWT 내부 정보 - id, name, roles
+        const login = jwtDecode(token);
+
+        console.log(login);
+
+        // localStorage 저장 - react 모든 곳에서 접근가능한 저장장소에 저장
+        localStorage.setItem("token", token);
+        localStorage.setItem("login", JSON.stringify(login));
+
+        alert(`${login.name}님으로 로그인되었습니다.`);
+
+        // navigate("/"); // react 서버 - 바로 적용이 안됨. 더 많은 소스를 작성 필요
+        // 다시 불러오는 location 사용.
+        location.href = "/";
+   
+      }
+      
       // navigate("/"); // react 서버
     } catch (error) { // 서버에서 오류가 난 경우 : 500번 오류
       console.log(error);
