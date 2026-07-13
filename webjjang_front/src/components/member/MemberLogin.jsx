@@ -1,15 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 function MemberLogin(){
   // 데이터 처리 ---------------------------------------------
+  // 사용자에게 키보드로 입력 받는 데이터
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-
-  // 데이터를 저장하는 부분
-  const [myJSON, setMyJSON] = useState(null);
 
   // 컴포넌트 이동 - routing : 페이지 이동
   const navigate = useNavigate();
@@ -34,9 +31,8 @@ function MemberLogin(){
     // Spring Boot로 백엔드 처리 APi 호출해서 데이터 전달
     try {
       const response = await axios.post("http://localhost/member/login.do",data);
-      console(response.data); // 서버에서 보낸 데이터를 출력하자.
-      setMyJSON(response.data);
-     navigate("/"); // react 서버
+      console.log(response.data); // 서버에서 보낸 데이터를 출력하자.
+      // navigate("/"); // react 서버
     } catch (error) { // 서버에서 오류가 난 경우 : 500번 오류
       console.log(error);
     }
@@ -54,7 +50,8 @@ function MemberLogin(){
         <div className="mb-3 mt-3">
           <label htmlFor="id" className="form-label">아이디:</label>
           <input type="text" className="form-control" id="id"
-           placeholder="아이디 입력" name="id" required maxLength={100}
+           placeholder="아이디 입력" name="id" required maxLength={20}
+           value={id}
            onChange={(e) => setId(e.target.value)}/>
         </div>
 
@@ -67,7 +64,7 @@ function MemberLogin(){
         </div>
 
 
-       <button type="submit" className="btn btn-primary mr-2">가입</button>
+       <button type="submit" className="btn btn-primary mr-2">로그인</button>
         <button type="reset" className="btn btn-success mr-2">새로입력</button>
         <button type="button" className="btn btn-warning"
           onClick={() => navigate("/")}>취소</button>

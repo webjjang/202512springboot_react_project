@@ -2,6 +2,7 @@ package com.webjjang.api.member.controller;
 
 import com.webjjang.api.data.dto.SignInResultDto;
 import com.webjjang.api.data.dto.SignUpResultDto;
+import com.webjjang.api.member.vo.LoginVO;
 import com.webjjang.api.member.vo.MemberVO;
 import com.webjjang.api.service.SignService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/member")
+@CrossOrigin(origins = "http://localhost:5173") // react 서버로 데이터 공유 허용해준다.
 @Log4j2
 public class MemberController {
 
@@ -30,8 +32,12 @@ public class MemberController {
     @PostMapping("/login.do") //  /sign-api/sign-in
     @Operation(summary = "(로그인)")
     public SignInResultDto login(
-           String id, String pw
-    ) throws RuntimeException {
+            @RequestBody LoginVO vo
+            ) throws RuntimeException {
+
+        // 넘겨 받은 데이터에서 필요한 데이터 꺼내기.
+        String id = vo.getId();
+        String pw = vo.getPw();
 
         // 넘어오는 데이터 확인하기
         log.info("[signIn] 로그인 시도를 하고 있습니다. id : {}, pw : {}", id, pw);

@@ -1,6 +1,6 @@
 function Home(){
   return(
-    <div>
+    <div className="mt-5">
       <h2>Home Page</h2>
       <p>
         홈입니다.
