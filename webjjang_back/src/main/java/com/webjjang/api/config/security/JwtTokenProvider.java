@@ -1,9 +1,7 @@
 package com.webjjang.api.config.security;
 
-import com.webjjang.api.data.entity.UserDetails;
 import com.webjjang.api.member.entity.MemberDetails;
 import com.webjjang.api.member.service.MemberDetailsService;
-import com.webjjang.api.service.UserDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
@@ -20,7 +18,6 @@ import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +27,6 @@ import java.util.List;
 // JWT : JSON Web Token - 토큰 관리 프로그램.
 public class JwtTokenProvider {
 
-    private final UserDetailsService userDetailsService;
     private final MemberDetailsService memberDetailsService;
 
     // application.properties에 springboot.jwt.secret 항목으로 세팅되어 있는 값을 가져다 사용한다.

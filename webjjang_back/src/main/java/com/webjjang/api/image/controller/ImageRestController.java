@@ -2,6 +2,7 @@ package com.webjjang.api.image.controller;
 
 import com.webjjang.api.board.service.BoardService;
 import com.webjjang.api.board.vo.BoardVO;
+import com.webjjang.api.config.security.JwtTokenProvider;
 import com.webjjang.api.image.service.ImageService;
 import com.webjjang.api.image.vo.ImageVO;
 import com.webjjang.api.util.page.PageObject;
@@ -37,6 +38,9 @@ import java.util.UUID;
 @RequiredArgsConstructor // private final 변수 자동 DI 어노테이션
 @CrossOrigin(origins = "http://localhost:5173") // react 서버로 데이터 공유 허용해준다.
 public class ImageRestController {
+
+
+    private final JwtTokenProvider jwtTokenProvider;
 
     private final ImageService service;
 
@@ -105,11 +109,14 @@ public class ImageRestController {
                     )
             )
             @RequestPart ImageVO vo,
-            @RequestPart MultipartFile imageFile) throws IOException {
+            @RequestPart MultipartFile imageFile,
+            @RequestHeader("X-AUTH-TOKEN") String token) throws IOException {
+
         log.info("[write] vo = {}, fileName = {}",
                 vo, imageFile.getOriginalFilename());
         // 데이터 세팅 - title, content 전달 받음. id : 헤더의 토큰으로 전달 받는다.(하드코딩)
-        vo.setId("test");
+//        vo.setId("test");
+        vo.setId(jwtTokenProvider.getId(token));
         // 파일을 저장하고 저장된 파일의 정보 세팅
         log.info("[write] 저장 경로 : {}", savePath);
         String originalFilename = imageFile.getOriginalFilename();
