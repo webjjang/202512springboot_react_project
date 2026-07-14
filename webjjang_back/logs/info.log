@@ -8627,3 +8627,368 @@ This generated password is for development use only. Your security configuration
 [2026-07-13 23:03:47.665] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
 [2026-07-13 23:03:47.665] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown initiated...
 [2026-07-13 23:03:47.669] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown completed.
+[2026-07-14 09:56:33.177] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-07-14 09:56:33.209] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 5244 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-14 09:56:33.209] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-14 09:56:33.235] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-07-14 09:56:33.235] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-07-14 09:56:33.976] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-14 09:56:34.028] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+[2026-07-14 09:56:34.469] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-14 09:56:34.477] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-14 09:56:34.478] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-14 09:56:34.478] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-14 09:56:34.515] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-14 09:56:34.515] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1280 ms
+[2026-07-14 09:56:34.638] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-14 09:56:34.682] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-07-14 09:56:34.709] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-14 09:56:34.878] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-14 09:56:34.898] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-07-14 09:56:34.949] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1aa555ef
+[2026-07-14 09:56:34.950] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-07-14 09:56:34.985] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-14 09:56:35.582] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-14 09:56:35.583] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-14 09:56:35.731] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-14 09:56:35.733] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-14 09:56:35.866] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-14 09:56:35.883] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 376f537d-f447-4272-a9b2-08cadb0b0f19
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-14 09:56:35.887] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-14 09:56:36.008] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-14 09:56:36.076] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-14 09:56:36.100] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-14 09:56:36.330] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-14 09:56:36.364] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-14 09:56:36.376] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-14 09:56:36.387] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 3.515 seconds (process running for 4.147)
+[2026-07-14 09:56:36.390] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-14 09:56:36.391] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-14 09:56:36.842] [INFO ] [RMI TCP Connection(4)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-07-14 09:56:36.843] [INFO ] [RMI TCP Connection(4)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-07-14 09:56:36.844] [INFO ] [RMI TCP Connection(4)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2026-07-14 09:57:32.115] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.118] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.119] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.119] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.167] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.190] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.329] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.330] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.330] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.330] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.367] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:57:32.367] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:57:32.367] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:57:32.367] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:57:32.739] [INFO ] [http-nio-80-exec-7] org.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 359 ms
+[2026-07-14 09:58:11.711] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:11.711] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:11.711] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:11.712] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:12.156] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:12.156] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:12.157] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:12.157] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:28.436] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:28.436] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:28.436] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:28.436] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:28.442] [INFO ] [http-nio-80-exec-1] com.webjjang.api.member.controller.MemberController [signIn] 로그인 시도를 하고 있습니다. id : test, pw : 1111
+[2026-07-14 09:58:28.442] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] signDataHandler 로 회원 정보 요청 - id : test, pw : 1111
+[2026-07-14 09:58:28.495] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] member : Member(id=test, pw={bcrypt}$2a$10$K4RNVSYH4qwgr0kUHTzb6.WgVl.3kv342pvl3jWtmNhcrsESTq.VO, name=홍길동, gender=남자, birth=2000-03-01T00:00, tel=010-1111-2222, postNo=11111, address=서울시, email=hong@naver.com, writeDate=2026-07-10T15:52:28.095570, conDate=2026-07-10T15:52:28.095570, roles=[ROLE_USER])
+[2026-07-14 09:58:28.496] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 비교 수행
+[2026-07-14 09:58:28.593] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 일치
+[2026-07-14 09:58:28.593] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체 생성
+[2026-07-14 09:58:28.593] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 시작
+[2026-07-14 09:58:28.593] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰에 저장할 데이터 : id, name, roles
+[2026-07-14 09:58:28.610] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 완료
+[2026-07-14 09:58:28.610] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체에 값 주입
+[2026-07-14 09:58:28.610] [INFO ] [http-nio-80-exec-1] com.webjjang.api.member.controller.MemberController [signIn] 정상적으로 로그인되었습니다. id : test, token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwibmFtZSI6Iu2Zjeq4uOuPmSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3ODM5OTA3MDgsImV4cCI6MTc4Mzk5NDMwOH0.r1BF7E2UHNP3fN6Rlndl0DxHENWoeVJu9thHnLrDv34
+[2026-07-14 09:58:35.095] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:35.095] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:35.095] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:35.095] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:35.105] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:35.105] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:35.105] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:35.105] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:43.216] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:43.216] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwibmFtZSI6Iu2Zjeq4uOuPmSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3ODM5OTA3MDgsImV4cCI6MTc4Mzk5NDMwOH0.r1BF7E2UHNP3fN6Rlndl0DxHENWoeVJu9thHnLrDv34
+[2026-07-14 09:58:43.216] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:43.216] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [validateToken] 토큰 유효 체크 시작
+[2026-07-14 09:58:43.247] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 시작
+[2026-07-14 09:58:43.247] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 09:58:43.249] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : test
+[2026-07-14 09:58:43.249] [INFO ] [http-nio-80-exec-7] com.webjjang.api.member.service.MemberDetailsServiceImpl [loadUserByUsername] loadUserByUsername 수행, id : test
+[2026-07-14 09:58:43.255] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 완료. MemberDetails.id : test
+[2026-07-14 09:58:43.256] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 성공
+[2026-07-14 09:58:43.256] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:43.275] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] vo = ImageVO(no=null, title=sadfsdafsd, content=afsdfsdaf, fileName=null, id=null, name=null, writedDate=null, updatedDate=null, hit=null), fileName = 04.이미지게시판백엔드개발.png
+[2026-07-14 09:58:43.275] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 09:58:43.275] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : test
+[2026-07-14 09:58:43.275] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] 저장 경로 : c:/upload/image/
+[2026-07-14 09:58:43.275] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] 데이터 세팅 완료 vo = ImageVO(no=null, title=sadfsdafsd, content=afsdfsdaf, fileName=5043ba5e-da53-4a19-86b3-7509e7f93ffb.png, id=test, name=null, writedDate=null, updatedDate=null, hit=null)
+[2026-07-14 09:58:43.421] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] DB에 저장된 데이터 확인. savedImageVO = ImageVO(no=2, title=sadfsdafsd, content=afsdfsdaf, fileName=5043ba5e-da53-4a19-86b3-7509e7f93ffb.png, id=test, name=null, writedDate=2026-07-14T09:58:43.326946200, updatedDate=2026-07-14T09:58:43.326946200, hit=0)
+[2026-07-14 09:58:44.897] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:44.897] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:44.897] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:44.897] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:44.909] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.member.controller.MemberController [signIn] 로그인 시도를 하고 있습니다. id : admin, pw : 1111
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] signDataHandler 로 회원 정보 요청 - id : admin, pw : 1111
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] member : Member(id=admin, pw={bcrypt}$2a$10$qJ.rjfwjbG1nS8lTDd1A3uFDy5lDTwndynq2L0jYlxx3i9NaXHY0m, name=관리자, gender=여자, birth=2006-03-01T00:00, tel=010-3333-4444, postNo=11111, address=서울시, email=admin@naver.com, writeDate=2026-07-10T15:54:39.116419, conDate=2026-07-10T15:54:39.116419, roles=[ROLE_USER, ROLE_ADMIN])
+[2026-07-14 09:58:54.160] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 비교 수행
+[2026-07-14 09:58:54.248] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 일치
+[2026-07-14 09:58:54.248] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체 생성
+[2026-07-14 09:58:54.248] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 시작
+[2026-07-14 09:58:54.248] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰에 저장할 데이터 : id, name, roles
+[2026-07-14 09:58:54.249] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 완료
+[2026-07-14 09:58:54.249] [INFO ] [http-nio-80-exec-2] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체에 값 주입
+[2026-07-14 09:58:54.249] [INFO ] [http-nio-80-exec-2] com.webjjang.api.member.controller.MemberController [signIn] 정상적으로 로그인되었습니다. id : admin, token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIm5hbWUiOiLqtIDrpqzsnpAiLCJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sImlhdCI6MTc4Mzk5MDczNCwiZXhwIjoxNzgzOTk0MzM0fQ.DPyo9FAoEOExLFmk6bAvaYrGDmid__JAybFjTAVaSfk
+[2026-07-14 09:59:00.265] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:00.265] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:00.265] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:00.265] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:00.277] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:07.432] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:07.433] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIm5hbWUiOiLqtIDrpqzsnpAiLCJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sImlhdCI6MTc4Mzk5MDczNCwiZXhwIjoxNzgzOTk0MzM0fQ.DPyo9FAoEOExLFmk6bAvaYrGDmid__JAybFjTAVaSfk
+[2026-07-14 09:59:07.433] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:07.433] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [validateToken] 토큰 유효 체크 시작
+[2026-07-14 09:59:07.436] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 시작
+[2026-07-14 09:59:07.436] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 09:59:07.438] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : admin
+[2026-07-14 09:59:07.438] [INFO ] [http-nio-80-exec-7] com.webjjang.api.member.service.MemberDetailsServiceImpl [loadUserByUsername] loadUserByUsername 수행, id : admin
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 완료. MemberDetails.id : admin
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 성공
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] vo = ImageVO(no=null, title=dfsgdfsbdsf, content=bgdsfgsf, fileName=null, id=null, name=null, writedDate=null, updatedDate=null, hit=null), fileName = 07.로그인과토큰사용프론트엔드.png
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : admin
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] 저장 경로 : c:/upload/image/
+[2026-07-14 09:59:07.442] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] 데이터 세팅 완료 vo = ImageVO(no=null, title=dfsgdfsbdsf, content=bgdsfgsf, fileName=19eefce9-81ee-4304-b0a2-c6fad8ea4a59.png, id=admin, name=null, writedDate=null, updatedDate=null, hit=null)
+[2026-07-14 09:59:07.459] [INFO ] [http-nio-80-exec-7] com.webjjang.api.image.controller.ImageRestController [write] DB에 저장된 데이터 확인. savedImageVO = ImageVO(no=3, title=dfsgdfsbdsf, content=bgdsfgsf, fileName=19eefce9-81ee-4304-b0a2-c6fad8ea4a59.png, id=admin, name=null, writedDate=2026-07-14T09:59:07.442609700, updatedDate=2026-07-14T09:59:07.442609700, hit=0)
+[2026-07-14 09:59:08.708] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:08.708] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:08.708] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:08.708] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:08.744] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:08.744] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:08.744] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 09:59:08.745] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:01.444] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:01.444] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:01.444] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:01.444] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:01.471] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:01.472] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:01.472] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:01.472] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:01.472] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:01.472] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:09.207] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:09.208] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:09.208] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:09.208] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:09.211] [INFO ] [http-nio-80-exec-1] com.webjjang.api.member.controller.MemberController [signIn] 로그인 시도를 하고 있습니다. id : test, pw : 1111
+[2026-07-14 11:04:09.211] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] signDataHandler 로 회원 정보 요청 - id : test, pw : 1111
+[2026-07-14 11:04:09.217] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] member : Member(id=test, pw={bcrypt}$2a$10$K4RNVSYH4qwgr0kUHTzb6.WgVl.3kv342pvl3jWtmNhcrsESTq.VO, name=홍길동, gender=남자, birth=2000-03-01T00:00, tel=010-1111-2222, postNo=11111, address=서울시, email=hong@naver.com, writeDate=2026-07-10T15:52:28.095570, conDate=2026-07-10T15:52:28.095570, roles=[ROLE_USER])
+[2026-07-14 11:04:09.217] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 비교 수행
+[2026-07-14 11:04:09.300] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 일치
+[2026-07-14 11:04:09.300] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체 생성
+[2026-07-14 11:04:09.300] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 시작
+[2026-07-14 11:04:09.300] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰에 저장할 데이터 : id, name, roles
+[2026-07-14 11:04:09.301] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 완료
+[2026-07-14 11:04:09.302] [INFO ] [http-nio-80-exec-1] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체에 값 주입
+[2026-07-14 11:04:09.302] [INFO ] [http-nio-80-exec-1] com.webjjang.api.member.controller.MemberController [signIn] 정상적으로 로그인되었습니다. id : test, token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwibmFtZSI6Iu2Zjeq4uOuPmSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3ODM5OTQ2NDksImV4cCI6MTc4Mzk5ODI0OX0.PZKaOZFRwE2K8ebpCT7MzwAbuQsvuZUjTZipF9hycAY
+[2026-07-14 11:04:19.207] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:19.208] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:19.208] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:19.208] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:19.218] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:19.219] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:19.219] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:19.219] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:30.974] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:30.974] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwibmFtZSI6Iu2Zjeq4uOuPmSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3ODM5OTQ2NDksImV4cCI6MTc4Mzk5ODI0OX0.PZKaOZFRwE2K8ebpCT7MzwAbuQsvuZUjTZipF9hycAY
+[2026-07-14 11:04:30.974] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:30.974] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [validateToken] 토큰 유효 체크 시작
+[2026-07-14 11:04:30.977] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 시작
+[2026-07-14 11:04:30.977] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 11:04:30.978] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : test
+[2026-07-14 11:04:30.978] [INFO ] [http-nio-80-exec-10] com.webjjang.api.member.service.MemberDetailsServiceImpl [loadUserByUsername] loadUserByUsername 수행, id : test
+[2026-07-14 11:04:30.981] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 완료. MemberDetails.id : test
+[2026-07-14 11:04:30.982] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 성공
+[2026-07-14 11:04:30.982] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:30.986] [INFO ] [http-nio-80-exec-10] com.webjjang.api.image.controller.ImageRestController [write] vo = ImageVO(no=null, title=ertgtdfgdfg, content=ewfgwegew, fileName=null, id=null, name=null, writedDate=null, updatedDate=null, hit=null), fileName = 03.일반게시판프론트엔드개발.png
+[2026-07-14 11:04:30.986] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 11:04:30.988] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : test
+[2026-07-14 11:04:30.988] [INFO ] [http-nio-80-exec-10] com.webjjang.api.image.controller.ImageRestController [write] 저장 경로 : c:/upload/image/
+[2026-07-14 11:04:30.989] [INFO ] [http-nio-80-exec-10] com.webjjang.api.image.controller.ImageRestController [write] 데이터 세팅 완료 vo = ImageVO(no=null, title=ertgtdfgdfg, content=ewfgwegew, fileName=421e66f5-53f1-4fce-8c68-59f4139a4308.png, id=test, name=null, writedDate=null, updatedDate=null, hit=null)
+[2026-07-14 11:04:31.008] [INFO ] [http-nio-80-exec-10] com.webjjang.api.image.controller.ImageRestController [write] DB에 저장된 데이터 확인. savedImageVO = ImageVO(no=4, title=ertgtdfgdfg, content=ewfgwegew, fileName=421e66f5-53f1-4fce-8c68-59f4139a4308.png, id=test, name=null, writedDate=2026-07-14T11:04:30.990938800, updatedDate=2026-07-14T11:04:30.990938800, hit=0)
+[2026-07-14 11:04:33.479] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:33.479] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:33.479] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:33.479] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:33.495] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:33.495] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:33.497] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:33.498] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:50.438] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:50.438] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:50.438] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:50.438] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:50.441] [INFO ] [http-nio-80-exec-4] com.webjjang.api.member.controller.MemberController [signIn] 로그인 시도를 하고 있습니다. id : admin, pw : 1111
+[2026-07-14 11:04:50.441] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] signDataHandler 로 회원 정보 요청 - id : admin, pw : 1111
+[2026-07-14 11:04:50.445] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] member : Member(id=admin, pw={bcrypt}$2a$10$qJ.rjfwjbG1nS8lTDd1A3uFDy5lDTwndynq2L0jYlxx3i9NaXHY0m, name=관리자, gender=여자, birth=2006-03-01T00:00, tel=010-3333-4444, postNo=11111, address=서울시, email=admin@naver.com, writeDate=2026-07-10T15:54:39.116419, conDate=2026-07-10T15:54:39.116419, roles=[ROLE_USER, ROLE_ADMIN])
+[2026-07-14 11:04:50.445] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 비교 수행
+[2026-07-14 11:04:50.530] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] 패스워드 일치
+[2026-07-14 11:04:50.530] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체 생성
+[2026-07-14 11:04:50.530] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 시작
+[2026-07-14 11:04:50.530] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰에 저장할 데이터 : id, name, roles
+[2026-07-14 11:04:50.532] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [createToken] 토큰 생성 완료
+[2026-07-14 11:04:50.532] [INFO ] [http-nio-80-exec-4] com.webjjang.api.service.impl.SignServiceImpl [signIn] SignInResultDto 객체에 값 주입
+[2026-07-14 11:04:50.532] [INFO ] [http-nio-80-exec-4] com.webjjang.api.member.controller.MemberController [signIn] 정상적으로 로그인되었습니다. id : admin, token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIm5hbWUiOiLqtIDrpqzsnpAiLCJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sImlhdCI6MTc4Mzk5NDY5MCwiZXhwIjoxNzgzOTk4MjkwfQ.CCTas_T8Hzbv-6QnuO5H-eVrTsBUT6yIbgxGd-RpRBg
+[2026-07-14 11:04:55.408] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:55.408] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:55.408] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:55.408] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:55.421] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:55.421] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:55.421] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:55.421] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:04:55.422] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:04.374] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:04.374] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsIm5hbWUiOiLqtIDrpqzsnpAiLCJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sImlhdCI6MTc4Mzk5NDY5MCwiZXhwIjoxNzgzOTk4MjkwfQ.CCTas_T8Hzbv-6QnuO5H-eVrTsBUT6yIbgxGd-RpRBg
+[2026-07-14 11:05:04.374] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:04.374] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [validateToken] 토큰 유효 체크 시작
+[2026-07-14 11:05:04.376] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 시작
+[2026-07-14 11:05:04.376] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 11:05:04.377] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : admin
+[2026-07-14 11:05:04.377] [INFO ] [http-nio-80-exec-5] com.webjjang.api.member.service.MemberDetailsServiceImpl [loadUserByUsername] loadUserByUsername 수행, id : admin
+[2026-07-14 11:05:04.380] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getAuthentication] 토큰 인증 정보 조회 완료. MemberDetails.id : admin
+[2026-07-14 11:05:04.380] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 성공
+[2026-07-14 11:05:04.380] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:04.385] [INFO ] [http-nio-80-exec-5] com.webjjang.api.image.controller.ImageRestController [write] vo = ImageVO(no=null, title=dbhsdfgfds, content=gdsfgdsfgdsf, fileName=null, id=null, name=null, writedDate=null, updatedDate=null, hit=null), fileName = 05.이미지게시판프론트엔드개발.png
+[2026-07-14 11:05:04.385] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 시작
+[2026-07-14 11:05:04.387] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [getId] 토큰 기반 회원 구별 정보 추출 완료, id : admin
+[2026-07-14 11:05:04.387] [INFO ] [http-nio-80-exec-5] com.webjjang.api.image.controller.ImageRestController [write] 저장 경로 : c:/upload/image/
+[2026-07-14 11:05:04.388] [INFO ] [http-nio-80-exec-5] com.webjjang.api.image.controller.ImageRestController [write] 데이터 세팅 완료 vo = ImageVO(no=null, title=dbhsdfgfds, content=gdsfgdsfgdsf, fileName=b2218ae8-2534-4a30-9eee-fc77efeb0af4.png, id=admin, name=null, writedDate=null, updatedDate=null, hit=null)
+[2026-07-14 11:05:04.393] [INFO ] [http-nio-80-exec-5] com.webjjang.api.image.controller.ImageRestController [write] DB에 저장된 데이터 확인. savedImageVO = ImageVO(no=5, title=dbhsdfgfds, content=gdsfgdsfgdsf, fileName=b2218ae8-2534-4a30-9eee-fc77efeb0af4.png, id=admin, name=null, writedDate=2026-07-14T11:05:04.389475300, updatedDate=2026-07-14T11:05:04.389475300, hit=0)
+[2026-07-14 11:05:05.639] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.639] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.639] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.640] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:05.652] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.652] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.652] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.654] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:05.653] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-14 11:05:05.654] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-14 11:05:05.654] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-14 11:05:05.654] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-14 11:05:05.654] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료

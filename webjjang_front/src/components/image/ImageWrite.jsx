@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../common/api";
@@ -73,6 +73,7 @@ function ImageWrite(){
     // Spring Boot로 백엔드 처리 APi 호출해서 데이터 전달
     try {
       // const response = await axios.post("http://localhost/image/write.do",
+      // api : axios를 이용해서 토큰을 헤더로 붙이는 객체
       const response = await api.post("http://localhost/image/write.do",
         formData,
         {
