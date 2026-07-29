@@ -112,3 +112,669 @@ This generated password is for development use only. Your security configuration
 [2026-07-29 10:48:37.418] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
 [2026-07-29 10:48:37.420] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
 [2026-07-29 10:48:37.422] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2026-07-29 13:41:29.945] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-07-29 13:41:29.973] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:41:29.974] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:41:30.000] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-07-29 13:41:30.000] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-07-29 13:41:30.773] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:41:30.868] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 90 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:41:31.392] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:41:31.402] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:41:31.403] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:41:31.404] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:41:31.450] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:41:31.451] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1451 ms
+[2026-07-29 13:41:31.591] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:41:31.639] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-07-29 13:41:31.665] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:41:31.855] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:41:31.877] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-07-29 13:41:31.926] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7b332200
+[2026-07-29 13:41:31.928] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-07-29 13:41:31.969] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:41:32.600] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:41:32.602] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:41:32.762] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:41:32.764] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:41:33.037] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:41:33.058] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 731f59d3-c997-4a4e-b8ef-37618a2c820f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:41:33.062] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:41:33.201] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:41:33.283] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:41:33.314] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:41:33.584] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:41:33.623] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:41:33.635] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:41:33.646] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 4.017 seconds (process running for 4.585)
+[2026-07-29 13:41:33.651] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:41:33.651] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:41:34.006] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-07-29 13:41:34.007] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-07-29 13:41:34.009] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2026-07-29 13:42:21.229] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.240] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.240] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.240] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.295] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.295] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.295] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.295] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.299] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.300] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.300] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.300] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.300] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.395] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.395] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.395] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.395] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.411] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.411] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.411] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.411] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.427] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:21.427] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:21.427] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:21.427] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:21.876] [INFO ] [http-nio-80-exec-9] org.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 437 ms
+[2026-07-29 13:42:39.439] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:42:39.440] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:42:39.440] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:42:39.440] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:42:39.841] [INFO ] [http-nio-80-exec-10] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-07-29 13:43:24.086] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:43:24.086] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:43:24.087] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:43:24.087] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:43:24.100] [INFO ] [http-nio-80-exec-4] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-07-29 13:45:02.190] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[2026-07-29 13:45:02.192] [INFO ] [Thread-5] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:45:02.193] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:45:02.236] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:45:02.237] [INFO ] [Thread-5] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:45:02.261] [INFO ] [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:45:02.264] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2026-07-29 13:45:02.266] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2026-07-29 13:45:02.322] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:45:02.322] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:45:02.507] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:45:02.529] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 21 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:45:02.595] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:45:02.595] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:45:02.595] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:45:02.596] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:45:02.616] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:45:02.616] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 293 ms
+[2026-07-29 13:45:02.648] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:45:02.649] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:45:02.655] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:45:02.656] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+[2026-07-29 13:45:02.658] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-2 - Added connection org.mariadb.jdbc.Connection@4ed5e35b
+[2026-07-29 13:45:02.658] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+[2026-07-29 13:45:02.659] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:45:02.713] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:45:02.714] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:45:02.755] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:45:02.755] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:45:02.794] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:45:02.799] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 025869fa-b207-4968-9bd7-ed39ead11183
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:45:02.800] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:45:02.839] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:45:02.862] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:45:02.883] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:45:02.945] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:45:02.954] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:45:02.957] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:45:02.963] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.658 seconds (process running for 213.903)
+[2026-07-29 13:45:02.964] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:45:02.964] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:45:02.965] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-07-29 13:46:14.312] [INFO ] [http-nio-80-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-07-29 13:46:14.312] [INFO ] [http-nio-80-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-07-29 13:46:14.314] [INFO ] [http-nio-80-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2026-07-29 13:46:14.316] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:46:14.316] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:46:14.316] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:46:14.316] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:46:14.368] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-07-29 13:47:11.698] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+[2026-07-29 13:47:11.700] [INFO ] [Thread-32] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:47:11.700] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:11.758] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:47:11.758] [INFO ] [Thread-32] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:11.762] [INFO ] [Thread-32] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:47:11.763] [INFO ] [Thread-32] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+[2026-07-29 13:47:11.764] [INFO ] [Thread-32] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+[2026-07-29 13:47:11.825] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:47:11.825] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:47:12.054] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:47:12.078] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:47:12.159] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:47:12.159] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:12.159] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:47:12.159] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:47:12.184] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:47:12.185] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 358 ms
+[2026-07-29 13:47:12.229] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:47:12.231] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:47:12.237] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:47:12.237] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Starting...
+[2026-07-29 13:47:12.241] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-3 - Added connection org.mariadb.jdbc.Connection@7033f0f0
+[2026-07-29 13:47:12.242] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Start completed.
+[2026-07-29 13:47:12.243] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:47:12.316] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:47:12.316] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:47:12.364] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:47:12.364] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:47:12.429] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:47:12.436] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: e646dfc7-aa18-487d-8be1-686d67542907
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:47:12.436] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:47:12.483] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:47:12.506] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:47:12.525] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:47:12.600] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:47:12.607] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:12.611] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:47:12.620] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.82 seconds (process running for 343.56)
+[2026-07-29 13:47:12.622] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:47:12.622] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:47:12.623] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-07-29 13:47:14.043] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+[2026-07-29 13:47:14.045] [INFO ] [Thread-60] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:47:14.045] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:14.089] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:47:14.089] [INFO ] [Thread-60] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:14.091] [INFO ] [Thread-60] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:47:14.092] [INFO ] [Thread-60] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown initiated...
+[2026-07-29 13:47:14.094] [INFO ] [Thread-60] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown completed.
+[2026-07-29 13:47:14.148] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:47:14.148] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:47:14.324] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:47:14.345] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:47:14.401] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:47:14.401] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:14.402] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:47:14.402] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:47:14.422] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:47:14.422] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 273 ms
+[2026-07-29 13:47:14.478] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:47:14.480] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:47:14.484] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:47:14.484] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Starting...
+[2026-07-29 13:47:14.486] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-4 - Added connection org.mariadb.jdbc.Connection@10051b15
+[2026-07-29 13:47:14.486] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Start completed.
+[2026-07-29 13:47:14.487] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:47:14.540] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:47:14.540] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:47:14.576] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:47:14.576] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:47:14.611] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:47:14.616] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 740ce9ec-7fdf-4da0-a614-6ac237558dc2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:47:14.616] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:47:14.653] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:47:14.676] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:47:14.695] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:47:14.764] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:47:14.773] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:47:14.775] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:47:14.783] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.652 seconds (process running for 345.722)
+[2026-07-29 13:47:14.783] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:47:14.783] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:47:14.784] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-07-29 13:49:01.469] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+[2026-07-29 13:49:01.470] [INFO ] [Thread-64] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:49:01.470] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:49:01.520] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:49:01.520] [INFO ] [Thread-64] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:49:01.523] [INFO ] [Thread-64] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:49:01.523] [INFO ] [Thread-64] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown initiated...
+[2026-07-29 13:49:01.525] [INFO ] [Thread-64] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown completed.
+[2026-07-29 13:49:01.586] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:49:01.586] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:49:01.811] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:49:01.832] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:49:01.889] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:49:01.890] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:49:01.890] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:49:01.890] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:49:01.912] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:49:01.912] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 325 ms
+[2026-07-29 13:49:01.946] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:49:01.948] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:49:01.953] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:49:01.954] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Starting...
+[2026-07-29 13:49:01.957] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-5 - Added connection org.mariadb.jdbc.Connection@456f2853
+[2026-07-29 13:49:01.957] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Start completed.
+[2026-07-29 13:49:01.958] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:49:01.998] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:49:01.998] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:49:02.036] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:49:02.037] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:49:02.066] [WARN ] [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pacsRestController' defined in file [D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes\com\webjjang\api\pacs\controller\PacsRestController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.webjjang.api.pacs.service.PacsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2026-07-29 13:49:02.066] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:49:02.066] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown initiated...
+[2026-07-29 13:49:02.112] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown completed.
+[2026-07-29 13:49:02.112] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2026-07-29 13:49:02.120] [INFO ] [restartedMain] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2026-07-29 13:49:02.133] [ERROR] [restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.webjjang.api.pacs.controller.PacsRestController required a bean of type 'com.webjjang.api.pacs.service.PacsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.webjjang.api.pacs.service.PacsService' in your configuration.
+
+[2026-07-29 13:52:15.871] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:52:15.871] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:52:16.037] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:52:16.055] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:52:16.111] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:52:16.112] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:52:16.112] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:52:16.112] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:52:16.132] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:52:16.132] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 260 ms
+[2026-07-29 13:52:16.164] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:52:16.165] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:52:16.168] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:52:16.169] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Starting...
+[2026-07-29 13:52:16.171] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-6 - Added connection org.mariadb.jdbc.Connection@1490f5d4
+[2026-07-29 13:52:16.171] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Start completed.
+[2026-07-29 13:52:16.172] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:52:16.208] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:52:16.208] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:52:16.244] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:52:16.244] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:52:16.278] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:52:16.283] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 6fbd4f6a-7665-4e97-ad31-326de63b9952
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:52:16.284] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:52:16.319] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:52:16.342] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:52:16.360] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:52:16.419] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:52:16.428] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:52:16.430] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:52:16.436] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.577 seconds (process running for 647.376)
+[2026-07-29 13:52:16.436] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:52:16.436] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:52:16.437] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-07-29 13:55:05.972] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+[2026-07-29 13:55:05.973] [INFO ] [Thread-68] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:55:05.973] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:06.020] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:55:06.021] [INFO ] [Thread-68] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:06.023] [INFO ] [Thread-68] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:06.023] [INFO ] [Thread-68] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown initiated...
+[2026-07-29 13:55:06.024] [INFO ] [Thread-68] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown completed.
+[2026-07-29 13:55:06.078] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:55:06.078] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:55:06.266] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:55:06.288] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 21 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:55:06.347] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:55:06.347] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:06.348] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:55:06.348] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:55:06.369] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:55:06.370] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 291 ms
+[2026-07-29 13:55:06.401] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:55:06.402] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:55:06.406] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:55:06.407] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Starting...
+[2026-07-29 13:55:06.409] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-7 - Added connection org.mariadb.jdbc.Connection@1c954f63
+[2026-07-29 13:55:06.409] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Start completed.
+[2026-07-29 13:55:06.410] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:55:06.456] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:55:06.456] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:06.489] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:55:06.489] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:55:06.523] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:55:06.529] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 25f8c3f6-f2ac-4ad2-b994-1c4d2817e26d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:55:06.529] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:55:06.564] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:55:06.587] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:55:06.606] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:55:06.664] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:55:06.673] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:06.675] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:55:06.680] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.617 seconds (process running for 817.621)
+[2026-07-29 13:55:06.681] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:55:06.681] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:55:06.682] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-07-29 13:55:34.037] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 76 class path changes (0 additions, 75 deletions, 1 modification)
+[2026-07-29 13:55:34.038] [INFO ] [Thread-75] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:55:34.039] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:34.094] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:55:34.094] [INFO ] [Thread-75] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:34.096] [INFO ] [Thread-75] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:34.096] [INFO ] [Thread-75] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown initiated...
+[2026-07-29 13:55:34.099] [INFO ] [Thread-75] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown completed.
+[2026-07-29 13:55:34.152] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:55:34.152] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:55:34.294] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:55:34.295] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+[2026-07-29 13:55:34.347] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:55:34.347] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:34.348] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:55:34.348] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:55:34.374] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:55:34.374] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 222 ms
+[2026-07-29 13:55:34.409] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:55:34.410] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:55:34.414] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:55:34.414] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Starting...
+[2026-07-29 13:55:34.418] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-8 - Added connection org.mariadb.jdbc.Connection@554757c7
+[2026-07-29 13:55:34.418] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Start completed.
+[2026-07-29 13:55:34.419] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:55:34.431] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:55:34.431] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:34.454] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:55:34.560] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: ffbcaa57-0381-4cde-bae7-48fef35a3768
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:55:34.561] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:55:34.583] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:55:34.612] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:55:34.625] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:34.628] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:55:34.634] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.498 seconds (process running for 845.576)
+[2026-07-29 13:55:34.637] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:55:34.637] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:55:34.639] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+[2026-07-29 13:55:36.860] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 75 class path changes (75 additions, 0 deletions, 0 modifications)
+[2026-07-29 13:55:36.861] [INFO ] [Thread-79] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:55:36.861] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:36.916] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:55:36.916] [INFO ] [Thread-79] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:36.918] [INFO ] [Thread-79] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:36.918] [INFO ] [Thread-79] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Shutdown initiated...
+[2026-07-29 13:55:36.920] [INFO ] [Thread-79] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Shutdown completed.
+[2026-07-29 13:55:36.983] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 22780 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:55:36.983] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:55:37.242] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:55:37.264] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 21 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:55:37.326] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:55:37.326] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:37.327] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:55:37.327] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:55:37.349] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:55:37.349] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 366 ms
+[2026-07-29 13:55:37.383] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:55:37.384] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:55:37.387] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:55:37.387] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-9 - Starting...
+[2026-07-29 13:55:37.389] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-9 - Added connection org.mariadb.jdbc.Connection@600ad84d
+[2026-07-29 13:55:37.390] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-9 - Start completed.
+[2026-07-29 13:55:37.390] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:55:37.434] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:55:37.434] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:37.471] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:55:37.471] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:55:37.511] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:55:37.517] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 6630f139-4e4c-4370-9ba9-c4170247e675
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:55:37.520] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:55:37.555] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:55:37.577] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:55:37.596] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:55:37.661] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:55:37.669] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:37.672] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:55:37.679] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.713 seconds (process running for 848.619)
+[2026-07-29 13:55:37.680] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:55:37.680] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:55:37.681] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+[2026-07-29 13:55:48.610] [INFO ] [SpringApplicationShutdownHook] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-07-29 13:55:48.654] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-07-29 13:55:48.657] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:48.657] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-9 - Shutdown initiated...
+[2026-07-29 13:55:48.659] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-9 - Shutdown completed.
+[2026-07-29 13:55:50.118] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-07-29 13:55:50.153] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 20884 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-07-29 13:55:50.154] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-07-29 13:55:50.181] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-07-29 13:55:50.181] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-07-29 13:55:50.873] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-07-29 13:55:50.968] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 90 ms. Found 5 JPA repository interfaces.
+[2026-07-29 13:55:51.366] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-07-29 13:55:51.373] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:51.374] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-07-29 13:55:51.374] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-07-29 13:55:51.412] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-07-29 13:55:51.413] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1232 ms
+[2026-07-29 13:55:51.537] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-07-29 13:55:51.559] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-07-29 13:55:51.574] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-07-29 13:55:51.712] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-07-29 13:55:51.727] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-07-29 13:55:51.774] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ae0a811
+[2026-07-29 13:55:51.775] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-07-29 13:55:51.809] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-07-29 13:55:52.362] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-07-29 13:55:52.364] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-07-29 13:55:52.514] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-07-29 13:55:52.517] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-07-29 13:55:52.756] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-07-29 13:55:52.773] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 6350fa16-1e7f-474f-b6d4-06a03bea8ce9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-07-29 13:55:52.776] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-29 13:55:52.901] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-07-29 13:55:52.970] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-07-29 13:55:52.998] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-07-29 13:55:53.267] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-07-29 13:55:53.305] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-07-29 13:55:53.317] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-07-29 13:55:53.328] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 3.539 seconds (process running for 4.102)
+[2026-07-29 13:55:53.332] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-07-29 13:55:53.332] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-07-29 13:55:53.902] [INFO ] [RMI TCP Connection(2)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-07-29 13:55:53.902] [INFO ] [RMI TCP Connection(2)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-07-29 13:55:53.904] [INFO ] [RMI TCP Connection(2)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2026-07-29 13:56:06.673] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-07-29 13:56:06.676] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-07-29 13:56:06.676] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-07-29 13:56:06.676] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-07-29 13:56:07.092] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-07-29 13:56:07.098] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260729T044516, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f], Type=Study}
+[2026-07-29 13:56:07.098] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.tags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
