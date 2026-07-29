@@ -40,9 +40,22 @@ public class PacsServiceImpl implements PacsService{
                     .block();
             log.info("[getStudyList] study = {}", study);
 
-            Map<String, String > tags = (Map<String, String >) study.get("MainDicomTags");
+            Map<String, String > mainDicomTags = (Map<String, String >) study.get("MainDicomTags");
+            Map<String, String > patientMainDicomTags = (Map<String, String >) study.get("PatientMainDicomTags");
 
-            log.info("[getStudyList] study.tags = {}", tags);
+            log.info("[getStudyList] study.mainDicomTags = {}", mainDicomTags);
+            log.info("[getStudyList] study.patientMainDicomTags = {}", patientMainDicomTags);
+
+            // StudyVO 저장 -> List에 담는다.
+            StudyVO vo = new StudyVO();
+            vo.setId(id);
+            vo.setPatientName(patientMainDicomTags.get("PatientName"));
+            vo.setPatientId(patientMainDicomTags.get("PatientID"));
+            vo.setStudyDate(mainDicomTags.get("StudyDate"));
+            vo.setStudyDescription(mainDicomTags.get("StudyDescription"));
+
+            list.add(vo);
+
         }
 
         return list;
