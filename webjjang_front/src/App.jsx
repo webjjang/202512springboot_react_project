@@ -5,6 +5,7 @@ import NotFoundMenu from "./components/error/NotFoundMenu"
 import BoardComp from "./components/board/BoardComp"
 import ImageComp from "./components/image/ImageComp"
 import MemberComp from "./components/member/MemberComp"
+import PacsComp from "./components/pacs/PacsComp"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/board/*" element={<BoardComp />} />
           <Route path="/image/*" element={<ImageComp />} />
+          <Route path="/pacs/*" element={<PacsComp />} />
           <Route path="/member/*" element={<MemberComp />} />
           <Route path="*" element={<NotFoundMenu />} />
         </Routes>
