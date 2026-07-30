@@ -23,7 +23,7 @@ public class PacsServiceImpl implements PacsService{
     public List<StudyVO> getStudyList(){
         List<StudyVO> list = new ArrayList<>();
 
-        // study id에 대한 데이터들 가져오기
+        // study id 배열 데이터를 가져오기
         List<String> ids = orthancWebClient.get()
                 .uri("/studies")
                 .retrieve()// 받는 데이터 처리 쉽게 하기 위해
@@ -33,6 +33,7 @@ public class PacsServiceImpl implements PacsService{
         log.info("[getStudyList] ids = {}", ids);
 
         for (String id : ids){
+            // study id에 대한 상세정보 가져오기
             Map<String, Object> study = orthancWebClient.get()
                     .uri("/studies/{id}", id)
                     .retrieve()
@@ -40,7 +41,9 @@ public class PacsServiceImpl implements PacsService{
                     .block();
             log.info("[getStudyList] study = {}", study);
 
+            // study 정보가 들어 있음
             Map<String, String > mainDicomTags = (Map<String, String >) study.get("MainDicomTags");
+            // patient 정보가 들어 있음.
             Map<String, String > patientMainDicomTags = (Map<String, String >) study.get("PatientMainDicomTags");
 
             log.info("[getStudyList] study.mainDicomTags = {}", mainDicomTags);
@@ -48,11 +51,35 @@ public class PacsServiceImpl implements PacsService{
 
             // StudyVO 저장 -> List에 담는다.
             StudyVO vo = new StudyVO();
+
+            // Orthanc 전체 정보
             vo.setId(id);
-            vo.setPatientName(patientMainDicomTags.get("PatientName"));
+            vo.setStable(Boolean.TRUE.equals(study.get("IsStable")));
+            vo.setParentPatient((String) study.get("ParentPatient"));
+
+            // Patient 정보 저장
             vo.setPatientId(patientMainDicomTags.get("PatientID"));
+            vo.setPatientName(patientMainDicomTags.get("PatientName"));
+            vo.setPatientSex(patientMainDicomTags.get("PatientSex"));
+            vo.setPatientBirthDate(patientMainDicomTags.get("PatientBirthDate"));
+
+            // study data
+            vo.setStudyInstanceUID(mainDicomTags.get("StudyInstanceUID"));
+            vo.setStudyID(mainDicomTags.get("StudyID"));
             vo.setStudyDate(mainDicomTags.get("StudyDate"));
-            vo.setStudyDescription(mainDicomTags.get("StudyDescription"));
+            vo.setStudyTime(mainDicomTags.get("StudyTime"));
+
+            // Description이 없으면 null 대신에 -로 표시한다.
+            String description = mainDicomTags.get("StudyDescription");
+            // description이 비어 있으면(null이거나 "") "-" 바꾼다.
+            if(description == null || description.isBlank())
+                description = "-";
+            vo.setStudyDescription(description);
+            vo.setAccessionNumber(mainDicomTags.get("AccessionNumber"));
+            vo.setRequestedProcedureDescription(mainDicomTags.get("RequestedProcedureDescription"));
+
+            // Series
+            vo.setSeries((List<String>) study.get("Series"));
 
             list.add(vo);
 
