@@ -27,4 +27,14 @@ public class PacsRestController {
         return ResponseEntity.status(HttpStatus.OK).body(pacsService.getStudyList());
     }
 
+    // Pacs Study 상세 정보보기
+    @GetMapping("/view.do")
+    public ResponseEntity<StudyVO> getStudyDetail(String id) {
+
+        log.info("[getStudyDetail] id = {}", id);
+        return ResponseEntity.ok(
+                pacsService.getStudyDetail(id)
+        );
+    }
+
 }

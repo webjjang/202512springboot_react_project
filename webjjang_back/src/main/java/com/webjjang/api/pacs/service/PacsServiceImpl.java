@@ -1,5 +1,6 @@
 package com.webjjang.api.pacs.service;
 
+import com.webjjang.api.pacs.vo.SeriesVO;
 import com.webjjang.api.pacs.vo.StudyVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -78,7 +79,7 @@ public class PacsServiceImpl implements PacsService{
             vo.setAccessionNumber(mainDicomTags.get("AccessionNumber"));
             vo.setRequestedProcedureDescription(mainDicomTags.get("RequestedProcedureDescription"));
 
-            // Series
+            // Series 카운트 처리
             List<String> seriesIds = (List<String>) study.get("Series");
             vo.setSeriesCount(seriesIds == null ? 0 : seriesIds.size());
 
@@ -87,6 +88,136 @@ public class PacsServiceImpl implements PacsService{
         }
 
         return list;
+    } // getStudyList() 의 끝
+
+    // study 데이터 상세 보기
+    @Override
+    public StudyVO getStudyDetail(String studyId) {
+
+        // studyId에 맞는 데이터 가져오기
+        Map<String, Object> study = orthancWebClient
+                .get()
+                .uri("/studies/{id}", studyId)
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<Map<String, Object>>() {})
+                .block();
+
+        if(study == null) {
+            return null;
+        }
+
+        StudyVO vo = new StudyVO();
+
+        vo.setId((String) study.get("ID"));
+
+        //-----------------------------
+        // Patient 정보
+        //-----------------------------
+        Map<String, String> patient =
+                (Map<String, String>) study.get("PatientMainDicomTags");
+
+        if (patient != null) {
+            vo.setPatientName(patient.get("PatientName"));
+            vo.setPatientId(patient.get("PatientID"));
+            vo.setPatientBirthDate(patient.get("PatientBirthDate"));
+            vo.setPatientSex(patient.get("PatientSex"));
+        }
+
+        //-----------------------------
+        // Study 정보
+        //-----------------------------
+        Map<String, String> tags =
+                (Map<String, String>) study.get("MainDicomTags");
+
+        if (tags != null) {
+            vo.setStudyDate(tags.get("StudyDate"));
+            vo.setStudyTime(tags.get("StudyTime"));
+            vo.setStudyDescription(tags.get("StudyDescription"));
+            vo.setAccessionNumber(tags.get("AccessionNumber"));
+        }
+
+        //-----------------------------
+        // Count
+        //-----------------------------
+
+        // series id 꺼내오기
+        List<String> series =
+                (List<String>) study.get("Series");
+        // instances 아이디 꺼내오기.
+        List<String> instances =
+                (List<String>) study.get("Instances");
+
+        // .size() - List에 들어 있는 데이터의 개수를 가져오는 메서드
+        vo.setSeriesCount(series == null ? 0 : series.size());
+        vo.setInstanceCount(instances == null ? 0 : instances.size()); // 의미 없음. 밑에서 처리하고 있음.
+
+        //-----------------------------
+        // Series 조회
+        //-----------------------------
+        if (series != null) {
+
+            List<SeriesVO> seriesList = new ArrayList<>();
+            int totalInstanceCount = 0;
+
+            for (String seriesId : series) {
+
+                // series 데이터를 꺼내오기. getSeries() 는 밑에서 선언해 놓음.
+                SeriesVO seriesVO = getSeries(seriesId);
+
+                if (seriesVO != null) {
+                    seriesList.add(seriesVO);
+
+                    if (seriesVO.getInstanceCount() != null) {
+                        // 각각의 series에 들어있는 Instance의 개수를 더한다.
+                        totalInstanceCount += seriesVO.getInstanceCount();
+                    }
+                }
+            } // for문의 끝
+
+            // StudyVO에 seriesList 담기
+            vo.setSeriesList(seriesList);
+            // StudyVO에 전체 Instance 개수를 담아둔다.
+            vo.setInstanceCount(totalInstanceCount);
+        }
+
+        return vo;
+    } // getStudyDetail()의 끝
+
+    // Siries의 정보를 가져오는 메서드
+    private SeriesVO getSeries(String seriesId) {
+
+        Map<String, Object> series = orthancWebClient
+                .get()
+                .uri("/series/{id}", seriesId)
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<Map<String, Object>>() {})
+                .block();
+
+        if(series == null) return null;
+
+        log.info("[getSeries] series = {}", series);
+
+        SeriesVO vo = new SeriesVO();
+        vo.setId((String) series.get("ID"));
+
+        Map<String, String> tags =
+                (Map<String, String>) series.get("MainDicomTags");
+
+        if (tags != null) {
+            vo.setModality(tags.get("Modality"));
+            vo.setSeriesDescription(tags.get("SeriesDescription"));
+            vo.setSeriesNumber(tags.get("SeriesNumber"));
+        }
+
+        // 인스턴스 id 목록 받아오기
+        List<String> instances =
+                (List<String>) series.get("Instances");
+
+        // instance 개수 저장하기.
+        vo.setInstanceCount(instances == null ? 0 : instances.size());
+
+        return vo;
     }
 
-}
+
+    } // PacsServiceImpl 클래스의 끝
