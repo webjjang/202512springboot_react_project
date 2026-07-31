@@ -30,7 +30,12 @@ public class StudyVO {
     private String parentPatient;
     private boolean stable;
 
-    // Series 정보
-    private List<String> series;
+    // 카운트 정보 저장 변수
+    private Integer seriesCount;
+    private Integer instanceCount;
+
+    // Series 정보 : String - id --> SeriesVO
+    // private List<String> series;
+    private List<SeriesVO> seriesList;
 
 }

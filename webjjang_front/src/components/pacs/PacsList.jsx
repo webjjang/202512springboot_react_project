@@ -209,9 +209,10 @@ function PacsList(){
                   </td>
 
                   <td className="text-center">
-                    {Array.isArray(study.series)
+                    {/*Array.isArray(study.series)
                       ? study.series.length
-                      : 0}
+                      : 0*/}
+                      {study.seriesCount}
                   </td>
 
                   <td className="text-center">

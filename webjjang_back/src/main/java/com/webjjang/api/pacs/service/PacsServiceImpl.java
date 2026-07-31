@@ -79,7 +79,8 @@ public class PacsServiceImpl implements PacsService{
             vo.setRequestedProcedureDescription(mainDicomTags.get("RequestedProcedureDescription"));
 
             // Series
-            vo.setSeries((List<String>) study.get("Series"));
+            List<String> seriesIds = (List<String>) study.get("Series");
+            vo.setSeriesCount(seriesIds == null ? 0 : seriesIds.size());
 
             list.add(vo);
 
