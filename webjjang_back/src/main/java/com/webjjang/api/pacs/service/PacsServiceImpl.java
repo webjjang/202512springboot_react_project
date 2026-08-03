@@ -191,7 +191,7 @@ public class PacsServiceImpl implements PacsService{
         return vo;
     } // getStudyDetail()의 끝
 
-    // Siries의 정보를 가져오는 메서드
+   // Siries의 정보를 가져오는 메서드
     private SeriesVO getSeries(String seriesId) {
 
         Map<String, Object> series = orthancWebClient
@@ -227,5 +227,17 @@ public class PacsServiceImpl implements PacsService{
         return vo;
     }
 
+    @Override
+    // DB의 텍스트 정보만 수정
+    public StudyVO updateStudyInfo(Long no, StudyVO updateVO) {
+        return null;
+    } // updateStudyInfo() 메서드의 끝
 
-    } // PacsServiceImpl 클래스의 끝
+    @Override
+    // Pacs 서버에서 DICOM 데이터를 가져와서 DB에 저장하기
+    public StudyVO saveStudyFromOrthanc(String orthancStudyId) {
+        return null;
+    }
+
+
+} // PacsServiceImpl 클래스의 끝
