@@ -1,5 +1,8 @@
 package com.webjjang.api.pacs.service;
 
+import com.webjjang.api.pacs.repository.PacsPatientRepository;
+import com.webjjang.api.pacs.repository.PacsSeriesRepository;
+import com.webjjang.api.pacs.repository.PacsStudyRepository;
 import com.webjjang.api.pacs.vo.SeriesVO;
 import com.webjjang.api.pacs.vo.StudyVO;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +22,11 @@ public class PacsServiceImpl implements PacsService{
 
     // 자동 DI - WebClientConfig 에서 생성해 놓으라고 설정함.
     private final WebClient orthancWebClient;
+
+    // DB에 저장하는 Repository 자동 DI
+    private final PacsPatientRepository pacsPatientRepository;
+    private final PacsStudyRepository pacsStudyRepository;
+    private final PacsSeriesRepository pacsSeriesRepository;
 
     @Override
     public List<StudyVO> getStudyList(){
