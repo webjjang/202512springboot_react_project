@@ -89,7 +89,7 @@ public class PacsStudy {
     private Integer instanceCount = 0;
 
     /**
-     * Patient (N:1)
+     * Patient (N:1)- 양방향 관계
      */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "patient_no", nullable = false)
@@ -99,9 +99,10 @@ public class PacsStudy {
      * Study -> Series (1:N)
      */
     @OneToMany(
-            mappedBy = "study",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true,
+            mappedBy = "study", // 주인이 내가 아님. - 외래키 관리 : PacsSeries에서 관리
+            cascade = CascadeType.ALL,// 참조하고 있는 내용을 적용시킨다.
+            orphanRemoval = true, // 부모 데이터와 관계가 끊어지면 삭제한다.
+            // LAZY - 필요할 때만 데이터를 가져온다. : select, FetchType.EAGER - 처음부터 데이터 가져옴.
             fetch = FetchType.LAZY
     )
     @Builder.Default

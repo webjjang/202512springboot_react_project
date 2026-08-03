@@ -58,7 +58,7 @@ public class PacsSeries {
     private Integer instanceCount = 0;
 
     /**
-     * Study (N : 1)
+     * Study (N : 1) - 양방향 설정
      */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "study_no", nullable = false)
