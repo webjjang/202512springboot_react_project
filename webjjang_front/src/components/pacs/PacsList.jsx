@@ -124,6 +124,18 @@ function PacsList(){
   };
 
 
+  const studyListSync = async() => {
+     
+      try{
+        // Pacs 서버에서 데이터 가져와 DB에 저장하기 처리
+        await api.get("http://localhost/pacs/sync.do");
+        window.location.reload(); // 페이지 새로고침. a tag 동작같다. 화면 전체가 새롭게 다시 불러온다.
+      } catch (error) {
+        // 서버에서 처리 오류
+        console.error("PACS 목록 동기화 오류 : ", error);
+      } // try ~ catch 의 끝
+   } // getStudyList 함수의 끝
+  
 
   // 데이터 표시 부분
   return(
@@ -140,9 +152,9 @@ function PacsList(){
         <button
           type="button"
           className="btn btn-outline-primary"
-          onClick={() => window.location.reload()}
+          onClick={() => studyListSync()}
         >
-          새로고침
+          동기화
         </button>
       </div>
 
