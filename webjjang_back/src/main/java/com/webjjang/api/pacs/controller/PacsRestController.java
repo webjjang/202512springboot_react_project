@@ -37,4 +37,11 @@ public class PacsRestController {
         );
     }
 
+    // Pacs 서버의 데이터와 DB 데이터를 동기화 시키는 메서드
+    @GetMapping("/sync.do")
+    public ResponseEntity<String> studyListSync() {
+        pacsService.saveStudyFromOrthanc(null);
+        return null;
+    }
+
 }

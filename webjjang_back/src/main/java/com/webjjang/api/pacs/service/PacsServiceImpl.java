@@ -234,10 +234,51 @@ public class PacsServiceImpl implements PacsService{
     } // updateStudyInfo() 메서드의 끝
 
     @Override
-    // Pacs 서버에서 DICOM 데이터를 가져와서 DB에 저장하기
+    // Pacs 서버에서 DICOM 전체 데이터를 가져와서 DB에 저장하기
     public StudyVO saveStudyFromOrthanc(String orthancStudyId) {
+        // study ids를 가져오기
+        List<String> orthancStudyids = orthancWebClient.get()
+                .uri("/studies")
+                .retrieve()// 받는 데이터 처리 쉽게 하기 위해
+                .bodyToMono(new ParameterizedTypeReference<List<String>>() {})// 역직렬화 body -> List<String>
+                .block(); // 비동기 통신이 끝날 때까지 기다린다.
+
+        log.info("[getStudyList] orthancStudyids = {}", orthancStudyids);
+
+        if(orthancStudyids == null) orthancStudyids = new ArrayList<>();
+
+
+        // 처리 결과로 가지는 처리 개수들의 변수 정의
+        int savedCount = 0;
+        int skippedCount = 0;
+        int failedCount = 0;
+
+        /*
+         * 2. Orthanc Study ID별 반복 처리 - 하나의 Study 데이터 가져오기
+         */
+
+
         return null;
     }
 
+    /*
+     * Study 상세 정보를 받아 와서 돌려주는 메서드
+     */
+    public Map<String, Object> getStudyFromOrthanc(
+            String orthancStudyId
+    ) {
+        return orthancWebClient
+                .get()
+                .uri(
+                        "/studies/{id}",
+                        orthancStudyId
+                )
+                .retrieve()
+                .bodyToMono(
+                        new ParameterizedTypeReference<Map<String, Object>>() {
+                        }
+                )
+                .block();
+    }
 
 } // PacsServiceImpl 클래스의 끝
