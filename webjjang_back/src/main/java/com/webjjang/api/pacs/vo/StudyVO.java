@@ -19,11 +19,11 @@ public class StudyVO {
 
     // Study - 진료 정보
     private String studyInstanceUID;
-    private String accessionNumber;
+    private String accessionNumber; // 접수번호
     private String studyDate;
     private String studyTime;
     private String studyDescription;
-    private String referringPhysicianName;
+    private String referringPhysicianName;//검사를 의뢰한 의사(진료의사)
     private String requestedProcedureDescription;
     private String studyID;
 
