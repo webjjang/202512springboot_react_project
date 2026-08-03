@@ -2,6 +2,7 @@ package com.webjjang.api.pacs.vo;
 
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -31,11 +32,11 @@ public class StudyVO {
     private boolean stable;
 
     // 카운트 정보 저장 변수
-    private Integer seriesCount;
-    private Integer instanceCount;
+    private Integer seriesCount = 0;
+    private Integer instanceCount = 0;
 
     // Series 정보 : String - id --> SeriesVO
     // private List<String> series;
-    private List<SeriesVO> seriesList;
+    private List<SeriesVO> seriesList = new ArrayList<>();
 
 }
