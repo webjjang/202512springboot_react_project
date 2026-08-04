@@ -233,8 +233,10 @@ public class PacsServiceImpl implements PacsService{
         return null;
     } // updateStudyInfo() 메서드의 끝
 
+
+
     @Override
-    // Pacs 서버에서 DICOM 전체 데이터를 가져와서 DB에 저장하기
+    // Pacs 서버에서 DICOM 전체 데이터를 가져와서 DB에 저장하기 ---------------------------------------------------------------------------
     public StudyVO saveStudyFromOrthanc(String orthancStudyId) {
         // study ids를 가져오기
         List<String> orthancStudyids = orthancWebClient.get()
@@ -249,14 +251,60 @@ public class PacsServiceImpl implements PacsService{
 
 
         // 처리 결과로 가지는 처리 개수들의 변수 정의
-        int savedCount = 0;
-        int skippedCount = 0;
-        int failedCount = 0;
+        int savedCount = 0; // DB에 저장되면 +1 한다.
+        int skippedCount = 0; // DB에 데이터가 있으면 저장하지 않고 +1 한다.
+        int failedCount = 0; // Exception이 발생되면 +1 한다.
 
         /*
          * 2. Orthanc Study ID별 반복 처리 - 하나의 Study 데이터 가져오기
          */
 
+        for(String studyId : orthancStudyids){
+            try{
+
+                // studyId가 DB 에 있는지 확인
+                if(pacsStudyRepository.existsByOrthancStudyId(studyId)){
+                    skippedCount ++; // DB에 존재하는 studyID 저장하지 않고 넘긴다.
+                    continue; // 다음 데이터를 확인하려 간다.
+                }
+
+                /*
+                 * 3. Orthanc Pacs 서버에서 상세 정보를 가져온다.
+                 */
+
+                Map<String, Object> studyDetailData =
+                        getStudyFromOrthanc(studyId); // 아래 메서드로 작성해 놓음. 상세 정보 가져오기
+
+                if(studyDetailData == null){
+                    failedCount ++;
+                    continue; // 다음 데이터 처리로 간다.
+                }
+
+                /*
+                 * 4. Study 에 정보를 위해서 MainDicomTags 꺼내기
+                 */
+                Map<String, String>  studyTags = getStringMap(studyDetailData, "MainDicomTags");
+
+                String studyInstanceUID = getTag(studyTags, "StudyInstanceUID");
+
+                //
+                if(studyInstanceUID != null && !studyInstanceUID.isBlank()
+                    && pacsStudyRepository.existsByStudyInstanceUID(studyInstanceUID)){
+                    skippedCount ++;
+                    continue; // 다음 데이터로 넘어간다 - for문 처음으로 간다.
+                }
+
+                // 환자 정보
+
+                // study 저장
+                // series 저장
+
+            }catch (Exception e){
+                failedCount ++; // 실패 카운트 1 증가.
+                // 예외 메시지 처리 로그
+                log.info("[saveStudyFromOrthanc] Study 저장 실패 : {}", studyId, e);
+            }
+        }
 
         return null;
     }
@@ -267,18 +315,45 @@ public class PacsServiceImpl implements PacsService{
     public Map<String, Object> getStudyFromOrthanc(
             String orthancStudyId
     ) {
-        return orthancWebClient
+        return orthancWebClient // Orthanc Server의 접근 정보가 있다. Bean 객체로 만다.
                 .get()
                 .uri(
                         "/studies/{id}",
                         orthancStudyId
                 )
                 .retrieve()
-                .bodyToMono(
+                .bodyToMono( // 역직렬화 - 문자열의 JSON 데이터를 Map으로 만든다.
                         new ParameterizedTypeReference<Map<String, Object>>() {
                         }
                 )
-                .block();
+                .block(); // 처리가 다 끝날 때 까지 기다린다.
+    } //getStudyFromOrthanc
+
+    // String 을 Map으로 만들어 주는 메서드 (JSON 데이터 문자열을 k, value 형식인 Map으로 만들어준다.)
+    @SuppressWarnings("unchecked")
+    private Map<String, String> getStringMap(
+            Map<String, Object> data, // 전체 데이터
+            String key // 찾으려는 JSON 데이터의 이름
+    ){
+        if(data == null) return null;
+
+        // data에서 key에 해당되는 데이터를 꺼낸다.
+        Object value = data.get(key);
+
+        // Map<String, String 변경 가능?
+        if(value instanceof Map<?, ?>) return (Map<String, String>) value;
+
+        return null;
+    }
+
+    // tags(Map)에서 일정한 데이터를 꺼내는 메서드
+    private String getTag(
+            Map<String, String> tags, // tag가 여러개 전체 데이터
+            String key // key에 해당되는 tag를 찾는다.
+    ){
+        if(tags == null) return null;
+
+        return tags.get(key);
     }
 
 } // PacsServiceImpl 클래스의 끝
