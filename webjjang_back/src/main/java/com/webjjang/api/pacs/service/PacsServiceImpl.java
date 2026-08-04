@@ -1,5 +1,6 @@
 package com.webjjang.api.pacs.service;
 
+import com.webjjang.api.pacs.entity.PacsPatient;
 import com.webjjang.api.pacs.repository.PacsPatientRepository;
 import com.webjjang.api.pacs.repository.PacsSeriesRepository;
 import com.webjjang.api.pacs.repository.PacsStudyRepository;
@@ -294,7 +295,8 @@ public class PacsServiceImpl implements PacsService{
                     continue; // 다음 데이터로 넘어간다 - for문 처음으로 간다.
                 }
 
-                // 환자 정보
+                // 환자 정보 - 조회 / 신규 저장
+                PacsPatient pacsPatient = findOrCreatePatient(studyDetailData);
 
                 // study 저장
                 // series 저장
@@ -307,6 +309,77 @@ public class PacsServiceImpl implements PacsService{
         }
 
         return null;
+    }
+
+    // 환자 정보를 DB에서 찾아봐서 없으면 새로 저장하는 메서드 ------------
+    private PacsPatient findOrCreatePatient(Map<String, Object> studyDetailData) throws Exception {
+        /*
+         * Orthanc Study의 ParentPatient가
+         * Orthanc Patient ID이다.
+         */
+        String orthancPatientId = getString(studyDetailData, "ParentPatient");
+
+        if(orthancPatientId == null || orthancPatientId.isBlank())
+            throw new Exception("Orthanc Patient Id가 없습니다.");
+
+        /*
+         * 이미 저장된 Patient가 있으면 그대로 사용
+         */
+        return pacsPatientRepository
+                .findByOrthancPatientId(
+                        orthancPatientId
+                )
+                .orElseGet(() -> {
+
+                    Map<String, String> patientTags =
+                            getStringMap(
+                                    studyDetailData,
+                                    "PatientMainDicomTags"
+                            );
+
+                    PacsPatient patient =
+                            PacsPatient.builder()
+                                    .orthancPatientId(
+                                            orthancPatientId
+                                    )
+                                    .patientId(
+                                            getTag(
+                                                    patientTags,
+                                                    "PatientID"
+                                            )
+                                    )
+                                    .patientName(
+                                            getTag(
+                                                    patientTags,
+                                                    "PatientName"
+                                            )
+                                    )
+                                    .patientSex(
+                                            getTag(
+                                                    patientTags,
+                                                    "PatientSex"
+                                            )
+                                    )
+                                    .patientBirthDate(
+                                            getTag(
+                                                    patientTags,
+                                                    "PatientBirthDate"
+                                            )
+                                    )
+                                    .stable(
+                                            getBoolean(
+                                                    studyDetailData,
+                                                    "IsStable"
+                                            )
+                                    )
+                                    .build();
+
+                    return pacsPatientRepository.save(
+                            patient
+                    );
+                });
+
+
     }
 
     /*
@@ -346,7 +419,7 @@ public class PacsServiceImpl implements PacsService{
         return null;
     }
 
-    // tags(Map)에서 일정한 데이터를 꺼내는 메서드
+    // tags(Map)에서 일정한 데이터를 꺼내는 메서드 : JSON 데이터를 꺼내서 값을 받아내는 처리
     private String getTag(
             Map<String, String> tags, // tag가 여러개 전체 데이터
             String key // key에 해당되는 tag를 찾는다.
@@ -356,4 +429,40 @@ public class PacsServiceImpl implements PacsService{
         return tags.get(key);
     }
 
+    // Map<String, Object> JSON의 상위 데이터를 문자열로 꺼내서 반환해 주는 메서드
+    private String getString(
+            Map<String, Object> data, String key
+    ){
+        if(data == null) return null;
+
+        Object value = data.get(key);
+
+        // value가 null이면 null 리턴 아니면, 문자열로 만들어서 리턴한다.
+        return value == null ? null: String.valueOf(value);
+    }
+
+
+    private Boolean getBoolean(
+            Map<String, Object> data,
+            String key
+    ) {
+
+        if (data == null) {
+            return false;
+        }
+
+        Object value = data.get(key);
+
+        if (value instanceof Boolean booleanValue) {
+            return booleanValue;
+        }
+
+        if (value instanceof String stringValue) {
+            return Boolean.parseBoolean(
+                    stringValue
+            );
+        }
+
+        return false;
+    }
 } // PacsServiceImpl 클래스의 끝
