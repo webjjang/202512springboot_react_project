@@ -12,4 +12,9 @@ extends JpaRepository<PacsStudy, Long> {
 
     Optional<PacsStudy> findByStudyInstanceUID(String studyInstanceUID);
 
+    boolean existsByOrthancStudyId(String orthancStudyId);
+
+    boolean existsByStudyInstanceUID(String studyInstanceUID);
+
+
 }
