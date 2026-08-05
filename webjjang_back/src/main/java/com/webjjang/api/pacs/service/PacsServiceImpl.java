@@ -286,36 +286,47 @@ public class PacsServiceImpl implements PacsService{
                 Map<String, Object> studyDetailData =
                         getStudyFromOrthanc(studyId); // 아래 메서드로 작성해 놓음. 상세 정보 가져오기
 
+                // 가져오지 못한 경우
                 if(studyDetailData == null){
                     failedCount ++;
                     continue; // 다음 데이터 처리로 간다.
                 }
 
                 /*
-                 * 4. Study 에 정보를 위해서 MainDicomTags 꺼내기
+                 * 4. Study -> studyDefailData 에 정보를 위해서 MainDicomTags(study 정보가 있음) 꺼내기
                  */
+                // studyDetailData에서 JSON 데이터를 꺼내서 Map으로 만든다. - getStringMap
+                // studyTags - studyTag[k-v]가 여러개
                 Map<String, String>  studyTags = getStringMap(studyDetailData, "MainDicomTags");
-
+                // 항목 이름에 맞는 tag의 값을 꺼낸다.
+                // study :: 1회 검사 구분을 위해 사용하는 tag가 studyInstanceUID이다.
                 String studyInstanceUID = getTag(studyTags, "StudyInstanceUID");
 
                 /*
                  * Orthanc ID는 다르더라도
                  * StudyInstanceUID가 이미 있으면 같은 Study로 판단
                  */
+                // Tag의 값이 존재하고 DB에도 존재하면 skip 시킨다.(저장하지 않는다.)
                 if(studyInstanceUID != null && !studyInstanceUID.isBlank()
                     && pacsStudyRepository.existsByStudyInstanceUID(studyInstanceUID)){
                     skippedCount ++;
                     continue; // 다음 데이터로 넘어간다 - for문 처음으로 간다.
                 }
 
+
+                /*
+                 * <<<<<< DB에 저장하는 처리 >>>>>>>>>
+                 */
+
                 /*
                  * 5. Patient 조회 또는 신규 저장
                  * - 환자 정보 - 조회 : DB에 있으면 있는 데이터 / DB에 없으면 신규 데이터 저장
                  */
                 PacsPatient patient = findOrCreatePatient(studyDetailData);
+                log.info("[saveStudyFromOrthanc] - DB의 저장되어 있는 PacsPatient = {}", patient);
 
                 /*
-                 * 6. Study 신규 저장
+                 * 6. Study 신규 저장 - DB에 존재하면 다음 데이터를 처리하는 코드가 앞 부분에 작성되어 있다.
                  */
                 PacsStudy study =
                         createStudyEntity(
@@ -324,6 +335,7 @@ public class PacsServiceImpl implements PacsService{
                                 patient
                         );
 
+                // 수집한 PacsStudy 엔티티 데이터를 DB에 저장한다.
                 PacsStudy savedStudy =
                         pacsStudyRepository.save(study);
 
@@ -335,6 +347,7 @@ public class PacsServiceImpl implements PacsService{
                         savedStudy
                 );
 
+                // 저장 완료 카운트 1 증가
                 savedCount++;
 
 
@@ -343,7 +356,7 @@ public class PacsServiceImpl implements PacsService{
                 // 예외 메시지 처리 로그
                 log.info("[saveStudyFromOrthanc] Study 저장 실패 : {}", studyId, e);
             }
-        }
+        } // for(String studyId : orthancStudyIds) 의 끝
 
         return StudySaveResultVO.builder()
                 .totalCount(orthancStudyIds.size())
@@ -353,7 +366,7 @@ public class PacsServiceImpl implements PacsService{
                 .build();
     };
 
-    // 환자 정보를 DB에서 찾아봐서 없으면 새로 저장하는 메서드 ------------
+    // 환자 정보를 DB에서 찾아봐서 있으면 저장 안함. 없으면 새로 저장하는 메서드 : 결과는 PacsPatient Entity 가 리턴된다. ------------
     private PacsPatient findOrCreatePatient(Map<String, Object> studyDetailData) throws Exception {
         /*
          * Orthanc Study의 ParentPatient가
@@ -368,12 +381,15 @@ public class PacsServiceImpl implements PacsService{
          * 이미 저장된 Patient가 있으면 그대로 사용
          */
         return pacsPatientRepository
-                .findByOrthancPatientId( // Optional 객체를 가져옴.
+                .findByOrthancPatientId( // Optional 객체를 가져옴. 가져와 지면 orElseGet() 실행되지 않는다. 가져온 데이터 사용
                         orthancPatientId
                 )
-                // 가녀온 Optional 객체가 있으면 그 값을 리턴하고 없으면 메서드가 실행이 되어 새로운 객체를 생성하게하는 저장하고 리턴하는 메서드
+                // 가녀온 Optional 객체가 있으면 그 값을 리턴하고 없으면 메서드가 실행이 되어 새로운 객체를 생성해서 저장하고 리턴하는 메서드
                 .orElseGet(() -> {
 
+                    log.info("[findOrCreatePatient] - DB에 Patient 정보가 존재하지 않아 저장을 진행합니다.");
+
+                    // 넘겨 받은 study 데이터에서 PatientMainDicomTags의 JSON데이터를 MAP로 꺼낸다.
                     Map<String, String> patientTags =
                             getStringMap(
                                     studyDetailData,
@@ -417,10 +433,11 @@ public class PacsServiceImpl implements PacsService{
                                     )
                                     .build();
 
+                    // 데이터가 채워진 patient를 DB 에 저장한 데이터가 리턴되거나 또는 DB에서 가져온 데이터가 리턴된다.다.
                     return pacsPatientRepository.save(
                             patient
                     );
-                });
+                }); // orElseGet() 의 끝
 
 
     }
@@ -513,7 +530,7 @@ public class PacsServiceImpl implements PacsService{
      *
      */
     private PacsStudy createStudyEntity(
-            Map<String, Object> studyData,
+            Map<String, Object> studyData, // studyData == studyDetailData
             Map<String, String> studyTags,
             PacsPatient patient
     ) {
@@ -628,7 +645,7 @@ public class PacsServiceImpl implements PacsService{
     }
 
     private void saveSeriesList(
-            Map<String, Object> studyData,
+            Map<String, Object> studyData, // studyData == studyDetailData
             PacsStudy study
     ) {
 
@@ -640,6 +657,7 @@ public class PacsServiceImpl implements PacsService{
 
         int totalInstanceCount = 0;
 
+        // Series는 배열로 되어 있다. List<String> 타입의 데이터 - 향상된 for문으로 전체 반복 처리.
         for (String orthancSeriesId : orthancSeriesIds) {
 
             /*
@@ -653,15 +671,23 @@ public class PacsServiceImpl implements PacsService{
                 continue;
             }
 
+            // DB에 없으면 저장한다.
+
+            // series 한개의 데이터를 가져온다.
             Map<String, Object> seriesData =
                     getSeriesFromOrthanc(
                             orthancSeriesId
                     );
 
+            // DB에 데이터가 없는 경우에만 로그 출력이 된다.
+            log.info("[saveSeriesList] Orthanc Pacs 서버에서 가져온 series 데이터 : {}", seriesData);
+
+            // 데이터가 없으면 다음 series 데이터를 가지러 간다.
             if (seriesData == null) {
                 continue;
             }
 
+            // Othanc Pacs 서버에 데이터가 있으면서 DB에는 데이터가 없는 경우 저장 처리한다.
             Map<String, String> seriesTags =
                     getStringMap(
                             seriesData,
@@ -737,11 +763,15 @@ public class PacsServiceImpl implements PacsService{
              * cascade 설정이 있으므로 Study를 저장해도 되지만,
              * 여기서는 Series 저장을 명시적으로 수행
              */
+
+            // DB에 Series 저장
             pacsSeriesRepository.save(series);
 
+            // Study에 전체 InstanceCount 를 저장하기 위해 합산한다.
             totalInstanceCount += instanceCount;
         }
 
+        // Study 데이터 수정
         study.setSeriesCount(
                 study.getSeriesList().size()
         );
@@ -750,6 +780,7 @@ public class PacsServiceImpl implements PacsService{
                 totalInstanceCount
         );
 
+        // Study에 데이터 SeriesCount, InstanceCount 계산한 내용으로 수정한다.
         pacsStudyRepository.save(study);
     }
 
