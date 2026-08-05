@@ -1,12 +1,43 @@
 package com.webjjang.api.pacs.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class StudyVO {
+
+    public StudyVO(
+            String id,
+            String patientId,
+            String patientName,
+            String patientSex,
+            String patientBirthDate,
+            String studyDate,
+            String studyTime,
+            String studyDescription,
+            Integer seriesCount,
+            Boolean stable) {
+
+        this.id = id;
+
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.patientSex = patientSex;
+        this.patientBirthDate = patientBirthDate;
+
+        this.studyDate = studyDate;
+        this.studyTime = studyTime;
+        this.studyDescription = studyDescription;
+
+        this.seriesCount = seriesCount;
+        this.stable = Boolean.TRUE.equals(stable);
+    }
 
     /* Orthanc Study ID */
     private String id;

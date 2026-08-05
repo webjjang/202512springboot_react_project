@@ -1,8 +1,11 @@
 package com.webjjang.api.pacs.repository;
 
 import com.webjjang.api.pacs.entity.PacsStudy;
+import com.webjjang.api.pacs.vo.StudyVO;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface PacsStudyRepository
@@ -16,5 +19,22 @@ extends JpaRepository<PacsStudy, Long> {
 
     boolean existsByStudyInstanceUID(String studyInstanceUID);
 
-
+    @Query("""
+        select new com.webjjang.api.pacs.vo.StudyVO(
+            s.orthancStudyId,
+            p.patientId,
+            p.patientName,
+            p.patientSex,
+            p.patientBirthDate,
+            s.studyDate,
+            s.studyTime,
+            s.studyDescription,
+            s.seriesCount,
+            s.stable
+        )
+        from PacsStudy s
+        join s.patient p
+        order by s.no desc
+    """)
+    List<StudyVO> findStudyList();
 }
