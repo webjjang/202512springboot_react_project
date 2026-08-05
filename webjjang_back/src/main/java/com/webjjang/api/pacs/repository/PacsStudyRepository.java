@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PacsStudyRepository
-extends JpaRepository<PacsStudy, Long> {
+extends JpaRepository<PacsStudy, Long>, PacsStudyRepositoryCustom {
 
     Optional<PacsStudy> findByOrthancStudyId(String orthancStudyId);
 
