@@ -19,6 +19,7 @@ extends JpaRepository<PacsStudy, Long> {
 
     boolean existsByStudyInstanceUID(String studyInstanceUID);
 
+    // JPA 에서 데이터 가져올 때 바로 VO에 담을 수 있다. 생성자가 필요하다.
     @Query("""
         select new com.webjjang.api.pacs.vo.StudyVO(
             s.orthancStudyId,

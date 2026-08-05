@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class StudyVO {
 
+    // PacsStudyRepository에서 바로 VO 객체로 받아내기 위해서 만든다.
     public StudyVO(
             String id,
             String patientId,
