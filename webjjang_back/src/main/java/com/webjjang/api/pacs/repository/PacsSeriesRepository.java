@@ -12,4 +12,8 @@ extends JpaRepository<PacsSeries, Long> {
 
     Optional<PacsSeries> findBySeriesInstanceUID(String seriesInstanceUID);
 
+    boolean existsByOrthancSeriesId(String orthancSeriesId);
+
+    boolean existsBySeriesInstanceUID(String seriesInstanceUID);
+
 }

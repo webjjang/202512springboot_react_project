@@ -1,10 +1,13 @@
 package com.webjjang.api.pacs.service;
 
 import com.webjjang.api.pacs.entity.PacsPatient;
+import com.webjjang.api.pacs.entity.PacsSeries;
+import com.webjjang.api.pacs.entity.PacsStudy;
 import com.webjjang.api.pacs.repository.PacsPatientRepository;
 import com.webjjang.api.pacs.repository.PacsSeriesRepository;
 import com.webjjang.api.pacs.repository.PacsStudyRepository;
 import com.webjjang.api.pacs.vo.SeriesVO;
+import com.webjjang.api.pacs.vo.StudySaveResultVO;
 import com.webjjang.api.pacs.vo.StudyVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -237,18 +240,20 @@ public class PacsServiceImpl implements PacsService{
 
 
     @Override
-    // Pacs 서버에서 DICOM 전체 데이터를 가져와서 DB에 저장하기 ---------------------------------------------------------------------------
-    public StudyVO saveStudyFromOrthanc(String orthancStudyId) {
+    /*
+     *   Pacs 서버에서 DICOM 전체 데이터를 가져와서 DB에 저장하기 -------------------
+     */
+    public StudySaveResultVO saveStudyFromOrthanc(String orthancStudyId) {
         // study ids를 가져오기
-        List<String> orthancStudyids = orthancWebClient.get()
+        List<String> orthancStudyIds = orthancWebClient.get()
                 .uri("/studies")
                 .retrieve()// 받는 데이터 처리 쉽게 하기 위해
                 .bodyToMono(new ParameterizedTypeReference<List<String>>() {})// 역직렬화 body -> List<String>
                 .block(); // 비동기 통신이 끝날 때까지 기다린다.
 
-        log.info("[getStudyList] orthancStudyids = {}", orthancStudyids);
+        log.info("[getStudyList] orthancStudyids = {}", orthancStudyIds);
 
-        if(orthancStudyids == null) orthancStudyids = new ArrayList<>();
+        if(orthancStudyIds == null) orthancStudyIds = new ArrayList<>();
 
 
         // 처리 결과로 가지는 처리 개수들의 변수 정의
@@ -256,12 +261,17 @@ public class PacsServiceImpl implements PacsService{
         int skippedCount = 0; // DB에 데이터가 있으면 저장하지 않고 +1 한다.
         int failedCount = 0; // Exception이 발생되면 +1 한다.
 
+
         /*
          * 2. Orthanc Study ID별 반복 처리 - 하나의 Study 데이터 가져오기
          */
 
-        for(String studyId : orthancStudyids){
+        log.info("\n[saveStudyFromOrthanc] 동기화 시작 ------------------>");
+
+        for(String studyId : orthancStudyIds){
             try{
+
+                log.info("[saveStudyFromOrthanc] 각 studyID 동기화 : {}", studyId);
 
                 // studyId가 DB 에 있는지 확인
                 if(pacsStudyRepository.existsByOrthancStudyId(studyId)){
@@ -288,18 +298,45 @@ public class PacsServiceImpl implements PacsService{
 
                 String studyInstanceUID = getTag(studyTags, "StudyInstanceUID");
 
-                //
+                /*
+                 * Orthanc ID는 다르더라도
+                 * StudyInstanceUID가 이미 있으면 같은 Study로 판단
+                 */
                 if(studyInstanceUID != null && !studyInstanceUID.isBlank()
                     && pacsStudyRepository.existsByStudyInstanceUID(studyInstanceUID)){
                     skippedCount ++;
                     continue; // 다음 데이터로 넘어간다 - for문 처음으로 간다.
                 }
 
-                // 환자 정보 - 조회 / 신규 저장
-                PacsPatient pacsPatient = findOrCreatePatient(studyDetailData);
+                /*
+                 * 5. Patient 조회 또는 신규 저장
+                 * - 환자 정보 - 조회 : DB에 있으면 있는 데이터 / DB에 없으면 신규 데이터 저장
+                 */
+                PacsPatient patient = findOrCreatePatient(studyDetailData);
 
-                // study 저장
-                // series 저장
+                /*
+                 * 6. Study 신규 저장
+                 */
+                PacsStudy study =
+                        createStudyEntity(
+                                studyDetailData,
+                                studyTags,
+                                patient
+                        );
+
+                PacsStudy savedStudy =
+                        pacsStudyRepository.save(study);
+
+                /*
+                 * 7. Study에 포함된 Series 신규 저장
+                 */
+                saveSeriesList(
+                        studyDetailData,
+                        savedStudy
+                );
+
+                savedCount++;
+
 
             }catch (Exception e){
                 failedCount ++; // 실패 카운트 1 증가.
@@ -308,8 +345,13 @@ public class PacsServiceImpl implements PacsService{
             }
         }
 
-        return null;
-    }
+        return StudySaveResultVO.builder()
+                .totalCount(orthancStudyIds.size())
+                .savedCount(savedCount)
+                .skippedCount(skippedCount)
+                .failedCount(failedCount)
+                .build();
+    };
 
     // 환자 정보를 DB에서 찾아봐서 없으면 새로 저장하는 메서드 ------------
     private PacsPatient findOrCreatePatient(Map<String, Object> studyDetailData) throws Exception {
@@ -326,9 +368,10 @@ public class PacsServiceImpl implements PacsService{
          * 이미 저장된 Patient가 있으면 그대로 사용
          */
         return pacsPatientRepository
-                .findByOrthancPatientId(
+                .findByOrthancPatientId( // Optional 객체를 가져옴.
                         orthancPatientId
                 )
+                // 가녀온 Optional 객체가 있으면 그 값을 리턴하고 없으면 메서드가 실행이 되어 새로운 객체를 생성하게하는 저장하고 리턴하는 메서드
                 .orElseGet(() -> {
 
                     Map<String, String> patientTags =
@@ -464,5 +507,270 @@ public class PacsServiceImpl implements PacsService{
         }
 
         return false;
+    }
+
+    /*
+     *
+     */
+    private PacsStudy createStudyEntity(
+            Map<String, Object> studyData,
+            Map<String, String> studyTags,
+            PacsPatient patient
+    ) {
+
+        String orthancStudyId =
+                getString(
+                        studyData,
+                        "ID"
+                );
+
+        List<String> seriesIds =
+                getStringList(
+                        studyData,
+                        "Series"
+                );
+
+        PacsStudy study = PacsStudy.builder()
+                .orthancStudyId(
+                        orthancStudyId
+                )
+                .studyInstanceUID(
+                        getTag(
+                                studyTags,
+                                "StudyInstanceUID"
+                        )
+                )
+                .accessionNumber(
+                        getTag(
+                                studyTags,
+                                "AccessionNumber"
+                        )
+                )
+                .studyDate(
+                        getTag(
+                                studyTags,
+                                "StudyDate"
+                        )
+                )
+                .studyTime(
+                        getTag(
+                                studyTags,
+                                "StudyTime"
+                        )
+                )
+                .studyDescription(
+                        getTag(
+                                studyTags,
+                                "StudyDescription"
+                        )
+                )
+                .referringPhysicianName(
+                        getTag(
+                                studyTags,
+                                "ReferringPhysicianName"
+                        )
+                )
+                .requestedProcedureDescription(
+                        getTag(
+                                studyTags,
+                                "RequestedProcedureDescription"
+                        )
+                )
+                .studyID(
+                        getTag(
+                                studyTags,
+                                "StudyID"
+                        )
+                )
+                .stable(
+                        getBoolean(
+                                studyData,
+                                "IsStable"
+                        )
+                )
+                .seriesCount(
+                        seriesIds.size()
+                )
+                .instanceCount(0)
+                .patient(patient)
+                .build();
+
+        /*
+         * 양방향 관계 설정
+         */
+        patient.getStudyList().add(study);
+
+        return study;
+    }
+
+
+    /*
+     *
+     */
+
+    @SuppressWarnings("unchecked")
+    private List<String> getStringList(
+            Map<String, Object> data,
+            String key
+    ) {
+
+        if (data == null) {
+            return new ArrayList<>();
+        }
+
+        Object value = data.get(key);
+
+        if (value instanceof List<?>) {
+            return (List<String>) value;
+        }
+
+        return new ArrayList<>();
+    }
+
+    private void saveSeriesList(
+            Map<String, Object> studyData,
+            PacsStudy study
+    ) {
+
+        List<String> orthancSeriesIds =
+                getStringList(
+                        studyData,
+                        "Series"
+                );
+
+        int totalInstanceCount = 0;
+
+        for (String orthancSeriesId : orthancSeriesIds) {
+
+            /*
+             * Orthanc Series ID가 이미 있다면 건너뜀
+             */
+            if (pacsSeriesRepository
+                    .existsByOrthancSeriesId(
+                            orthancSeriesId
+                    )) {
+
+                continue;
+            }
+
+            Map<String, Object> seriesData =
+                    getSeriesFromOrthanc(
+                            orthancSeriesId
+                    );
+
+            if (seriesData == null) {
+                continue;
+            }
+
+            Map<String, String> seriesTags =
+                    getStringMap(
+                            seriesData,
+                            "MainDicomTags"
+                    );
+
+            String seriesInstanceUID =
+                    getTag(
+                            seriesTags,
+                            "SeriesInstanceUID"
+                    );
+
+            /*
+             * SeriesInstanceUID가 이미 있으면 건너뜀
+             */
+            if (seriesInstanceUID != null
+                    && !seriesInstanceUID.isBlank()
+                    && pacsSeriesRepository
+                    .existsBySeriesInstanceUID(
+                            seriesInstanceUID
+                    )) {
+
+                continue;
+            }
+
+            List<String> instanceIds =
+                    getStringList(
+                            seriesData,
+                            "Instances"
+                    );
+
+            int instanceCount =
+                    instanceIds.size();
+
+            PacsSeries series =
+                    PacsSeries.builder()
+                            .orthancSeriesId(
+                                    orthancSeriesId
+                            )
+                            .seriesInstanceUID(
+                                    seriesInstanceUID
+                            )
+                            .modality(
+                                    getTag(
+                                            seriesTags,
+                                            "Modality"
+                                    )
+                            )
+                            .seriesDescription(
+                                    getTag(
+                                            seriesTags,
+                                            "SeriesDescription"
+                                    )
+                            )
+                            .seriesNumber(
+                                    getTag(
+                                            seriesTags,
+                                            "SeriesNumber"
+                                    )
+                            )
+                            .instanceCount(
+                                    instanceCount
+                            )
+                            .study(study)
+                            .build();
+
+            /*
+             * 양방향 관계 설정
+             */
+            study.getSeriesList().add(series);
+
+            /*
+             * cascade 설정이 있으므로 Study를 저장해도 되지만,
+             * 여기서는 Series 저장을 명시적으로 수행
+             */
+            pacsSeriesRepository.save(series);
+
+            totalInstanceCount += instanceCount;
+        }
+
+        study.setSeriesCount(
+                study.getSeriesList().size()
+        );
+
+        study.setInstanceCount(
+                totalInstanceCount
+        );
+
+        pacsStudyRepository.save(study);
+    }
+
+
+    private Map<String, Object> getSeriesFromOrthanc(
+            String orthancSeriesId
+    ) {
+
+        return orthancWebClient
+                .get()
+                .uri(
+                        "/series/{id}",
+                        orthancSeriesId
+                )
+                .retrieve()
+                .bodyToMono(
+                        new ParameterizedTypeReference<
+                                Map<String, Object>
+                                >() {
+                        }
+                )
+                .block();
     }
 } // PacsServiceImpl 클래스의 끝

@@ -41,7 +41,10 @@ public class PacsRestController {
     @GetMapping("/sync.do")
     public ResponseEntity<String> studyListSync() {
         pacsService.saveStudyFromOrthanc(null);
-        return null;
+        return ResponseEntity.ok(
+               "Orthanc Pacs System 데이터와 동기화가 완료되었습니다."
+        );
+
     }
 
 }

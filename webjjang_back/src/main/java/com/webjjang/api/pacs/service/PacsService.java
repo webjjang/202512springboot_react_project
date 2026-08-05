@@ -1,5 +1,6 @@
 package com.webjjang.api.pacs.service;
 
+import com.webjjang.api.pacs.vo.StudySaveResultVO;
 import com.webjjang.api.pacs.vo.StudyVO;
 
 import java.util.List;
@@ -16,6 +17,6 @@ public interface PacsService {
     StudyVO updateStudyInfo(Long no, StudyVO updateVO);
 
     // orthanc Pacs 서버에서 데이터 가져와서 DB에 저장하기
-    StudyVO saveStudyFromOrthanc(String orthancStudyId);
+    StudySaveResultVO saveStudyFromOrthanc(String orthancStudyId);
 
 }

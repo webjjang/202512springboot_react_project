@@ -5765,3 +5765,631 @@ This generated password is for development use only. Your security configuration
 [2026-08-03 17:16:22.842] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
 [2026-08-03 17:16:22.842] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
 [2026-08-03 17:16:22.843] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 09:53:14.898] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-08-05 09:53:14.933] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 09:53:14.933] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 09:53:14.962] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-08-05 09:53:14.963] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-08-05 09:53:15.711] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 09:53:15.841] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 123 ms. Found 8 JPA repository interfaces.
+[2026-08-05 09:53:16.292] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 09:53:16.300] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 09:53:16.301] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 09:53:16.301] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 09:53:16.344] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 09:53:16.344] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1381 ms
+[2026-08-05 09:53:16.479] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 09:53:16.522] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-08-05 09:53:16.548] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 09:53:16.724] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 09:53:16.747] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-08-05 09:53:16.810] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7167493d
+[2026-08-05 09:53:16.811] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-08-05 09:53:16.854] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 09:53:17.491] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 09:53:17.493] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 09:53:17.656] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 09:53:17.658] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 09:53:17.965] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 09:53:17.984] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 17fac09d-6428-4687-90a0-bf4aaa4f24c4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 09:53:17.989] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 09:53:18.140] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 09:53:18.218] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 09:53:18.247] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 09:53:18.514] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 09:53:18.552] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 09:53:18.564] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 09:53:18.575] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 4.008 seconds (process running for 4.684)
+[2026-08-05 09:53:18.579] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 09:53:18.579] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 09:53:18.863] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-05 09:53:18.863] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-08-05 09:53:18.865] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2026-08-05 09:56:04.870] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.879] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.879] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.879] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:04.923] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.924] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.924] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.924] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:04.928] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:05.034] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:05.034] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:05.034] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:05.034] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:05.069] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:56:05.069] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:56:05.069] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:56:05.069] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:56:05.563] [INFO ] [http-nio-80-exec-8] org.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 482 ms
+[2026-08-05 09:58:05.410] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 09:58:05.411] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 09:58:05.411] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 09:58:05.411] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 09:58:05.826] [INFO ] [http-nio-80-exec-5] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-08-05 09:58:05.826] [INFO ] [http-nio-80-exec-5] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260730T023842, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f], Type=Study}
+[2026-08-05 09:58:05.826] [INFO ] [http-nio-80-exec-5] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 09:58:05.826] [INFO ] [http-nio-80-exec-5] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:04:03.749] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:03.749] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:03.749] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:03.749] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:03.750] [INFO ] [http-nio-80-exec-6] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-08-05 10:04:03.750] [INFO ] [http-nio-80-exec-6] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260730T023842, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f], Type=Study}
+[2026-08-05 10:04:03.750] [INFO ] [http-nio-80-exec-6] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:04:03.750] [INFO ] [http-nio-80-exec-6] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:04:05.551] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:05.551] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:05.551] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:05.551] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:06.021] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:07.988] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:07.988] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:07.988] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:07.988] [INFO ] [http-nio-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:08.010] [INFO ] [http-nio-80-exec-3] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-08-05 10:04:08.015] [INFO ] [http-nio-80-exec-3] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260730T023842, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f], Type=Study}
+[2026-08-05 10:04:08.015] [INFO ] [http-nio-80-exec-3] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:04:08.016] [INFO ] [http-nio-80-exec-3] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:04:08.667] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:08.667] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:08.667] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:08.667] [INFO ] [http-nio-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:10.341] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:10.341] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:10.341] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:10.342] [INFO ] [http-nio-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:10.353] [INFO ] [http-nio-80-exec-4] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7]
+[2026-08-05 10:04:10.358] [INFO ] [http-nio-80-exec-4] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260730T023842, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f], Type=Study}
+[2026-08-05 10:04:10.358] [INFO ] [http-nio-80-exec-4] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:04:10.359] [INFO ] [http-nio-80-exec-4] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:04:37.665] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.665] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.665] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.666] [INFO ] [http-nio-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:04:37.679] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.681] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:04:37.681] [INFO ] [http-nio-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:04:37.681] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:10:27.889] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:10:27.889] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:10:27.889] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:10:27.889] [INFO ] [http-nio-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:10:27.900] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7, a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929]
+[2026-08-05 10:10:27.903] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260805T010621, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f, bdb6db42-70e11ce8-26155133-d41a7e83-74092eb4], Type=Study}
+[2026-08-05 10:10:27.904] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:10:27.904] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:10:27.907] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929, IsStable=true, Labels=[], LastUpdate=20260805T010759, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}, Series=[15a80207-a0be98e6-69ec37f1-ae30013d-94c00113], Type=Study}
+[2026-08-05 10:10:27.907] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}
+[2026-08-05 10:10:27.907] [INFO ] [http-nio-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}
+[2026-08-05 10:10:36.350] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:10:36.350] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:10:36.350] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:10:36.350] [INFO ] [http-nio-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:10:36.363] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7, a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929]
+[2026-08-05 10:10:36.363] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260805T010621, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f, bdb6db42-70e11ce8-26155133-d41a7e83-74092eb4], Type=Study}
+[2026-08-05 10:10:36.363] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:10:36.363] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:10:36.373] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929, IsStable=true, Labels=[], LastUpdate=20260805T010759, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}, Series=[15a80207-a0be98e6-69ec37f1-ae30013d-94c00113], Type=Study}
+[2026-08-05 10:10:36.373] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}
+[2026-08-05 10:10:36.373] [INFO ] [http-nio-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}
+[2026-08-05 10:10:37.551] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:10:37.553] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:10:37.553] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:10:37.553] [INFO ] [http-nio-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:10:37.560] [INFO ] [http-nio-80-exec-10] com.webjjang.api.pacs.controller.PacsRestController [getStudyDetail] id = 3d03892c-fe16a397-b54727fd-34224e15-421e37a7
+[2026-08-05 10:10:37.572] [INFO ] [http-nio-80-exec-10] com.webjjang.api.pacs.service.PacsServiceImpl [getSeries] series = {ExpectedNumberOfInstances=null, ID=1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f, Instances=[09e80a97-65aa5a19-b051a9b7-dbdd3a0c-2500cb1e, bd343fb2-0e449f34-5545a524-bc0c653e-7d2de194], IsStable=true, Labels=[], LastUpdate=20260730T023842, MainDicomTags={BodyPartExamined=CHEST, ContrastBolusAgent=IV, ImageOrientationPatient=1.000000\0.000000\0.000000\0.000000\1.000000\0.000000, Manufacturer=GE MEDICAL SYSTEMS, Modality=CT, PerformedProcedureStepStartDate=20000101, SeriesDate=20000101, SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.179049373636438705059720603192, SeriesNumber=3000566}, ParentStudy=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, Status=Unknown, Type=Series}
+[2026-08-05 10:10:37.574] [INFO ] [http-nio-80-exec-10] com.webjjang.api.pacs.service.PacsServiceImpl [getSeries] series = {ExpectedNumberOfInstances=null, ID=bdb6db42-70e11ce8-26155133-d41a7e83-74092eb4, Instances=[e9abc12f-fbe92251-af152e8f-6ff15255-21b67a0a], IsStable=true, Labels=[], LastUpdate=20260805T010621, MainDicomTags={BodyPartExamined=CHEST, Manufacturer=QIICR, Modality=SEG, SeriesDate=20190322, SeriesDescription=Segmentation of Nodule 1 - Annotation Nodule 001, SeriesInstanceUID=1.2.276.0.7230010.3.1.3.0.89314.1553284067.990548, SeriesNumber=3000567, SeriesTime=154749}, ParentStudy=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, Status=Unknown, Type=Series}
+[2026-08-05 10:10:47.006] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-05 10:10:47.007] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-05 10:10:47.007] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-05 10:10:47.007] [INFO ] [http-nio-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-05 10:10:47.012] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] ids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7, a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929]
+[2026-08-05 10:10:47.012] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=3d03892c-fe16a397-b54727fd-34224e15-421e37a7, IsStable=true, Labels=[], LastUpdate=20260805T010621, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}, Series=[1ddda848-9c2a7f23-3f580cf0-ee14b84f-e8561c0f, bdb6db42-70e11ce8-26155133-d41a7e83-74092eb4], Type=Study}
+[2026-08-05 10:10:47.012] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178, StudyTime=}
+[2026-08-05 10:10:47.012] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=홍길동, PatientSex=}
+[2026-08-05 10:10:47.023] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study = {ID=a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929, IsStable=true, Labels=[], LastUpdate=20260805T010759, MainDicomTags={AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}, ParentPatient=98e1d3de-b182c097-7a323e45-9b75fe68-45bdea8a, PatientMainDicomTags={PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}, Series=[15a80207-a0be98e6-69ec37f1-ae30013d-94c00113], Type=Study}
+[2026-08-05 10:10:47.023] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.mainDicomTags = {AccessionNumber=, ReferringPhysicianName=, StudyDate=20000101, StudyID=, StudyInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.175012972118199124641098335511, StudyTime=}
+[2026-08-05 10:10:47.023] [INFO ] [http-nio-80-exec-8] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] study.patientMainDicomTags = {PatientBirthDate=, PatientID=LIDC-IDRI-0001, PatientName=, PatientSex=}
+[2026-08-05 10:27:08.648] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2026-08-05 10:27:08.652] [INFO ] [Thread-5] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:27:08.653] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:08.707] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:27:08.707] [INFO ] [Thread-5] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:08.728] [INFO ] [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:08.730] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2026-08-05 10:27:08.732] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2026-08-05 10:27:08.859] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:27:08.859] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:27:09.071] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:27:09.109] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 36 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:27:09.186] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:27:09.186] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:09.186] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:27:09.186] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:27:09.211] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:27:09.212] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 352 ms
+[2026-08-05 10:27:09.256] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:27:09.258] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:27:09.266] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:27:09.267] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+[2026-08-05 10:27:09.270] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-2 - Added connection org.mariadb.jdbc.Connection@76fb9944
+[2026-08-05 10:27:09.270] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+[2026-08-05 10:27:09.271] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:27:09.372] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:27:09.373] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:09.418] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:27:09.418] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:27:09.489] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:27:09.496] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: ef140a38-c4f9-44a7-bb46-bc5c93d15117
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:27:09.497] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:27:09.547] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:27:09.577] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:27:09.598] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:27:09.691] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:27:09.702] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:09.705] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:27:09.712] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.92 seconds (process running for 2035.821)
+[2026-08-05 10:27:09.713] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:27:09.713] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:27:09.714] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 10:27:11.144] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[2026-08-05 10:27:11.146] [INFO ] [Thread-32] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:27:11.147] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:11.201] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:27:11.202] [INFO ] [Thread-32] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:11.207] [INFO ] [Thread-32] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:11.208] [INFO ] [Thread-32] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+[2026-08-05 10:27:11.210] [INFO ] [Thread-32] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+[2026-08-05 10:27:11.263] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:27:11.264] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:27:11.434] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:27:11.460] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 24 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:27:11.518] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:27:11.520] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:11.520] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:27:11.520] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:27:11.541] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:27:11.541] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 277 ms
+[2026-08-05 10:27:11.573] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:27:11.575] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:27:11.578] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:27:11.579] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Starting...
+[2026-08-05 10:27:11.580] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-3 - Added connection org.mariadb.jdbc.Connection@4b0121df
+[2026-08-05 10:27:11.580] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Start completed.
+[2026-08-05 10:27:11.581] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:27:11.644] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:27:11.644] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:11.675] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:27:11.676] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:27:11.726] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:27:11.731] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 593471b5-309a-4d93-bb92-d04f847bab8e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:27:11.731] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:27:11.768] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:27:11.787] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:27:11.804] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:27:11.861] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:27:11.869] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:11.871] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:27:11.876] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.626 seconds (process running for 2037.986)
+[2026-08-05 10:27:11.877] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:27:11.877] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:27:11.877] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 10:27:30.731] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2026-08-05 10:27:30.732] [INFO ] [Thread-36] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:27:30.733] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:30.789] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:27:30.789] [INFO ] [Thread-36] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:30.792] [INFO ] [Thread-36] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:30.792] [INFO ] [Thread-36] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown initiated...
+[2026-08-05 10:27:30.794] [INFO ] [Thread-36] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown completed.
+[2026-08-05 10:27:30.844] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:27:30.844] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:27:31.023] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:27:31.050] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 26 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:27:31.113] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:27:31.114] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:31.114] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:27:31.114] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:27:31.136] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:27:31.136] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 291 ms
+[2026-08-05 10:27:31.174] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:27:31.176] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:27:31.180] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:27:31.180] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Starting...
+[2026-08-05 10:27:31.183] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-4 - Added connection org.mariadb.jdbc.Connection@10f5fe55
+[2026-08-05 10:27:31.183] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Start completed.
+[2026-08-05 10:27:31.183] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:27:31.261] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:27:31.261] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:31.309] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:27:31.310] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:27:31.373] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:27:31.379] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 95ebdb2f-5121-4e92-85b8-9e7ef9469ba1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:27:31.380] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:27:31.424] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:27:31.448] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:27:31.466] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:27:31.531] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:27:31.540] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:31.542] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:27:31.548] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.72 seconds (process running for 2057.657)
+[2026-08-05 10:27:31.548] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:27:31.548] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:27:31.549] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 10:27:32.981] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[2026-08-05 10:27:32.984] [INFO ] [Thread-40] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:27:32.985] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:33.029] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:27:33.029] [INFO ] [Thread-40] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:33.031] [INFO ] [Thread-40] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:33.032] [INFO ] [Thread-40] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown initiated...
+[2026-08-05 10:27:33.033] [INFO ] [Thread-40] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown completed.
+[2026-08-05 10:27:33.075] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:27:33.075] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:27:33.223] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:27:33.244] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 20 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:27:33.296] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:27:33.297] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:33.297] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:27:33.297] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:27:33.325] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:27:33.325] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 249 ms
+[2026-08-05 10:27:33.354] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:27:33.355] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:27:33.358] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:27:33.358] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Starting...
+[2026-08-05 10:27:33.361] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-5 - Added connection org.mariadb.jdbc.Connection@53880480
+[2026-08-05 10:27:33.361] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Start completed.
+[2026-08-05 10:27:33.361] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:27:33.410] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:27:33.410] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:33.442] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:27:33.442] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:27:33.490] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:27:33.494] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 6962a247-58af-4a66-a34c-d642f95c1e07
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:27:33.495] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:27:33.527] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:27:33.546] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:27:33.563] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:27:33.615] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:27:33.622] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:33.624] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:27:33.630] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.567 seconds (process running for 2059.739)
+[2026-08-05 10:27:33.630] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:27:33.630] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:27:33.631] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 10:27:58.631] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2026-08-05 10:27:58.632] [INFO ] [Thread-44] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:27:58.632] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:58.683] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:27:58.683] [INFO ] [Thread-44] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:27:58.686] [INFO ] [Thread-44] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:27:58.686] [INFO ] [Thread-44] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown initiated...
+[2026-08-05 10:27:58.687] [INFO ] [Thread-44] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown completed.
+[2026-08-05 10:27:58.739] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:27:58.740] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:27:58.767] [WARN ] [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.webjjang.api.pacs.service.PacsServiceImpl]
+[2026-08-05 10:27:58.780] [ERROR] [restartedMain] org.springframework.boot.SpringApplication Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.webjjang.api.pacs.service.PacsServiceImpl]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:288)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:218)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:356)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:283)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:792)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.webjjang.api.WebjjangBackApplication.main(WebjjangBackApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.io.FileNotFoundException: class path resource [com/webjjang/api/pacs/service/PacsService.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:85)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:713)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1062)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:443)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:387)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:283)
+	... 23 common frames omitted
+[2026-08-05 10:28:00.627] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:28:00.627] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:28:00.802] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:28:00.827] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 23 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:28:00.885] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:28:00.885] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:00.885] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:28:00.885] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:28:00.916] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:28:00.916] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 288 ms
+[2026-08-05 10:28:00.948] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:28:00.950] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:28:00.953] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:28:00.953] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Starting...
+[2026-08-05 10:28:00.955] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-6 - Added connection org.mariadb.jdbc.Connection@79a9386e
+[2026-08-05 10:28:00.955] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Start completed.
+[2026-08-05 10:28:00.956] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:28:01.005] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:28:01.005] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:28:01.037] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:28:01.038] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:28:01.054] [WARN ] [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pacsRestController' defined in file [D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes\com\webjjang\api\pacs\controller\PacsRestController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.webjjang.api.pacs.service.PacsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2026-08-05 10:28:01.054] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:28:01.054] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown initiated...
+[2026-08-05 10:28:01.054] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown completed.
+[2026-08-05 10:28:01.055] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2026-08-05 10:28:01.061] [INFO ] [restartedMain] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2026-08-05 10:28:01.064] [ERROR] [restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.webjjang.api.pacs.controller.PacsRestController required a bean of type 'com.webjjang.api.pacs.service.PacsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.webjjang.api.pacs.service.PacsService' in your configuration.
+
+[2026-08-05 10:28:13.763] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:28:13.763] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:28:14.077] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:28:14.119] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 41 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:28:14.215] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:28:14.217] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:14.217] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:28:14.217] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:28:14.246] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:28:14.246] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 483 ms
+[2026-08-05 10:28:14.311] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:28:14.311] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:28:14.320] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:28:14.320] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Starting...
+[2026-08-05 10:28:14.327] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-7 - Added connection org.mariadb.jdbc.Connection@41ce54cf
+[2026-08-05 10:28:14.327] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Start completed.
+[2026-08-05 10:28:14.327] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:28:14.423] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:28:14.423] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:28:14.480] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:28:14.480] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:28:14.544] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:28:14.560] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: ae9adbba-a13b-484f-9691-e8bafcf39d42
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:28:14.560] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:28:14.633] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:28:14.681] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:28:14.706] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:28:14.846] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:28:14.862] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:14.878] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:28:14.878] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 1.129 seconds (process running for 2100.999)
+[2026-08-05 10:28:14.878] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:28:14.878] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:28:14.878] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-05 10:28:16.701] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 10 class path changes (10 additions, 0 deletions, 0 modifications)
+[2026-08-05 10:28:16.704] [INFO ] [Thread-48] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-05 10:28:16.705] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:16.804] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-05 10:28:16.804] [INFO ] [Thread-48] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:16.808] [INFO ] [Thread-48] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:28:16.809] [INFO ] [Thread-48] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown initiated...
+[2026-08-05 10:28:16.813] [INFO ] [Thread-48] com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown completed.
+[2026-08-05 10:28:16.916] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 1460 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-05 10:28:16.916] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-05 10:28:17.247] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-05 10:28:17.294] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 46 ms. Found 8 JPA repository interfaces.
+[2026-08-05 10:28:17.398] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-05 10:28:17.399] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:17.399] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-05 10:28:17.399] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-05 10:28:17.428] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-05 10:28:17.428] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 511 ms
+[2026-08-05 10:28:17.492] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-05 10:28:17.492] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-05 10:28:17.492] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-05 10:28:17.492] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Starting...
+[2026-08-05 10:28:17.508] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-8 - Added connection org.mariadb.jdbc.Connection@15979d4d
+[2026-08-05 10:28:17.508] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-8 - Start completed.
+[2026-08-05 10:28:17.508] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-05 10:28:17.642] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-05 10:28:17.642] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-05 10:28:17.695] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-05 10:28:17.695] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-05 10:28:17.824] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-05 10:28:17.836] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: e7883d87-5d17-41a1-b414-f8aa0fe45fc5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-05 10:28:17.837] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-05 10:28:17.897] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-05 10:28:17.947] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-05 10:28:17.978] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-05 10:28:18.098] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-05 10:28:18.116] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-80"]
+[2026-08-05 10:28:18.121] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-05 10:28:18.134] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 1.249 seconds (process running for 2104.243)
+[2026-08-05 10:28:18.135] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-05 10:28:18.135] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-05 10:28:18.136] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
