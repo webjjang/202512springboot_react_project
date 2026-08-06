@@ -19,6 +19,7 @@ public class StudyVO {
             String patientName,
             String patientSex,
             String patientBirthDate,
+            String studyInstanceUID,
             String studyDate,
             String studyTime,
             String studyDescription,
@@ -32,6 +33,7 @@ public class StudyVO {
         this.patientSex = patientSex;
         this.patientBirthDate = patientBirthDate;
 
+        this.studyInstanceUID = studyInstanceUID;
         this.studyDate = studyDate;
         this.studyTime = studyTime;
         this.studyDescription = studyDescription;

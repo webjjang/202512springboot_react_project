@@ -1,6 +1,6 @@
 /** @type {AppTypes.Config} */
 window.config = {
-  routerBasename: null,
+  routerBasename: '/',
   extensions: [],
   modes: [],
   showStudyList: true,
@@ -16,20 +16,22 @@ window.config = {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
       sourceName: 'orthanc',
       configuration: {
-        friendlyName: 'local Orthanc DICOMWeb Server',
-        name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost/dicom-web',
-        qidoRoot: 'http://localhost/dicom-web',
-        wadoRoot: 'http://localhost/dicom-web',
-        qidoSupportsIncludeField: true,
-        supportsReject: true,
+        friendlyName: 'local Orthanc',
+        name: 'orthanc',
+
+	// 실제 주소는 설정으로 만듬.
+        wadoUriRoot: '/dicom-web',
+        qidoRoot: '/dicom-web',
+        wadoRoot: '/dicom-web',
+        qidoSupportsIncludeField: false,
+        supportsReject: false,
         dicomUploadEnabled: true,
         imageRendering: 'wadors',
-        thumbnailRendering: 'rendered',
+        thumbnailRendering: 'wadors',
         thumbnailRequestStrategy: 'fetch',
         enableStudyLazyLoad: true,
-        supportsFuzzyMatching: true,
-        supportsWildcard: true,
+        supportsFuzzyMatching: false,
+        supportsWildcard: false,
         omitQuotationForMultipartRequest: true,
         bulkDataURI: {
           enabled: true,

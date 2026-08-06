@@ -27,6 +27,7 @@ extends JpaRepository<PacsStudy, Long>, PacsStudyRepositoryCustom {
             p.patientName,
             p.patientSex,
             p.patientBirthDate,
+            s.studyInstanceUID,
             s.studyDate,
             s.studyTime,
             s.studyDescription,

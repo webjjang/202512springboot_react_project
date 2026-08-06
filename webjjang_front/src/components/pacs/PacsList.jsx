@@ -105,24 +105,29 @@ function PacsList(){
   };
 
 
-  /**
-   * 영상 보기
-   *
-   * StudyInstanceUID를 React Viewer 페이지로 전달한다.
-   */
+ /**
+ * OHIF Viewer 새 창 열기
+ *
+ * @param {object} study PACS Study 데이터
+ */
   const handleViewer = (study) => {
+
     if (!study.studyInstanceUID) {
-      alert("StudyInstanceUID가 없어 영상을 열 수 없습니다.");
-      return;
+        alert("StudyInstanceUID가 없습니다.");
+        return;
     }
 
-    navigate(
-      `/pacs/viewer?studyInstanceUID=${encodeURIComponent(
-        study.studyInstanceUID
-      )}`
+    const viewerUrl =
+        `http://localhost:3000/viewer?StudyInstanceUIDs=${encodeURIComponent(
+            study.studyInstanceUID
+        )}`;
+
+    window.open(
+        viewerUrl,
+        "_blank",
+        "noopener,noreferrer"
     );
   };
-
 
   const studyListSync = async() => {
      
@@ -137,6 +142,7 @@ function PacsList(){
    } // getStudyList 함수의 끝
   
 
+   
   // 데이터 표시 부분
   return(
     <div className="container-fluid mt-4">
