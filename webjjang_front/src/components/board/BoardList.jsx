@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./Board.css"
 import PageNation from "../common/PageNation";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { format } from "date-fns";
+import api from "../common/api";
 
 function BoardList(){
   // -- 데이터 처리 부분 ------------------
@@ -31,7 +31,7 @@ function BoardList(){
   useEffect(
     function(){
       console.log("BoardList :: useEffect 실행해서 데이터 가져오기 시작")
-      axios.get("http://localhost/board/list.do?" + query)
+      api.get(`/board/list.do?${query}`)
       .then((response) => {
         console.log("Axios를 이용한 데이터 가져오기");
         console.log("응답 데이터 : " + response);

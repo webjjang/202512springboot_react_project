@@ -25,7 +25,7 @@ function BoardView(){
 
   // 랜더링 전에 컴포넌트를 처음 실행할 때 Spring Boot Server에서 데이터 가져오기 - useEffect()
   useEffect(()=>{
-    axios.get(`http://localhost/board/view.do?no=${no}&inc=${inc}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/board/view.do?no=${no}&inc=${inc}`)
     .then((response) =>{
       // 가져온 데이터 확인
       console.log("json 데이터 : " + JSON.stringify(response.data));

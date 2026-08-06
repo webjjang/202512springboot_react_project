@@ -34,7 +34,7 @@ function ImageList(){
     function(){
       console.log("ImageList :: useEffect 실행해서 데이터 가져오기 시작")
       // react(:5173) -> spring boot(:80-http인 경우 생략)로 데이터 요청
-      axios.get("http://localhost/image/list.do?" + query)
+      axios.get("http://172.30.1.52/image/list.do?" + query)
       .then((response) => {
         console.log("Axios를 이용한 데이터 가져오기");
         console.log("응답 데이터 : " + response);

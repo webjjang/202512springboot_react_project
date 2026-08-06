@@ -19,7 +19,7 @@ function PacsList(){
      
       try{
         // 데이터 가져오기
-        const response = await api.get("http://localhost/pacs/list.do?");
+        const response = await api.get("/pacs/list.do?");
         console.log("PACS Study 데이터 : " + JSON.stringify(response.data));
 
         // 배열이면 저장한다. 그렇지 않으면 오류 처리한다.
@@ -118,7 +118,7 @@ function PacsList(){
     }
 
     const viewerUrl =
-        `http://localhost:3000/viewer?StudyInstanceUIDs=${encodeURIComponent(
+        `http://172.30.1.52:3000/viewer?StudyInstanceUIDs=${encodeURIComponent(
             study.studyInstanceUID
         )}`;
 

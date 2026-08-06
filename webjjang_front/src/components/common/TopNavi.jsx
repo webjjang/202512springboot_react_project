@@ -45,6 +45,9 @@ function TopNavi(){
               <NavLink to={"/image/list"} className="nav-link">Image</NavLink>&nbsp;
             </li>
             <li className="nav-item">
+              <NavLink to={"/board/list"} className="nav-link">Board</NavLink>&nbsp;
+            </li>
+            <li className="nav-item">
               <NavLink to={"/pacs/list"} className="nav-link">Pacs</NavLink>&nbsp;
             </li>
           </ul>

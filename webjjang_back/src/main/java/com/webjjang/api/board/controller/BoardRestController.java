@@ -18,7 +18,6 @@ import java.util.Objects;
 @RequestMapping("/board")
 @Log4j2
 @RequiredArgsConstructor // private final 변수 자동 DI 어노테이션
-@CrossOrigin(origins = "http://localhost:5173") // react 서버로 데이터 공유 허용해준다.
 public class BoardRestController {
 
     private final BoardService service;
