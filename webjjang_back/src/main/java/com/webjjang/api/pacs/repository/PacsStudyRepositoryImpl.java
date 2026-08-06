@@ -31,6 +31,7 @@ public class PacsStudyRepositoryImpl
             );
         }
 
+        // DB에서 PacsStudy로 데이터를 가져오데 환자정보와 영상촬영 정보 리스트도 포함해서 가져온다.
         PacsStudy study = entityManager.createQuery(
                         """
                         select distinct ps
@@ -95,6 +96,7 @@ public class PacsStudyRepositoryImpl
 
         /*
          * Series 정보
+         * Series Entity List -> SeriesVOList로 변환해서 담는다.
          */
         List<SeriesVO> seriesList = toSeriesVOList(
                 study.getSeriesList()
@@ -116,7 +118,7 @@ public class PacsStudyRepositoryImpl
 
         /*
          * Instance는 DB에 개별 저장하지 않고
-         * Study에 저장된 총 개수를 사용합니다.
+         * Study에 저장된 총 개수를 사용합니다. - Series 안에 InstanceCount가 있다. 전체 Series의 InstanceCount 합쳐서 저장한다.
          */
         studyVO.setInstanceCount(
                 study.getInstanceCount() != null
@@ -161,8 +163,10 @@ public class PacsStudyRepositoryImpl
         }
 
         return seriesList.stream()
-                .map(this::toSeriesVO)
-                .sorted(seriesComparator())
+                // 데이터 개수가 있는 만큼 하나씩 가져와서 반복처리한다.
+                .map(this::toSeriesVO) // entity를 VO만든 다음에 반복처리
+                .sorted(seriesComparator()) // 정렬시킨다.
+                // 맨 처음 ArrayList를 생성해서 반복처리하는 결과를 담아라.
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
@@ -192,6 +196,7 @@ public class PacsStudyRepositoryImpl
         return seriesVO;
     }
 
+    // siries 안에 있는 instanceCopunt를 더하는 처리 메서드
     private int calculateInstanceCount(
             List<SeriesVO> seriesList
     ) {
@@ -207,8 +212,11 @@ public class PacsStudyRepositoryImpl
 
         return Comparator.comparing(
                 SeriesVO::getSeriesNumber,
+                // nullsLast() - null은 맨뒤로 위치시켜라.
                 Comparator.nullsLast(this::compareSeriesNumber)
-        );
+        )
+                // .reversed() - 내림 차순 정렬
+                ;
     }
 
     private int compareSeriesNumber(
@@ -217,10 +225,12 @@ public class PacsStudyRepositoryImpl
     ) {
 
         try {
+            // 문자열이 숫자 형태로 들어오면 비교해서 first가 작으면 -1, 같은면 0, 크면 1 리턴된다.
             return Integer.compare(
                     Integer.parseInt(first),
                     Integer.parseInt(second)
             );
+        // 숫자로 변환이 안되는 경우의 처리 - 문자 비교해라. String.compareTo()
         } catch (NumberFormatException e) {
             return first.compareTo(second);
         }
