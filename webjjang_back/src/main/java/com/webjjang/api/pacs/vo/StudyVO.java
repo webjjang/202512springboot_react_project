@@ -14,7 +14,7 @@ public class StudyVO {
 
     // PacsStudyRepository에서 바로 VO 객체로 받아내기 위해서 만든다.
     public StudyVO(
-            String id,
+            String orthancStudyId,
             String patientId,
             String patientName,
             String patientSex,
@@ -25,7 +25,7 @@ public class StudyVO {
             Integer seriesCount,
             Boolean stable) {
 
-        this.id = id;
+        this.orthancStudyId = orthancStudyId;
 
         this.patientId = patientId;
         this.patientName = patientName;
@@ -41,7 +41,7 @@ public class StudyVO {
     }
 
     /* Orthanc Study ID */
-    private String id;
+    private String orthancStudyId;
 
     // Patient - 환자 정보
     private String patientId;

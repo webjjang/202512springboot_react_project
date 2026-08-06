@@ -55,7 +55,7 @@ public class PacsServiceImpl implements PacsService{
 
         StudyVO vo = new StudyVO();
 
-        vo.setId((String) study.get("ID"));
+        vo.setOrthancStudyId((String) study.get("ID"));
 
         //-----------------------------
         // Patient 정보

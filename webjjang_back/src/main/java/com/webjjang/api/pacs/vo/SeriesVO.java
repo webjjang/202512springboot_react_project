@@ -21,6 +21,4 @@ public class SeriesVO {
 
     private String seriesNumber; // 번호
 
-    // 영상 상세 조회가 필요할 때 사용 리스트 - 추가
-    private List<InstanceVO> instanceList = new ArrayList<>();
 }

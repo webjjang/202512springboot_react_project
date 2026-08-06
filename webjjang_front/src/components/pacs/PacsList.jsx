@@ -47,7 +47,7 @@ function PacsList(){
    * Study 상세 화면 이동
    */
   const handleDetail = (study) => {
-    navigate(`/pacs/view?id=${encodeURIComponent(study.id)}`);
+    navigate(`/pacs/view?id=${encodeURIComponent(study.orthancStudyId)}`);
   };
 
   /**

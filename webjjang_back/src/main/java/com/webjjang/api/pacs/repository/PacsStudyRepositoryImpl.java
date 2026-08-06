@@ -62,7 +62,7 @@ public class PacsStudyRepositoryImpl
          * StudyVO.id는 Orthanc Study ID를 의미하므로
          * DB PK인 study.getNo()가 아니라 orthancStudyId를 넣습니다.
          */
-        studyVO.setId(study.getOrthancStudyId());
+        studyVO.setOrthancStudyId(study.getOrthancStudyId());
 
         /*
          * Patient 정보
