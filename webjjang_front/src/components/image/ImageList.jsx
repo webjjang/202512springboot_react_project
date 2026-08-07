@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./Image.css"
 import PageNation from "../common/PageNation";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { format } from "date-fns"; // 날짜 형식
+import api from "../common/api";
 
 function ImageList(){
   // -- 데이터 처리 부분 ------------------
@@ -34,7 +34,7 @@ function ImageList(){
     function(){
       console.log("ImageList :: useEffect 실행해서 데이터 가져오기 시작")
       // react(:5173) -> spring boot(:80-http인 경우 생략)로 데이터 요청
-      axios.get("http://172.30.1.52/image/list.do?" + query)
+      api.get("/image/list.do?" + query)
       .then((response) => {
         console.log("Axios를 이용한 데이터 가져오기");
         console.log("응답 데이터 : " + response);
@@ -59,7 +59,7 @@ function ImageList(){
           <td>{vo.id}</td>
           <td>{vo.name}</td>
           {/* spring boot 서버에서 이미지 데이터를 가져와서 표시해준다. img 태그 사용 */}
-          <td><img src={`http://localhost/upload/image/${vo.fileName}`} alt={vo.title} style={{ maxWidth: '50px', maxHeight: '50px' }} /></td>
+          <td><img src={`http://10.15.21.178/upload/image/${vo.fileName}`} alt={vo.title} style={{ maxWidth: '50px', maxHeight: '50px' }} /></td>
           <td>{format(vo.writedDate, "yyyy-MM-dd")}</td>
           <td>{vo.hit}</td>
         </tr>

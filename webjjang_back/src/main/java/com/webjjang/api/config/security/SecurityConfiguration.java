@@ -84,8 +84,9 @@ public class SecurityConfiguration {
         configuration.setAllowedOrigins(
                 List.of(
                         "http://localhost:5173",
+                        // 특정 IP만 접근 허용 - 보안 상태가 좋아 진다. :: react 서버
                         "http://127.0.0.1:5173",
-                        "http://172.30.1.52:5173"
+                        "http://10.15.21.178:5173"
                 )
         );
 

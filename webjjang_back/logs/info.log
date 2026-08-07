@@ -1141,3 +1141,770 @@ This generated password is for development use only. Your security configuration
 [2026-08-07 04:12:36.411] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
 [2026-08-07 04:12:36.415] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
 [2026-08-07 04:12:36.419] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2026-08-07 10:14:04.471] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-08-07 10:14:04.509] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 10:14:04.509] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 10:14:04.535] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-08-07 10:14:04.535] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-08-07 10:14:05.273] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 10:14:05.415] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 137 ms. Found 8 JPA repository interfaces.
+[2026-08-07 10:14:05.867] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 10:14:05.875] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:14:05.876] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 10:14:05.877] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 10:14:05.918] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 10:14:05.918] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1382 ms
+[2026-08-07 10:14:06.044] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 10:14:06.087] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-08-07 10:14:06.119] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 10:14:06.285] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 10:14:06.305] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-08-07 10:14:06.374] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@49a6f022
+[2026-08-07 10:14:06.375] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-08-07 10:14:06.444] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 10:14:07.059] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 10:14:07.061] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:14:07.206] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 10:14:07.208] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 10:14:07.447] [INFO ] [restartedMain] org.springframework.data.jpa.repository.query.QueryEnhancerFactory Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-08-07 10:14:07.728] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 10:14:07.744] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: b341f778-faf2-4b7b-a8e6-dff1117585ba
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 10:14:07.749] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 10:14:07.877] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 10:14:07.944] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 10:14:07.971] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 10:14:08.238] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 10:14:08.297] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:14:08.312] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 10:14:08.324] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 4.222 seconds (process running for 4.836)
+[2026-08-07 10:14:08.328] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 10:14:08.328] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 10:14:08.577] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-07 10:14:08.577] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-08-07 10:14:08.579] [INFO ] [RMI TCP Connection(3)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2026-08-07 10:32:59.932] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:32:59.944] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:32:59.944] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:32:59.944] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.120] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:14.125] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:38.058] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:34:55.042] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:34:55.042] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:34:55.042] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:34:55.042] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:35:02.481] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:35:02.481] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:35:02.481] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:35:02.481] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:35:03.033] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:35:03.034] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:35:03.034] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:35:03.034] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:35:03.579] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:35:03.579] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:35:03.579] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:35:03.579] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:31.732] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2026-08-07 10:42:31.735] [INFO ] [Thread-5] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 10:42:31.735] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:42:31.778] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 10:42:31.778] [INFO ] [Thread-5] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:42:31.804] [INFO ] [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:42:31.806] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2026-08-07 10:42:31.808] [INFO ] [Thread-5] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2026-08-07 10:42:31.892] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 10:42:31.892] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 10:42:32.628] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 10:42:32.658] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+[2026-08-07 10:42:32.722] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 10:42:32.723] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:42:32.723] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 10:42:32.723] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 10:42:32.744] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 10:42:32.744] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 851 ms
+[2026-08-07 10:42:32.779] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 10:42:32.781] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 10:42:32.787] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 10:42:32.787] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+[2026-08-07 10:42:32.789] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-2 - Added connection org.mariadb.jdbc.Connection@241ade91
+[2026-08-07 10:42:32.790] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+[2026-08-07 10:42:32.790] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 10:42:32.875] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 10:42:32.875] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:42:32.918] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 10:42:32.918] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 10:42:32.984] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 10:42:32.990] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 12f1191a-1edd-45c6-889d-07cbf660f23d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 10:42:32.990] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 10:42:33.030] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 10:42:33.053] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 10:42:33.072] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 10:42:33.151] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 10:42:33.161] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:42:33.163] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 10:42:33.170] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 1.298 seconds (process running for 1709.682)
+[2026-08-07 10:42:33.171] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 10:42:33.171] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 10:42:33.172] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-07 10:42:40.805] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-07 10:42:40.805] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-08-07 10:42:40.810] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 5 ms
+[2026-08-07 10:42:40.810] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.810] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.810] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.810] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:40.849] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.849] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.849] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:40.849] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:40.849] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.851] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:40.850] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:42:40.851] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:42:40.851] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:06.763] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2026-08-07 10:47:06.765] [INFO ] [Thread-7] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 10:47:06.765] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:06.814] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 10:47:06.814] [INFO ] [Thread-7] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:06.817] [INFO ] [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:47:06.817] [INFO ] [Thread-7] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+[2026-08-07 10:47:06.818] [INFO ] [Thread-7] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+[2026-08-07 10:47:06.873] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 10:47:06.873] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 10:47:07.085] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 10:47:07.114] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+[2026-08-07 10:47:07.184] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 10:47:07.184] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:07.184] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 10:47:07.184] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 10:47:07.208] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 10:47:07.208] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 333 ms
+[2026-08-07 10:47:07.245] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 10:47:07.247] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 10:47:07.251] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 10:47:07.251] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Starting...
+[2026-08-07 10:47:07.254] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-3 - Added connection org.mariadb.jdbc.Connection@1d2c9484
+[2026-08-07 10:47:07.255] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Start completed.
+[2026-08-07 10:47:07.255] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 10:47:07.326] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 10:47:07.326] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:47:07.370] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 10:47:07.370] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 10:47:07.450] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 10:47:07.456] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: fe917364-507c-42fe-bc4b-d7ee7f70979e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 10:47:07.457] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 10:47:07.502] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 10:47:07.530] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 10:47:07.552] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 10:47:07.641] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 10:47:07.651] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:07.653] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 10:47:07.659] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.807 seconds (process running for 1984.171)
+[2026-08-07 10:47:07.660] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 10:47:07.660] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 10:47:07.661] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-07 10:47:09.071] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[2026-08-07 10:47:09.073] [INFO ] [Thread-11] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 10:47:09.073] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:09.129] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 10:47:09.129] [INFO ] [Thread-11] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:09.132] [INFO ] [Thread-11] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:47:09.132] [INFO ] [Thread-11] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown initiated...
+[2026-08-07 10:47:09.134] [INFO ] [Thread-11] com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown completed.
+[2026-08-07 10:47:09.178] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 10:47:09.178] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 10:47:09.356] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 10:47:09.386] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+[2026-08-07 10:47:09.452] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 10:47:09.452] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:09.452] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 10:47:09.453] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 10:47:09.474] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 10:47:09.474] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 296 ms
+[2026-08-07 10:47:09.506] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 10:47:09.507] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 10:47:09.511] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 10:47:09.511] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Starting...
+[2026-08-07 10:47:09.513] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-4 - Added connection org.mariadb.jdbc.Connection@55aa1618
+[2026-08-07 10:47:09.513] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Start completed.
+[2026-08-07 10:47:09.514] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 10:47:09.576] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 10:47:09.576] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 10:47:09.610] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 10:47:09.611] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 10:47:09.676] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 10:47:09.681] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 2cd9d3cb-dd5d-471c-9bc7-76dc7449a447
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 10:47:09.681] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 10:47:09.715] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 10:47:09.736] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 10:47:09.753] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 10:47:09.815] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 10:47:09.828] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 10:47:09.831] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 10:47:09.838] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.674 seconds (process running for 1986.349)
+[2026-08-07 10:47:09.839] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 10:47:09.839] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 10:47:09.840] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-07 10:47:19.840] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-07 10:47:19.840] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-08-07 10:47:19.842] [INFO ] [http-nio-0.0.0.0-80-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2026-08-07 10:47:19.843] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:19.843] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:19.844] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:19.844] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.641] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.641] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.641] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.641] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:21.661] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 10:47:22.845] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 10:47:22.845] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 10:47:22.845] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 10:47:22.845] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:10.734] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:10.734] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:10.734] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:10.734] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.768] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.768] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.769] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.769] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.787] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.787] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.787] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:11.788] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:11.789] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:02:13.535] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:02:13.535] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:02:13.535] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:02:13.535] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:23.046] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:23.046] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:23.046] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:23.046] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:31.051] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:31.051] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:31.051] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:31.051] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:34.043] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:34.043] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:34.043] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:34.043] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:44.038] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:44.038] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:44.038] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:44.038] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:51.035] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:51.036] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:51.036] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:51.036] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:07:58.042] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:07:58.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:07:58.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:07:58.043] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:15.050] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:15.050] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:15.050] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:15.050] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:20.039] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:20.039] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:20.039] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:20.039] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:24.042] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:24.043] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:24.043] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:24.043] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:28.038] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:28.038] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:28.038] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:28.038] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:30.042] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:30.042] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:30.042] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:30.042] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:35.038] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:35.038] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:35.038] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:35.038] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:41.042] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:41.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:41.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:41.043] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:43.048] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:43.048] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:43.048] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:43.048] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:45.049] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:45.049] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:45.049] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:45.049] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 12:09:50.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 12:09:50.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 12:09:50.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 12:09:50.043] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:48.227] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:48.227] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:48.227] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:48.227] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:50.364] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:50.364] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:50.364] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:50.364] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.238] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.238] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.238] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.238] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:52.250] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:52.252] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:36:54.819] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:36:54.819] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:36:54.819] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:36:54.819] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:48:03.446] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2026-08-07 13:48:03.455] [INFO ] [Thread-15] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 13:48:03.455] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:03.503] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 13:48:03.503] [INFO ] [Thread-15] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:03.509] [INFO ] [Thread-15] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:03.513] [INFO ] [Thread-15] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown initiated...
+[2026-08-07 13:48:03.514] [INFO ] [Thread-15] com.zaxxer.hikari.HikariDataSource HikariPool-4 - Shutdown completed.
+[2026-08-07 13:48:03.664] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 13:48:03.665] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 13:48:04.612] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 13:48:04.639] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 26 ms. Found 8 JPA repository interfaces.
+[2026-08-07 13:48:04.739] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 13:48:04.740] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:04.740] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 13:48:04.740] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 13:48:04.761] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 13:48:04.761] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1094 ms
+[2026-08-07 13:48:04.795] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 13:48:04.795] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 13:48:04.801] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 13:48:04.801] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Starting...
+[2026-08-07 13:48:04.803] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-5 - Added connection org.mariadb.jdbc.Connection@209ce767
+[2026-08-07 13:48:04.803] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Start completed.
+[2026-08-07 13:48:04.804] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 13:48:04.866] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 13:48:04.866] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:04.908] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 13:48:04.908] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 13:48:04.969] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 13:48:04.975] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 38a464bc-fcf1-4f01-a504-94cdaf007ff3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 13:48:04.976] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 13:48:05.021] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 13:48:05.045] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 13:48:05.065] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 13:48:05.147] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 13:48:05.155] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:05.158] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 13:48:05.164] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 1.521 seconds (process running for 12841.676)
+[2026-08-07 13:48:05.165] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 13:48:05.165] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 13:48:05.165] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-07 13:48:06.570] [INFO ] [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[2026-08-07 13:48:06.571] [INFO ] [Thread-19] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 13:48:06.571] [INFO ] [tomcat-shutdown] org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:06.621] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 13:48:06.622] [INFO ] [Thread-19] org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:06.624] [INFO ] [Thread-19] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:06.624] [INFO ] [Thread-19] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown initiated...
+[2026-08-07 13:48:06.625] [INFO ] [Thread-19] com.zaxxer.hikari.HikariDataSource HikariPool-5 - Shutdown completed.
+[2026-08-07 13:48:06.676] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 4436 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 13:48:06.676] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 13:48:06.864] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 13:48:06.892] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+[2026-08-07 13:48:06.951] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 13:48:06.951] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:06.951] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 13:48:06.951] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 13:48:06.970] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 13:48:06.970] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 294 ms
+[2026-08-07 13:48:07.001] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 13:48:07.002] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 13:48:07.006] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 13:48:07.006] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Starting...
+[2026-08-07 13:48:07.007] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-6 - Added connection org.mariadb.jdbc.Connection@61f8ee4
+[2026-08-07 13:48:07.008] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Start completed.
+[2026-08-07 13:48:07.008] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 13:48:07.061] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 13:48:07.061] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:07.095] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 13:48:07.095] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 13:48:07.166] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 13:48:07.171] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 94184fab-72ec-4346-aad1-81c9d3627cda
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 13:48:07.172] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 13:48:07.207] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 13:48:07.229] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 13:48:07.247] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 13:48:07.304] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 13:48:07.313] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:07.316] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 13:48:07.322] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 0.661 seconds (process running for 12843.834)
+[2026-08-07 13:48:07.322] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 13:48:07.322] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 13:48:07.324] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+[2026-08-07 13:48:46.413] [INFO ] [SpringApplicationShutdownHook] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 13:48:46.463] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 13:48:46.465] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:46.465] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown initiated...
+[2026-08-07 13:48:46.467] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-6 - Shutdown completed.
+[2026-08-07 13:48:48.154] [INFO ] [background-preinit] org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 8.0.3.Final
+[2026-08-07 13:48:48.185] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Starting WebjjangBackApplication using Java 17.0.12 with PID 24152 (D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back\target\classes started by User in D:\leeyh\workspace\springboot-react-project\202512springboot_react_project\webjjang_back)
+[2026-08-07 13:48:48.185] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication No active profile set, falling back to 1 default profile: "default"
+[2026-08-07 13:48:48.213] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2026-08-07 13:48:48.213] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2026-08-07 13:48:48.935] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-08-07 13:48:49.044] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 103 ms. Found 8 JPA repository interfaces.
+[2026-08-07 13:48:49.485] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port 80 (http)
+[2026-08-07 13:48:49.493] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:49.494] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2026-08-07 13:48:49.494] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/10.1.55]
+[2026-08-07 13:48:49.539] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2026-08-07 13:48:49.540] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1326 ms
+[2026-08-07 13:48:49.670] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-08-07 13:48:49.710] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 6.6.53.Final
+[2026-08-07 13:48:49.734] [INFO ] [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator HHH000026: Second-level cache disabled
+[2026-08-07 13:48:49.890] [INFO ] [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-08-07 13:48:49.908] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2026-08-07 13:48:49.955] [INFO ] [restartedMain] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection org.mariadb.jdbc.Connection@d1a8ed1
+[2026-08-07 13:48:49.956] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2026-08-07 13:48:49.995] [INFO ] [restartedMain] org.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.6.27
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-08-07 13:48:50.637] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-08-07 13:48:50.638] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 13:48:50.791] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 시작
+[2026-08-07 13:48:50.793] [INFO ] [restartedMain] com.webjjang.api.config.security.JwtTokenProvider [init] JwtTokenProvider 내 secretKey 이용 key 초기화 초기화 완료
+[2026-08-07 13:48:51.008] [INFO ] [restartedMain] org.springframework.data.jpa.repository.query.QueryEnhancerFactory Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-08-07 13:48:51.298] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-08-07 13:48:51.313] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: d29724e1-d67c-4f71-9e53-9d4fe717cea6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2026-08-07 13:48:51.318] [INFO ] [restartedMain] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-08-07 13:48:51.447] [INFO ] [restartedMain] com.webjjang.api.config.WebConfig [addResourceHandlers] image URI 폴더 추가 ------
+[2026-08-07 13:48:51.521] [INFO ] [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+[2026-08-07 13:48:51.551] [WARN ] [restartedMain] org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry One of the patterns in [**exception**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+[2026-08-07 13:48:51.789] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2026-08-07 13:48:51.824] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-0.0.0.0-80"]
+[2026-08-07 13:48:51.835] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port 80 (http) with context path '/'
+[2026-08-07 13:48:51.845] [INFO ] [restartedMain] com.webjjang.api.WebjjangBackApplication Started WebjjangBackApplication in 3.997 seconds (process running for 4.62)
+[2026-08-07 13:48:51.850] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+[2026-08-07 13:48:51.850] [WARN ] [restartedMain] org.springdoc.core.events.SpringDocAppInitializer SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[2026-08-07 13:48:51.948] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-07 13:48:51.948] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2026-08-07 13:48:51.949] [INFO ] [RMI TCP Connection(1)-10.15.21.178] org.springframework.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2026-08-07 13:49:02.693] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.699] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.699] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.699] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.883] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:02.884] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:10.883] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:10.883] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:10.883] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:10.883] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:12.825] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:12.825] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:12.825] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:12.825] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:34.622] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:34.622] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:34.623] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:34.623] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:35.084] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyList] orthancStudyids = [3d03892c-fe16a397-b54727fd-34224e15-421e37a7, a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929]
+[2026-08-07 13:49:35.084] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl 
+[saveStudyFromOrthanc] 동기화 시작 ------------------>
+[2026-08-07 13:49:35.084] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [saveStudyFromOrthanc] 각 studyID 동기화 : 3d03892c-fe16a397-b54727fd-34224e15-421e37a7
+[2026-08-07 13:49:35.097] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.pacs.service.PacsServiceImpl [saveStudyFromOrthanc] 각 studyID 동기화 : a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929
+[2026-08-07 13:49:35.173] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:35.175] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:35.175] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:35.175] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:36.613] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:36.614] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:36.614] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:36.614] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:36.644] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.pacs.controller.PacsRestController [getStudyDetail] id = a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929
+[2026-08-07 13:49:36.650] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.pacs.service.PacsServiceImpl [getStudyDetail] DB Study 상세 조회 - orthancStudyId=a83c30ef-e1eb3230-c7e7060f-12254a75-9dcc6929
+[2026-08-07 13:49:49.155] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:49.155] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:49.157] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:49.157] [INFO ] [http-nio-0.0.0.0-80-exec-6] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:52.937] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:52.937] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:52.937] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:52.937] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:54.815] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:54.815] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:54.815] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:54.817] [INFO ] [http-nio-0.0.0.0-80-exec-4] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.651] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.652] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.652] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.653] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.722] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:49:56.723] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:49:56.724] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:49:56.724] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:49:56.724] [INFO ] [http-nio-0.0.0.0-80-exec-10] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:50:01.727] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:50:01.727] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:50:01.727] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:50:01.727] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.626] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.627] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.627] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.627] [INFO ] [http-nio-0.0.0.0-80-exec-3] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-5] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-7] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.685] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.686] [INFO ] [http-nio-0.0.0.0-80-exec-8] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.687] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.688] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.688] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.688] [INFO ] [http-nio-0.0.0.0-80-exec-9] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:03.706] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:03.708] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:03.708] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:03.708] [INFO ] [http-nio-0.0.0.0-80-exec-2] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 13:51:08.041] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtTokenProvider [resolveToken] Http 헤더에서 Token 값을 추출
+[2026-08-07 13:51:08.041] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 추출 완료. token : null
+[2026-08-07 13:51:08.041] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 시작
+[2026-08-07 13:51:08.041] [INFO ] [http-nio-0.0.0.0-80-exec-1] com.webjjang.api.config.security.JwtAuthenticationFilter [doFilterInternal] token 값 유효성 체크 완료
+[2026-08-07 14:32:48.074] [INFO ] [SpringApplicationShutdownHook] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+[2026-08-07 14:32:48.122] [INFO ] [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown Graceful shutdown complete
+[2026-08-07 14:32:48.140] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-08-07 14:32:48.141] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2026-08-07 14:32:48.143] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.

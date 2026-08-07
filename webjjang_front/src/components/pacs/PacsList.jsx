@@ -117,11 +117,13 @@ function PacsList(){
         return;
     }
 
+    // 이동해야할 페이지의 URL 저장
     const viewerUrl =
-        `http://172.30.1.52:3000/viewer?StudyInstanceUIDs=${encodeURIComponent(
+        `http://10.15.21.178:3000/viewer?StudyInstanceUIDs=${encodeURIComponent(
             study.studyInstanceUID
         )}`;
 
+    // 새창을 열어서 전달된 studyInstanceUID 정보로 OHIF Viewer에 이미지 표시
     window.open(
         viewerUrl,
         "_blank",
@@ -133,7 +135,7 @@ function PacsList(){
      
       try{
         // Pacs 서버에서 데이터 가져와 DB에 저장하기 처리
-        await api.get("http://localhost/pacs/sync.do");
+        await api.get("/pacs/sync.do");
         window.location.reload(); // 페이지 새로고침. a tag 동작같다. 화면 전체가 새롭게 다시 불러온다.
       } catch (error) {
         // 서버에서 처리 오류
